@@ -17,6 +17,7 @@ export const headerData = {
       text: 'Pages',
       links: [
         { text: 'Products', href: '/products' },
+        { text: 'In Their Own Hands', href: '/in-their-own-hands' },
         { text: 'Open Source', href: '/open-source' },
         { text: 'About', href: '/about' },
         { text: 'Contact', href: '/contact' },
@@ -36,6 +37,7 @@ export const footerData = {
         { text: 'About', href: '/about' },
         { text: 'Consulting', href: '/consulting' },
         { text: 'Real World Ready', href: '/real-world-ready' },
+        { text: 'In Their Own Hands', href: '/in-their-own-hands' },
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Testimonials', href: '/testimonials' },
         { text: 'Contact', href: '/contact' },

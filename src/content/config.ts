@@ -65,6 +65,24 @@ const postCollection = defineCollection({
   }),
 });
 
+const episodeCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/episode' }),
+  schema: z.object({
+    publishDate: z.date().optional(),
+    draft: z.boolean().optional(),
+
+    title: z.string(),
+    studentName: z.string(),
+    excerpt: z.string().optional(),
+    videoUrl: z.string().optional(),
+
+    tags: z.array(z.string()).optional(),
+
+    metadata: metadataDefinition(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  episode: episodeCollection,
 };

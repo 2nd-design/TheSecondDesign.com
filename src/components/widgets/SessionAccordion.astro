@@ -1,0 +1,147 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { Session } from '~/data/sessions';
+
+export interface Props {
+  readySessions: Session[];
+  upcomingSessions: Session[];
+  plannedSummary: string;
+}
+
+const { readySessions, upcomingSessions, plannedSummary } = Astro.props;
+
+const statusConfig: Record<string, { label: string; classes: string }> = {
+  'ready': {
+    label: 'Ready',
+    classes: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20',
+  },
+  'open-source': {
+    label: 'Open-source',
+    classes: 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20',
+  },
+  'upcoming': {
+    label: 'Upcoming',
+    classes: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20',
+  },
+};
+---
+
+<div class="space-y-10">
+  <!-- Ready & Tested -->
+  {readySessions.length > 0 && (
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+        <h3 class="text-sm font-semibold tracking-[0.15em] text-emerald-600 dark:text-emerald-400 uppercase">
+          Ready & Tested
+        </h3>
+      </div>
+
+      <div class="divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
+        {readySessions.map((session) => {
+          const status = statusConfig[session.status];
+          return (
+            <details class="group">
+              <summary class="flex items-center justify-between gap-4 py-5 px-1 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <div class="flex items-center gap-3 min-w-0">
+                  <h4 class="font-semibold text-slate-900 dark:text-white truncate">{session.title}</h4>
+                  <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border shrink-0 ${status.classes}`}>
+                    {status.label}
+                  </span>
+                </div>
+                <div class="flex items-center gap-4 shrink-0">
+                  <p class="hidden md:block text-sm text-slate-500 dark:text-slate-400 text-right max-w-xs">{session.problemStatement}</p>
+                  <Icon name="tabler:chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 group-open:rotate-180" />
+                </div>
+              </summary>
+
+              <div class="pb-6 px-1">
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-900/50 p-6 space-y-4">
+                  {/* Problem on mobile (hidden on desktop where it's in summary) */}
+                  <p class="md:hidden text-sm text-slate-500 dark:text-slate-400">{session.problemStatement}</p>
+
+                  {session.whatStudentsDo && (
+                    <div>
+                      <p class="text-xs font-semibold tracking-[0.15em] text-slate-500 dark:text-slate-400 uppercase mb-2">What students do</p>
+                      <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{session.whatStudentsDo}</p>
+                    </div>
+                  )}
+
+                  {session.why && (
+                    <div>
+                      <p class="text-xs font-semibold tracking-[0.15em] text-slate-500 dark:text-slate-400 uppercase mb-2">Why this session exists</p>
+                      <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{session.why}</p>
+                    </div>
+                  )}
+
+                  {session.isOpenSource && session.openSourceLink && (
+                    <a
+                      href={session.openSourceLink}
+                      class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      <Icon name="tabler:external-link" class="w-4 h-4" />
+                      View open-source materials
+                    </a>
+                  )}
+                </div>
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </div>
+  )}
+
+  <!-- Upcoming -->
+  {upcomingSessions.length > 0 && (
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+        <h3 class="text-sm font-semibold tracking-[0.15em] text-amber-600 dark:text-amber-400 uppercase">
+          Upcoming
+        </h3>
+      </div>
+
+      <div class="divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
+        {upcomingSessions.map((session) => {
+          const status = statusConfig[session.status];
+          return (
+            <details class="group">
+              <summary class="flex items-center justify-between gap-4 py-5 px-1 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <div class="flex items-center gap-3 min-w-0">
+                  <h4 class="font-semibold text-slate-900 dark:text-white truncate">{session.title}</h4>
+                  <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border shrink-0 ${status.classes}`}>
+                    {status.label}
+                  </span>
+                </div>
+                <div class="flex items-center gap-4 shrink-0">
+                  <p class="hidden md:block text-sm text-slate-500 dark:text-slate-400 text-right max-w-xs">{session.problemStatement}</p>
+                  <Icon name="tabler:chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 group-open:rotate-180" />
+                </div>
+              </summary>
+
+              <div class="pb-6 px-1">
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-900/50 p-6">
+                  <p class="md:hidden text-sm text-slate-500 dark:text-slate-400 mb-3">{session.problemStatement}</p>
+                  {session.upcomingTeaser && (
+                    <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{session.upcomingTeaser}</p>
+                  )}
+                </div>
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </div>
+  )}
+
+  <!-- Planned -->
+  {plannedSummary && (
+    <div class="flex items-start gap-3 px-1">
+      <div class="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 mt-1.5 shrink-0"></div>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        {plannedSummary}
+      </p>
+    </div>
+  )}
+</div>
