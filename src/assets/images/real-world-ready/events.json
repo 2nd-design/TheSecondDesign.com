@@ -1,0 +1,23 @@
+{
+  "btb-feb-2025-tinkerhub": {
+    "name": "Beyond the Blueprint",
+    "session": "",
+    "location": "Online",
+    "date": "February 2025",
+    "partner": "TinkerHub Foundation"
+  },
+  "btb-dec-2025-tinkerhub": {
+    "name": "Beyond the Blueprint",
+    "session": "",
+    "location": "Online",
+    "date": "December 2025",
+    "partner": "TinkerHub Foundation"
+  },
+  "foss-hack-jan-2025": {
+    "name": "FOSS Hack 2025",
+    "session": "Real World Ready",
+    "location": "Online",
+    "date": "January 2025",
+    "partner": "FOSS United"
+  }
+}

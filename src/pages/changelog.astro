@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Changelog',
+  description: 'A log of updates and changes made to The Second Design website.',
+};
+
+const changelog = [
+  {
+    date: '2026-02-25',
+    version: '1.1.0',
+    title: 'Content & UX improvements across the site',
+    changes: [
+      {
+        category: 'Homepage',
+        items: [
+          'Updated hero subtitle to be more concise — changed "The Second Design is an Education Design Studio" to "We are an education design studio"',
+          'Replaced "pedagogy" with "learning design" in the "What we do" note section',
+          'Updated NGOs feature description to use "learning design" instead of "pedagogy"',
+          'Refreshed blog section tagline to "instructional design and what we\'re learning"',
+        ],
+      },
+      {
+        category: 'Consulting Page',
+        items: [
+          'Updated hero intro copy — "We turn it into an unforgettable, transformative learning experience"',
+          'Replaced "pedagogy" references with "learning design" throughout (3 instances)',
+        ],
+      },
+      {
+        category: 'Real World Ready Page',
+        items: [
+          'Changed section title from "How institutions get started" to "Bring this to your students"',
+          'Redesigned the 3-step getting started section — now displays horizontally on desktop for a more compact layout',
+          'Separated student testimonials from outcomes in the bento grid section',
+          'Added new "Self-awareness" and "Confidence to act" outcome cards',
+          'Created dedicated testimonials section with 5 named student quotes',
+          'Updated testimonials to include student names and colleges where available (Nahidah from Jyothi Engineering College, Arjun Vibeesh, Deva, Arsha, Niranjana)',
+        ],
+      },
+      {
+        category: 'Open Source Pages',
+        items: [
+          'Changed resource links from "Open in Google Docs/Slides" to "Make a copy" — users now get their own editable copy directly',
+          'Added CC BY-NC-SA 4.0 license with badge, updated license section with clear permissions and restrictions',
+          'Updated hero badges from "Open for reuse with attribution" to clickable "CC BY-NC-SA 4.0" linking to Creative Commons',
+          'Added license badges to project cards on the main /open-source listing page',
+          'Fixed copy in Shitty First Draft page — changed "concrete shitty first draft" to "concrete first draft"',
+        ],
+      },
+      {
+        category: 'Navigation',
+        items: [
+          'Renamed "Pages" dropdown to "More" in the main navigation for clarity',
+        ],
+      },
+      {
+        category: 'Blog',
+        items: [
+          'Renamed blog post "Pedagogy of Cohort Based Courses" to "Learning Design in Cohort Based Courses"',
+          'Updated blog post URL from /blog/pedagogy-of-cohort-based-courses to /blog/learning-design-in-cohort-based-courses',
+          'Changed "Conventional pedagogy" to "Conventional teaching" in the post body',
+        ],
+      },
+      {
+        category: 'Infrastructure',
+        items: [
+          'Created CLAUDE.md file for Claude Code guidance when working in this repository',
+          'Set up folder structure for Real World Ready event images at src/assets/images/real-world-ready/events/',
+          'Created events.json metadata file for tracking session images by event, location, and date',
+          'Added /changelog page to track website updates publicly',
+        ],
+      },
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20 bg-white dark:bg-slate-950">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="space-y-4 mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Changelog
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          A record of updates and improvements to The Second Design website.
+        </p>
+      </div>
+
+      <div class="space-y-16">
+        {changelog.map((release) => (
+          <article class="relative">
+            <div class="flex items-center gap-4 mb-6">
+              <time class="text-sm font-medium text-slate-500 dark:text-slate-400">
+                {release.date}
+              </time>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                v{release.version}
+              </span>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">
+              {release.title}
+            </h2>
+
+            <div class="space-y-8">
+              {release.changes.map((section) => (
+                <div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-800">
+                  <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-white dark:border-slate-950"></div>
+                  <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                    {section.category}
+                  </h3>
+                  <ul class="space-y-2">
+                    {section.items.map((item) => (
+                      <li class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex gap-2">
+                        <Icon name="tabler:check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

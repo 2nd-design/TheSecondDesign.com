@@ -12,9 +12,9 @@ export const headerData = {
 
     { text: 'Blog', href: getBlogPermalink() },
 
-    // Pages dropdown (last item)
+    // More dropdown (last item)
     {
-      text: 'Pages',
+      text: 'More',
       links: [
         { text: 'Products', href: '/products' },
         { text: 'In Their Own Hands', href: '/in-their-own-hands' },

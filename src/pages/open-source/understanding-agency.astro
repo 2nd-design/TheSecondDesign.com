@@ -37,12 +37,15 @@ const metadata = {
       </div>
 
       <div class="flex flex-wrap gap-3 text-xs text-slate-600 dark:text-slate-400">
-        <span
-          class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1"
+        <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1 hover:bg-emerald-500/20 transition"
         >
           <Icon name="tabler:license" class="w-3.5 h-3.5" />
-          Open for reuse with attribution
-        </span>
+          CC BY-NC-SA 4.0
+        </a>
         <span class="inline-flex items-center gap-1 rounded-full bg-slate-900/5 dark:bg-slate-800 px-3 py-1">
           <Icon name="tabler:presentation" class="w-3.5 h-3.5" />
           Slide deck + workbook
@@ -149,7 +152,7 @@ const metadata = {
       <div class="grid gap-6 md:grid-cols-2">
         <!-- Deck -->
         <a
-          href="https://docs.google.com/presentation/d/1WWQyw2Ufq_-FbQofoCiQTq_nejilKzlaFc4cJ5-LVYw/edit"
+          href="https://docs.google.com/presentation/d/1WWQyw2Ufq_-FbQofoCiQTq_nejilKzlaFc4cJ5-LVYw/copy"
           target="_blank"
           rel="noopener noreferrer"
           class="group rounded-2xl border bg-white border-slate-200 shadow-sm shadow-slate-200/80
@@ -171,14 +174,14 @@ const metadata = {
             </p>
           </div>
           <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
-            Open in Google Slides
-            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+            Make a copy
+            <Icon name="tabler:copy" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
           </div>
         </a>
 
         <!-- Workbook -->
         <a
-          href="https://docs.google.com/document/d/16Tu6aqMHe2E55PbLVrInjDFc0vWGpQwLhdE-8mMMRaI/edit"
+          href="https://docs.google.com/document/d/16Tu6aqMHe2E55PbLVrInjDFc0vWGpQwLhdE-8mMMRaI/copy"
           target="_blank"
           rel="noopener noreferrer"
           class="group rounded-2xl border bg-white border-slate-200 shadow-sm shadow-slate-200/80
@@ -200,8 +203,8 @@ const metadata = {
             </p>
           </div>
           <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
-            Open in Google Docs
-            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+            Make a copy
+            <Icon name="tabler:copy" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
           </div>
         </a>
       </div>
@@ -213,9 +216,20 @@ const metadata = {
   <section class="py-20 bg-white border-t border-slate-200
            dark:bg-slate-950/90 dark:border-slate-800">
     <div class="container max-w-4xl mx-auto space-y-6 text-sm md:text-base px-4 sm:px-6 lg:px-8">
-      <h2 class="text-xl md:text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
-        How you're allowed to use this
-      </h2>
+      <div class="flex items-center gap-4 flex-wrap">
+        <h2 class="text-xl md:text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+          How you're allowed to use this
+        </h2>
+        <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+        >
+          <img src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" alt="CC BY-NC-SA 4.0" class="h-4" />
+          CC BY-NC-SA 4.0
+        </a>
+      </div>
 
       <div class="grid gap-8 md:grid-cols-2">
         <div class="space-y-3 text-slate-700 dark:text-slate-300">
@@ -224,6 +238,7 @@ const metadata = {
             <li>• Run this session with your own students or community.</li>
             <li>• Adapt, translate, and remix the material for your context.</li>
             <li>• Include it as one component inside a larger program.</li>
+            <li>• Share your adaptations under the same license.</li>
           </ul>
         </div>
 
@@ -232,14 +247,14 @@ const metadata = {
           <ul class="space-y-1.5 text-sm">
             <li>• Credit <span class="font-semibold">The Second Design</span> as the original creators.</li>
             <li>• Link back to this page where reasonable (slides, docs, descriptions).</li>
-            <li>• Don't sell this exact material as a standalone paid product without adding your own work.</li>
+            <li>• Don't use this material for commercial purposes without permission.</li>
           </ul>
         </div>
       </div>
 
       <p class="text-xs text-slate-500 dark:text-slate-400">
-        If you want a more formal license (for example, for a large institution or partner program), just reach out via
-        the contact page and we can set that up.
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-700 dark:hover:text-slate-300">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+        For commercial licensing or institutional partnerships, reach out via the contact page.
       </p>
     </div>
   </section>
