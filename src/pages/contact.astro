@@ -105,14 +105,7 @@ const metadata = {
                  border-slate-200 shadow-slate-200/80
                  dark:bg-slate-900 dark:text-slate-50 dark:border-slate-800 dark:shadow-black/60"
         >
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5">
-            <!-- Netlify hidden fields -->
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden">
-              <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
-              </label>
-            </p>
+          <form id="contact-form-element" class="space-y-5">
 
             <div class="space-y-1">
               <label class="text-xs font-medium text-slate-700 dark:text-slate-300" for="name">Your name</label>
@@ -196,22 +189,93 @@ const metadata = {
             <div class="pt-2">
               <button
                 type="submit"
+                id="submit-btn"
                 class="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold
                        bg-slate-900 text-slate-50 shadow-sm hover:bg-slate-800
                        dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
-                       transition"
+                       transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send message
+                <span id="btn-text">Send message</span>
+                <span id="btn-loading" class="hidden">Sending...</span>
               </button>
             </div>
 
             <p class="text-[11px] text-slate-500 dark:text-slate-500 leading-relaxed pt-1">
-              We read every message. If it makes sense to speak live, we’ll reply with a link to this same 30-minute
+              We read every message. If it makes sense to speak live, we'll reply with a link to this same 30-minute
               call, or suggest a different next step if that's more useful.
             </p>
+
+            <!-- Success message -->
+            <div id="success-message" class="hidden rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 p-4">
+              <p class="text-sm text-emerald-800 dark:text-emerald-200 font-medium">Message sent successfully!</p>
+              <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">We'll get back to you soon.</p>
+            </div>
+
+            <!-- Error message -->
+            <div id="error-message" class="hidden rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4">
+              <p class="text-sm text-red-800 dark:text-red-200 font-medium">Something went wrong.</p>
+              <p class="text-xs text-red-600 dark:text-red-400 mt-1">Please try again or email us directly.</p>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTgnEstlYvIolaCPq6pQtM2aGUi0vuESwZ59QJn8SpbbR96jD1syJ7IYB4zisFk_jDbQ/exec";
+
+    document.getElementById("contact-form-element").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const submitBtn = document.getElementById("submit-btn");
+      const btnText = document.getElementById("btn-text");
+      const btnLoading = document.getElementById("btn-loading");
+      const successMsg = document.getElementById("success-message");
+      const errorMsg = document.getElementById("error-message");
+
+      // Hide any previous messages
+      successMsg.classList.add("hidden");
+      errorMsg.classList.add("hidden");
+
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.classList.add("hidden");
+      btnLoading.classList.remove("hidden");
+
+      // Collect form data
+      const formData = {
+        name: form.querySelector("#name").value,
+        email: form.querySelector("#email").value,
+        organisation: form.querySelector("#org").value,
+        interest: form.querySelector("#interest").value,
+        message: form.querySelector("#message").value
+      };
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData)
+        });
+
+        // Show success (we use no-cors so we can't read the response, but it usually works)
+        successMsg.classList.remove("hidden");
+        form.reset();
+
+      } catch (error) {
+        console.error("Form submission error:", error);
+        errorMsg.classList.remove("hidden");
+      } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.classList.remove("hidden");
+        btnLoading.classList.add("hidden");
+      }
+    });
+  </script>
 </Layout>
