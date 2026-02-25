@@ -6,20 +6,29 @@ import { fetchEpisodes } from '~/utils/episodes';
 const episodes = await fetchEpisodes();
 
 const metadata = {
-  title: 'In Their Own Hands',
+  title: 'Proof of Work',
   description:
-    'Students who decided to take matters into their own hands. They started projects, organised events, shipped work, and made decisions without waiting for permission.',
+    'Students who decided to act. They started projects, organised events, shipped work, and made decisions without waiting for permission.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero ************************************* -->
   <section class="relative overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
-    <!-- Animated gradient background -->
+    <!-- Background image -->
+    <img
+      src="https://images.unsplash.com/photo-1735892907432-569ee8e8cc1b?auto=format&fit=crop&w=1920&q=80"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-slate-950/70"></div>
+
+    <!-- Colored gradient accents -->
     <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-slate-950 to-violet-600/15"></div>
-      <div class="absolute top-1/4 left-0 w-[700px] h-[700px] bg-blue-500/25 rounded-full blur-[150px] animate-pulse"></div>
-      <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
+      <div class="absolute top-1/4 left-0 w-[700px] h-[700px] bg-blue-500/15 rounded-full blur-[150px] animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-500/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
       <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 3s;"></div>
     </div>
 
@@ -36,14 +45,14 @@ const metadata = {
 
         <!-- Main headline -->
         <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight text-white mb-8 leading-[0.9]">
-          In Their
+          Proof of
           <span class="block bg-gradient-to-r from-blue-400 via-violet-400 to-emerald-400 bg-clip-text text-transparent">
-            Own Hands
+            Work
           </span>
         </h1>
 
         <p class="text-xl sm:text-2xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-6">
-          Students who decided to take matters into their own hands.
+          Students who decided to act.
         </p>
 
         <p class="text-base text-slate-500 max-w-xl mx-auto">
@@ -143,7 +152,7 @@ const metadata = {
         <div class="max-w-5xl mx-auto">
           <!-- Featured card -->
           <a
-            href={`/in-their-own-hands/${episodes[0].slug}`}
+            href={`/proof-of-work/${episodes[0].slug}`}
             class="group block relative rounded-3xl overflow-hidden"
           >
             <!-- Large gradient card -->
@@ -230,7 +239,7 @@ const metadata = {
           More stories in the making
         </h2>
         <p class="text-lg text-slate-600 dark:text-slate-400">
-          We're documenting more students who took matters into their own hands. Each story follows the same format: the decision, the steps, and what happened.
+          We're documenting more students who decided to act. Each story follows the same format: the decision, the steps, and what happened.
         </p>
       </div>
 
@@ -267,7 +276,7 @@ const metadata = {
         <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {episodes.slice(1).map((episode, index) => (
             <a
-              href={`/in-their-own-hands/${episode.slug}`}
+              href={`/proof-of-work/${episode.slug}`}
               class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 hover:-translate-y-1"
             >
               <div class="p-6 sm:p-8">

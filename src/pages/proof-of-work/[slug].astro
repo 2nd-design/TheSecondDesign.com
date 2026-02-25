@@ -15,8 +15,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { episode } = Astro.props as Props;
 
 const metadata = {
-  title: `${episode.title} — In Their Own Hands`,
-  description: episode.excerpt || `${episode.studentName}'s story — In Their Own Hands by The Second Design.`,
+  title: `${episode.title} — Proof of Work`,
+  description: episode.excerpt || `${episode.studentName}'s story — Proof of Work by The Second Design.`,
 };
 
 const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1];
@@ -27,11 +27,11 @@ const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed
     <div class="container max-w-3xl mx-auto px-4 sm:px-6">
       <!-- Back link -->
       <a
-        href="/in-their-own-hands"
+        href="/proof-of-work"
         class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors mb-10"
       >
         <Icon name="tabler:arrow-left" class="w-4 h-4" />
-        Back to In Their Own Hands
+        Back to Proof of Work
       </a>
 
       <!-- Header -->
@@ -79,7 +79,7 @@ const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed
       <!-- Footer nav -->
       <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
         <a
-          href="/in-their-own-hands"
+          href="/proof-of-work"
           class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
         >
           <Icon name="tabler:arrow-left" class="w-4 h-4" />
