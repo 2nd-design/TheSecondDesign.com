@@ -9,6 +9,53 @@ const metadata = {
 
 const changelog = [
   {
+    date: '2026-03-07',
+    version: '1.6.0',
+    title: 'Google Sheets testimonials system',
+    changes: [
+      {
+        category: 'Testimonials',
+        items: [
+          'Migrated testimonials system from manual JSON editing to Google Sheets as single source of truth',
+          'Created Google Form for easy testimonial input with dropdowns for persons, products, and partners',
+          'Added one-click deploy trigger from Google Sheet menu ("Website → Deploy to Live Site")',
+          'Testimonials, products, partners, and persons data now auto-fetched from Google Sheets at build time',
+          'Updated /testimonials page to display names, designations, and companies correctly',
+          'Rewrote /docs/testimonial-architecture with complete documentation of the new workflow',
+          'Updated /docs/testimonials-table to link directly to Google Sheets',
+        ],
+      },
+      {
+        category: 'Infrastructure',
+        items: [
+          'Added prebuild script to fetch fresh data from Google Sheets before every build',
+          'Created fetch-testimonials.js script to pull data from 4 sheet tabs (Products, Partners, Persons, Form Responses)',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-03-07',
+    version: '1.5.0',
+    title: 'Real World Ready event photos & image optimization',
+    changes: [
+      {
+        category: 'Real World Ready Page',
+        items: [
+          'Replaced stock images with actual photos from Beyond the Blueprint sessions',
+          'Added real event photos showing students participating in workshops and activities',
+        ],
+      },
+      {
+        category: 'Performance',
+        items: [
+          'Optimized event images folder from 134MB to 20MB (85% reduction)',
+          'Resized images to max 1600px width at 80% quality for faster page loads',
+        ],
+      },
+    ],
+  },
+  {
     date: '2026-02-25',
     version: '1.4.0',
     title: 'Clearer open source license guidelines',

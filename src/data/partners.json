@@ -4,44 +4,44 @@
     "name": "TinkerHub",
     "relationship_type": "community",
     "logo_url": "",
-    "website_url": "https://tinkerhub.org",
-    "description_short": "Community helping students build tech and real-world skills.",
-    "priority": 1
+    "website_url": "",
+    "description_short": "",
+    "priority": 10
   },
   {
     "partner_id": "foss-united",
     "name": "FOSS United",
     "relationship_type": "community",
     "logo_url": "",
-    "website_url": "https://fossunited.org",
-    "description_short": "Non-profit enabling India’s Free and Open Source ecosystem.",
-    "priority": 1
+    "website_url": "",
+    "description_short": "",
+    "priority": 10
   },
   {
     "partner_id": "edison",
     "name": "Edison",
-    "relationship_type": "client",
+    "relationship_type": "community",
     "logo_url": "",
     "website_url": "",
-    "description_short": "Client for whom The Second Design designed learning experiences.",
-    "priority": 2
+    "description_short": "",
+    "priority": 10
   },
   {
     "partner_id": "maven",
     "name": "Maven",
-    "relationship_type": "platform",
+    "relationship_type": "community",
     "logo_url": "",
-    "website_url": "https://maven.com",
-    "description_short": "Platform hosting cohort-based courses.",
-    "priority": 3
+    "website_url": "",
+    "description_short": "",
+    "priority": 10
   },
   {
     "partner_id": "udemy",
     "name": "Udemy",
-    "relationship_type": "platform",
+    "relationship_type": "community",
     "logo_url": "",
-    "website_url": "https://www.udemy.com",
-    "description_short": "Platform hosting the AI-assisted course creation program.",
-    "priority": 3
+    "website_url": "",
+    "description_short": "",
+    "priority": 10
   }
 ]

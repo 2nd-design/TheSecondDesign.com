@@ -4,8 +4,11 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'Testimonials Data Architecture',
   description:
-    'Internal documentation for how testimonials are modeled, stored, and used across The Second Design website, including products, partners, persons, and testimonials JSON files.',
+    'Internal documentation for how testimonials are modeled, stored, and used across The Second Design website via Google Sheets.',
 };
+
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1xHTYHuGVZx6U4DwrzRbVZiDdxAbkKYtOJAc6FTA6DO0/edit';
+const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJXKvFgMqTbfnqxgKgWpNsWtplqPgQV5H5TgIBQlVqNqHvPw/viewform';
 ---
 
 <Layout metadata={metadata}>
@@ -17,233 +20,225 @@ const metadata = {
       <h1>Testimonials Data Architecture</h1>
 
       <p>
-        This page documents how testimonials are modeled, stored, and used across The Second Design website. It covers
-        the structure of the four JSON files (products, partners, persons, testimonials) and how to safely add new
-        entries without touching TypeScript or Astro components.
+        This page documents how testimonials are modeled, stored, and used across The Second Design website. All data
+        lives in a <a href={SHEET_URL} target="_blank" rel="noopener noreferrer">Google Sheet</a> and is fetched
+        automatically at build time.
       </p>
 
+      <div class="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg">
+        <p class="text-sm text-blue-900 dark:text-blue-100">
+          <strong>Quick links:</strong>
+          <a href={SHEET_URL} target="_blank" rel="noopener noreferrer" class="ml-2 underline">Open Sheet</a> ·
+          <a href={FORM_URL} target="_blank" rel="noopener noreferrer" class="ml-2 underline">Add Testimonial (Form)</a>
+        </p>
+      </div>
+
       <h2>1. Overview</h2>
-      <p>Testimonials are built on four core entities:</p>
+      <p>The testimonials system is built on four core entities, each stored in a separate sheet tab:</p>
       <ul>
         <li>
-          <strong>Product</strong> – a specific offering or sub-offering, such as Real World Ready, the FOSS Hack 2025 intervention,
-          consulting with Edison, Design Your First CBC, or the Udemy AI course.
+          <strong>Products</strong> – offerings like Real World Ready, FOSS Hack 2025, consulting, or online courses.
         </li>
         <li>
-          <strong>Partner</strong> – an organisation connected to products or testimonials, such as TinkerHub, FOSS United,
-          Edison, or platforms like Maven and Udemy.
+          <strong>Partners</strong> – organisations like TinkerHub, FOSS United, Edison, Maven, or Udemy.
         </li>
         <li>
-          <strong>Person</strong> – a named individual (student, client, partner staff, collaborator) who gives a testimonial.
-          Anonymous voices do not get a person record.
+          <strong>Persons</strong> – named individuals who give testimonials (students, clients, collaborators).
         </li>
         <li>
-          <strong>Testimonial</strong> – one asset expressing feedback: a short quote, a longer text, an email, a video link,
-          a blog post, a screenshot, or a tweet.
+          <strong>Testimonials</strong> – the actual feedback: quotes, videos, emails, screenshots, tweets, etc.
         </li>
       </ul>
       <p>A single testimonial can:</p>
       <ul>
-        <li>Optionally link to a person (or leave the person field empty for anonymous quotes).</li>
+        <li>Optionally link to a person (or be anonymous).</li>
         <li>Link to one or more products.</li>
         <li>Link to one or more partners.</li>
         <li>Be scoped to a specific product or to the overall brand.</li>
       </ul>
 
-      <h2>2. Files and location</h2>
-      <p>All testimonial-related data lives in JSON files under the <code>src/data</code> folder:</p>
-      <ul>
-        <li><code>src/data/products.json</code></li>
-        <li><code>src/data/partners.json</code></li>
-        <li><code>src/data/persons.json</code></li>
-        <li><code>src/data/testimonials.json</code></li>
-        <li><code>src/data/testimonials.ts</code> – helper that joins everything</li>
-      </ul>
-      <p>
-        Components never read JSON directly. They call a helper function
-        <code>getTestimonialsForProduct</code> from <code>testimonials.ts</code>. That helper:
-      </p>
-      <ul>
-        <li>Loads products, partners, persons, and testimonials from the JSON files.</li>
-        <li>Resolves references (testimonial to person, product, and partners).</li>
-        <li>Filters testimonials by product or brand scope.</li>
-        <li>Sorts testimonials by priority (hero, high, normal, low) and then by date (newest first).</li>
-      </ul>
-
-      <h2>3. JSON conventions</h2>
-      <p>All four JSON files follow the same basic rules:</p>
-      <ul>
-        <li>The entire file is a single array of objects.</li>
-        <li>Each object is separated from the next by a comma.</li>
-        <li>The last object in the array has no trailing comma.</li>
-        <li>All keys and string values use double quotes.</li>
-        <li>There are no comments inside JSON.</li>
-      </ul>
-      <p>
-        After editing any JSON file, run <code>npm run dev</code>. If a file is invalid, Astro will report which file
-        failed to parse so you can fix commas or quotes.
-      </p>
-
-      <h2>4. Entity reference</h2>
-
-      <h3>4.1 Product (products.json)</h3>
-      <p>
-        A product represents a unique offering or sub-offering. Examples: the overall Real World Ready program, the FOSS
-        Hack 2025 Real World Ready track, consulting work with Edison, the Design Your First CBC course, or the Udemy
-        AI-assisted course.
-      </p>
-      <p>Each product object includes at least:</p>
-      <ul>
-        <li><strong>product_id</strong> – unique ID, lowercase with dashes (for example, rwr-foss2025).</li>
-        <li><strong>name</strong> – main name of the program (for example, “Real World Ready”).</li>
-        <li>
-          <strong>category</strong> – broad bucket such as real_world_ready, consulting, online_course_design, or generic.
-        </li>
-        <li>
-          <strong>variant_name</strong> – optional sub-label for the variant, such as “FOSS Hack 2025” or “Beyond the Blueprint”.
-        </li>
-        <li><strong>partner_ids</strong> – list of partner IDs connected to this product.</li>
-        <li><strong>platform</strong> – where it runs (“On-site”, “Maven”, “Udemy”, or left empty).</li>
-        <li><strong>url</strong> – landing page or detail page URL.</li>
-        <li><strong>description_short</strong> – one or two lines for UI.</li>
-        <li><strong>status</strong> – usually “active”.</li>
-      </ul>
-
-      <h3>4.2 Partner (partners.json)</h3>
-      <p>A partner represents an organisation.</p>
-      <p>Each partner object includes:</p>
-      <ul>
-        <li><strong>partner_id</strong> – unique ID, lowercase with dashes (for example, foss-united).</li>
-        <li><strong>name</strong> – official name.</li>
-        <li>
-          <strong>relationship_type</strong> – community, client, platform, employer, or another simple label.
-        </li>
-        <li><strong>logo_url</strong> – optional path to their logo.</li>
-        <li><strong>website_url</strong> – their main website.</li>
-        <li><strong>description_short</strong> – one-line description.</li>
-        <li><strong>priority</strong> – lower numbers show earlier when sorting partners.</li>
-      </ul>
-
-      <h3>4.3 Person (persons.json)</h3>
-      <p>A person is an identifiable individual providing a testimonial.</p>
-      <p>Each person object includes:</p>
-      <ul>
-        <li><strong>person_id</strong> – unique ID, lowercase with dashes (for example, sai-rahul).</li>
-        <li><strong>name</strong> – full name.</li>
-        <li><strong>designation</strong> – optional title (“Program Lead”, “Founder”, “Student”, etc.).</li>
-        <li><strong>company</strong> – optional organisation name.</li>
-        <li><strong>partner_id</strong> – linked partner ID if they belong to a partner; empty otherwise.</li>
-        <li><strong>linkedin_url</strong> – optional LinkedIn profile.</li>
-        <li><strong>other_link</strong> – optional personal site or article.</li>
-        <li><strong>headshot_url</strong> – optional portrait image path.</li>
-        <li>
-          <strong>relationship_type</strong> – student, client, partner_staff, collaborator, or another simple label.
-        </li>
-      </ul>
-      <p>Anonymous or generic quotes do not get a person entry; the testimonial simply stores a null person.</p>
-
-      <h3>4.4 Testimonial (testimonials.json)</h3>
-      <p>
-        A testimonial is one asset (a text quote, email, video, screenshot, blog, tweet, etc.). A single person can have
-        multiple testimonials across different products.
-      </p>
-      <p>Each testimonial object includes:</p>
-      <ul>
-        <li><strong>testimonial_id</strong> – unique ID, usually product-person-type-year.</li>
-        <li><strong>person_id</strong> – a valid person ID or empty for anonymous.</li>
-        <li><strong>product_ids</strong> – list of product IDs this testimonial applies to.</li>
-        <li><strong>partner_ids</strong> – list of partner IDs, if any.</li>
-        <li>
-          <strong>scope</strong> – “product” if it’s about a specific program or variant, “brand” if it’s about The Second
-          Design overall.
-        </li>
-        <li>
-          <strong>audience_type</strong> – partner, student, client, collaborator, or generic (who is speaking).
-        </li>
-        <li>
-          <strong>source_type</strong> – text, video, image, email, blog, tweet (what kind of asset this is).
-        </li>
-        <li><strong>source_url</strong> – link to video, blog, tweet, or other external source.</li>
-        <li><strong>image_url</strong> / <strong>image_alt</strong> – used for screenshot-based testimonials.</li>
-        <li><strong>quote_short</strong> – 1–2 killer lines used on cards.</li>
-        <li><strong>quote_long</strong> – longer paraphrased text or context.</li>
-        <li><strong>rating</strong> – numeric rating for review-style sources or left empty.</li>
-        <li><strong>language</strong> – language code such as en or ml.</li>
-        <li><strong>date</strong> – date string in YYYY-MM-DD format (approximate is fine).</li>
-        <li><strong>priority</strong> – hero, high, normal, or low.</li>
-        <li><strong>is_published</strong> – true to show on site, false to hide.</li>
-        <li><strong>internal_notes</strong> – freeform internal notes that are never rendered.</li>
-      </ul>
-
-      <h2>5. How to add new entries</h2>
-      <p>
-        When a new testimonial comes in, you may need to add a product, a partner, a person, and finally the testimonial
-        itself. Always follow this order so references don&apos;t break.
-      </p>
-
-      <h3>5.1 Add a new product (if needed)</h3>
+      <h2>2. Data flow</h2>
+      <p>Here's how data moves from Google Sheets to the live website:</p>
       <ol>
-        <li>Open <code>src/data/products.json</code>.</li>
-        <li>Copy an existing product object and paste it at the end of the array.</li>
         <li>
-          Change the fields: use a new product_id, adjust the name, category, variant_name, partner_ids, platform, url,
-          and description_short.
+          <strong>Input</strong> – Add testimonials via the Google Form (linked to the sheet), or edit data directly in
+          the Google Sheet tabs (Products, Partners, Persons, Form Responses 1).
         </li>
-        <li>Keep status as “active” unless the product is retired.</li>
+        <li>
+          <strong>Deploy</strong> – Click "Website → Deploy to Live Site" in the Google Sheet menu, OR push to the main
+          branch on GitHub.
+        </li>
+        <li>
+          <strong>Fetch</strong> – During the Netlify build, the <code>prebuild</code> script runs{' '}
+          <code>scripts/fetch-testimonials.js</code> which reads all four sheet tabs and writes JSON files to{' '}
+          <code>src/data/</code>.
+        </li>
+        <li>
+          <strong>Build</strong> – Astro builds the site, reading the JSON files via <code>testimonials.ts</code>.
+        </li>
+        <li>
+          <strong>Live</strong> – The updated site goes live on Netlify.
+        </li>
       </ol>
 
-      <h3>5.2 Add a new partner (if needed)</h3>
+      <h2>3. Sheet structure</h2>
+      <p>
+        The Google Sheet has four tabs. The column names in row 1 of each tab must match exactly (case-sensitive):
+      </p>
+
+      <h3>3.1 Products tab</h3>
+      <table class="text-sm">
+        <thead>
+          <tr>
+            <th>Column</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>product_id</td><td>Unique ID, lowercase with dashes (e.g., <code>rwr-foss2025</code>)</td></tr>
+          <tr><td>name</td><td>Main product name (e.g., "Real World Ready")</td></tr>
+          <tr><td>category</td><td>Bucket: real_world_ready, consulting, online_course_design, generic</td></tr>
+          <tr><td>variant_name</td><td>Optional variant label (e.g., "FOSS Hack 2025")</td></tr>
+          <tr><td>partner_ids</td><td>Comma-separated partner IDs</td></tr>
+          <tr><td>platform</td><td>Where it runs: On-site, Maven, Udemy, or blank</td></tr>
+          <tr><td>url</td><td>Landing page URL</td></tr>
+          <tr><td>description_short</td><td>One-liner for UI</td></tr>
+          <tr><td>status</td><td>Usually "active"</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.2 Partners tab</h3>
+      <table class="text-sm">
+        <thead>
+          <tr>
+            <th>Column</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>partner_id</td><td>Unique ID, lowercase with dashes (e.g., <code>foss-united</code>)</td></tr>
+          <tr><td>name</td><td>Official organisation name</td></tr>
+          <tr><td>relationship_type</td><td>community, client, platform, employer</td></tr>
+          <tr><td>logo_url</td><td>Optional logo path</td></tr>
+          <tr><td>website_url</td><td>Organisation website</td></tr>
+          <tr><td>description_short</td><td>One-line description</td></tr>
+          <tr><td>priority</td><td>Lower numbers appear first</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.3 Persons tab</h3>
+      <table class="text-sm">
+        <thead>
+          <tr>
+            <th>Column</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>person_id</td><td>Unique ID, lowercase with dashes (e.g., <code>sai-rahul</code>)</td></tr>
+          <tr><td>name</td><td>Full name</td></tr>
+          <tr><td>designation</td><td>Title or role</td></tr>
+          <tr><td>company</td><td>Organisation name</td></tr>
+          <tr><td>partner_id</td><td>Link to partner if applicable</td></tr>
+          <tr><td>linkedin_url</td><td>LinkedIn profile URL</td></tr>
+          <tr><td>other_link</td><td>Personal site or article</td></tr>
+          <tr><td>headshot_url</td><td>Portrait image path</td></tr>
+          <tr><td>relationship_type</td><td>student, client, partner_staff, collaborator, participant</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.4 Form Responses 1 tab (Testimonials)</h3>
+      <p>
+        This tab receives submissions from the Google Form and contains all testimonial data. Key columns:
+      </p>
+      <ul>
+        <li><strong>Select Person</strong> – dropdown to pick existing person or "Add New Person"</li>
+        <li><strong>New Person fields</strong> – name, designation, company, LinkedIn (for new people)</li>
+        <li><strong>Product</strong> – dropdown of products</li>
+        <li><strong>Partner</strong> – dropdown of partners</li>
+        <li><strong>Scope</strong> – product or brand</li>
+        <li><strong>Audience Type</strong> – student, client, partner, collaborator</li>
+        <li><strong>Source Type</strong> – text, video, image, email, blog, tweet</li>
+        <li><strong>Quote (Short)</strong> – 1-2 punchy lines for cards</li>
+        <li><strong>Quote (Long)</strong> – full context</li>
+        <li><strong>Rating</strong> – numeric rating if applicable</li>
+        <li><strong>Language</strong> – en, ml, etc.</li>
+        <li><strong>Testimonial Date</strong> – when the testimonial was given</li>
+        <li><strong>Priority</strong> – hero, high, normal, low</li>
+        <li><strong>Publish Immediately?</strong> – Yes/No</li>
+        <li><strong>Internal Notes</strong> – never shown on site</li>
+      </ul>
+
+      <h2>4. How to add a testimonial</h2>
+      <p>
+        The easiest way is to use the <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Google Form</a>.
+        The form has dropdowns for existing persons, products, and partners, plus fields for adding new people.
+      </p>
+      <p>After submitting:</p>
       <ol>
-        <li>Open <code>src/data/partners.json</code>.</li>
-        <li>Copy an existing partner, paste it at the end.</li>
-        <li>Change partner_id, name, relationship_type, website_url, description_short, and priority.</li>
+        <li>Open the Google Sheet and go to "Form Responses 1".</li>
+        <li>Review the new row. Set "Publish Immediately?" to Yes if ready.</li>
+        <li>Click "Website → Deploy to Live Site" in the menu bar.</li>
+        <li>Wait 1-2 minutes for the site to rebuild.</li>
       </ol>
 
-      <h3>5.3 Add a new person (if needed)</h3>
-      <p>Only for named individuals. Anonymous students or generic reviewers will not have a person record.</p>
+      <h2>5. How to add products, partners, or persons</h2>
+      <p>Edit the respective sheet tab directly:</p>
       <ol>
-        <li>Open <code>src/data/persons.json</code>.</li>
-        <li>Copy an existing person, paste it at the end.</li>
-        <li>Update person_id, name, designation, company, partner_id, and any links you have.</li>
+        <li>Go to the Products, Partners, or Persons tab.</li>
+        <li>Add a new row at the bottom with all required fields.</li>
+        <li>Use lowercase-with-dashes for all IDs.</li>
+        <li>Deploy to make the new entity available on the site.</li>
       </ol>
-
-      <h3>5.4 Add the testimonial itself</h3>
-      <ol>
-        <li>Open <code>src/data/testimonials.json</code>.</li>
-        <li>Copy an existing testimonial object and paste it at the end.</li>
-        <li>
-          Set a new testimonial_id, link the correct person_id (or leave it empty), set product_ids and partner_ids,
-          choose a scope, audience_type, and source_type, and then fill quote_short and quote_long.
-        </li>
-        <li>Set the date and priority and mark is_published as true when you want it live.</li>
-      </ol>
+      <p>
+        New products, partners, and persons will automatically appear in the Google Form dropdowns after you refresh
+        the form.
+      </p>
 
       <h2>6. Display rules</h2>
       <ul>
         <li>
-          The homepage uses <code>&lt;TestimonialsSection /&gt;</code> with no productId, so it shows only testimonials whose
-          scope is set to “brand”.
+          The homepage shows testimonials with <code>scope: brand</code>.
         </li>
         <li>
-          Product or program pages can pass a productId, e.g.
-          <code>&lt;TestimonialsSection productId="rwr-foss2025" /&gt;</code>, to show testimonials linked to that
-          product.
+          Product pages show testimonials with <code>scope: product</code> filtered by product_id.
         </li>
         <li>
-          Testimonials are sorted first by priority (hero, then high, then normal, then low) and then by date (newest
-          first).
+          Testimonials are sorted by priority (hero → high → normal → low) then by date (newest first).
         </li>
         <li>
-          Videos and blogs show a “watch” or “read” link when source_type is video or blog; screenshots are shown when
-          source_type is image and an image_url is present.
+          Only testimonials with <code>is_published: true</code> appear on the site.
+        </li>
+        <li>
+          Videos and blogs show watch/read links. Screenshots display the image.
         </li>
       </ul>
 
-      <p>
-        The whole point of this setup is that the data layer is boring and predictable. You can keep adding new
-        products, partners, people, and testimonials by editing JSON only, without changing any TypeScript or layout
-        code.
-      </p>
+      <h2>7. Technical details</h2>
+      <p>For developers:</p>
+      <ul>
+        <li>
+          <code>scripts/fetch-testimonials.js</code> – fetches all sheet tabs via the public gviz API (no auth
+          required, sheet must be "published to web").
+        </li>
+        <li>
+          <code>src/data/testimonials.ts</code> – helper that loads JSON and resolves references between entities.
+        </li>
+        <li>
+          <code>package.json</code> has <code>"prebuild": "node scripts/fetch-testimonials.js"</code> so data is
+          always fresh on deploy.
+        </li>
+        <li>
+          The deploy trigger in Google Apps Script calls the Netlify build hook via POST request.
+        </li>
+      </ul>
+
+      <div class="not-prose my-6 p-4 bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <p class="text-sm text-amber-900 dark:text-amber-100">
+          <strong>Important:</strong> The Google Sheet must be "Published to web" (File → Share → Publish to web) for
+          the fetch script to work. Only publish the specific tabs needed, not the entire document with edit access.
+        </p>
+      </div>
     </div>
   </section>
 </Layout>

@@ -22,7 +22,7 @@ npm run fix          # Auto-fix eslint + prettier issues
 ### Content System
 
 - **Blog posts**: `src/data/post/*.md|mdx` - uses Astro Content Collections with Zod validation
-- **Video episodes**: `src/data/episode/*.md|mdx` - "In Their Own Hands" show content
+- **Video episodes**: `src/data/episode/*.md|mdx` - "Proof of Work" show content
 - **Structured data**: `src/data/*.json` (persons, partners, products)
 - **Content schemas**: `src/content/config.ts` - defines post and episode collection schemas
 

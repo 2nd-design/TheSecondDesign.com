@@ -2,78 +2,78 @@
   {
     "product_id": "rwr",
     "name": "Real World Ready",
-    "category": "real_world_ready",
-    "variant_name": null,
-    "partner_ids": [],
-    "platform": null,
-    "url": "",
-    "description_short": "Flagship program helping young people build practical skills, habits, and mindsets.",
-    "status": "active"
-  },
-  {
-    "product_id": "rwr-btb",
-    "name": "Real World Ready",
-    "category": "real_world_ready",
-    "variant_name": "Beyond the Blueprint",
-    "partner_ids": ["tinkerhub"],
-    "platform": "On-site",
-    "url": "",
-    "description_short": "Beyond the Blueprint: the real-world skills lab for TinkerHub students.",
-    "status": "active"
-  },
-  {
-    "product_id": "rwr-foss2025",
-    "name": "Real World Ready",
-    "category": "real_world_ready",
-    "variant_name": "FOSS Hack 2025",
-    "partner_ids": ["foss-united"],
-    "platform": "On-site",
-    "url": "",
-    "description_short": "Real World Ready’s intervention for FOSS Hack 2025 participants.",
-    "status": "active"
-  },
-  {
-    "product_id": "consulting-edison",
-    "name": "Consulting",
-    "category": "consulting",
-    "variant_name": "Edison",
-    "partner_ids": ["edison"],
-    "platform": null,
-    "url": "",
-    "description_short": "Education design consulting done with Edison.",
-    "status": "active"
-  },
-  {
-    "product_id": "ocd-design-cbc",
-    "name": "Design Your First Cohort Based Course",
-    "category": "online_course_design",
-    "variant_name": null,
-    "partner_ids": [],
-    "platform": "Maven",
-    "url": "https://maven.com/theseconddesign/designacbc",
-    "description_short": "Live cohort-based course on designing your first CBC.",
-    "status": "active"
-  },
-  {
-    "product_id": "ocd-udemy-ai-course",
-    "name": "AI Assisted Course Creation",
-    "category": "online_course_design",
-    "variant_name": "Step-by-Step with ChatGPT",
-    "partner_ids": [],
-    "platform": "Udemy",
-    "url": "https://www.udemy.com/course/ai-assisted-course-creation-a-step-by-step-journey/",
-    "description_short": "Self-paced Udemy course on AI-assisted course creation.",
-    "status": "active"
-  },
-  {
-    "product_id": "generic-brand",
-    "name": "The Second Design – Brand",
     "category": "generic",
     "variant_name": null,
     "partner_ids": [],
     "platform": null,
     "url": "",
-    "description_short": "General praise and brand-level testimonials for The Second Design.",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "rwr-btb",
+    "name": "Real World Ready",
+    "category": "generic",
+    "variant_name": "Beyond the Blueprint",
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "rwr-foss2025",
+    "name": "Real World Ready",
+    "category": "generic",
+    "variant_name": "FOSS Hack 2025",
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "consulting-edison",
+    "name": "Consulting",
+    "category": "generic",
+    "variant_name": "Edison",
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "ocd-design-cbc",
+    "name": "Design Your First Cohort Based Course",
+    "category": "generic",
+    "variant_name": null,
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "ocd-udemy-ai-course",
+    "name": "AI Assisted Course Creation",
+    "category": "generic",
+    "variant_name": "Step-by-Step with ChatGPT",
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
+    "status": "active"
+  },
+  {
+    "product_id": "generic-brand",
+    "name": "The Second Design - Brand",
+    "category": "generic",
+    "variant_name": null,
+    "partner_ids": [],
+    "platform": null,
+    "url": "",
+    "description_short": "",
     "status": "active"
   }
 ]

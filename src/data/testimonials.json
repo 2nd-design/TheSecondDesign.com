@@ -1,9 +1,13 @@
 [
   {
-    "testimonial_id": "rahul-foss-email-2025",
+    "testimonial_id": "testimonial-sai-rahul-ceo-foss-united-1",
     "person_id": "sai-rahul",
-    "product_ids": ["rwr-foss2025"],
-    "partner_ids": ["foss-united"],
+    "product_ids": [
+      "rwr-foss2025"
+    ],
+    "partner_ids": [
+      "foss-united"
+    ],
     "scope": "product",
     "audience_type": "partner",
     "source_type": "email",
@@ -11,19 +15,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Their intervention at FOSS Hack 2025 gave students a clearer understanding of FOSS and helped us communicate far more effectively with participants.",
-    "quote_long": "Rahul explains that Aruna and Gautham are among a handful of people in India who really understand the challenges students face in the FOSS ecosystem. Their intervention for FOSS Hack 2025 helped participants grasp the fundamentals of FOSS, evaluate which problems they were best suited to solve, and gave FOSS United new language for communicating with students who couldn’t attend the sessions.",
+    "quote_long": "Rahul explains that Aruna and Gautham are among a handful of people in India who really understand the challenges students face in the FOSS ecosystem. Their intervention for FOSS Hack 2025 helped participants grasp the fundamentals of FOSS, evaluate which problems they were best suited to solve, and gave FOSS United new language for communicating with students who couldn't attend the sessions.",
     "rating": null,
     "language": "en",
-    "date": "2025-01-01",
+    "date": "2024-12-31",
     "priority": "hero",
     "is_published": true,
     "internal_notes": "Email testimonial for the FOSS Hack 2025 intervention."
   },
   {
-    "testimonial_id": "rahul-foss-video-2025",
+    "testimonial_id": "testimonial-sai-rahul-ceo-foss-united-2",
     "person_id": "sai-rahul",
-    "product_ids": ["rwr-foss2025"],
-    "partner_ids": ["foss-united"],
+    "product_ids": [
+      "rwr-foss2025"
+    ],
+    "partner_ids": [
+      "foss-united"
+    ],
     "scope": "product",
     "audience_type": "partner",
     "source_type": "video",
@@ -31,19 +39,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "They did their homework, understood our community, and built an intervention that gave us a new language for working with students.",
-    "quote_long": "In the video, Rahul describes how the collaboration began through Kailash’s introduction and quickly turned into a focused experiment for FOSS Hack. He highlights that Aruna and Gautham talked directly to the community, mapped the student journey, and designed a structure that FOSS United is now reusing to think about student agency in the ecosystem.",
+    "quote_long": "In the video, Rahul describes how the collaboration began through Kailash's introduction and quickly turned into a focused experiment for FOSS Hack. He highlights that Aruna and Gautham talked directly to the community, mapped the student journey, and designed a structure that FOSS United is now reusing to think about student agency in the ecosystem.",
     "rating": null,
     "language": "en",
-    "date": "2025-01-01",
+    "date": "2024-12-31",
     "priority": "hero",
     "is_published": true,
     "internal_notes": "Main video testimonial for the FOSS Hack 2025 case."
   },
   {
-    "testimonial_id": "rahul-foss-blog-2025",
+    "testimonial_id": "testimonial-sai-rahul-ceo-foss-united-3",
     "person_id": "sai-rahul",
-    "product_ids": ["rwr-foss2025"],
-    "partner_ids": ["foss-united"],
+    "product_ids": [
+      "rwr-foss2025"
+    ],
+    "partner_ids": [
+      "foss-united"
+    ],
     "scope": "product",
     "audience_type": "partner",
     "source_type": "blog",
@@ -54,16 +66,20 @@
     "quote_long": "",
     "rating": null,
     "language": "en",
-    "date": "2025-01-01",
+    "date": "2024-12-31",
     "priority": "high",
     "is_published": true,
     "internal_notes": "Use as a 'Read full story' CTA for the FOSS Hack case study."
   },
   {
-    "testimonial_id": "btb-2025-anon-01",
+    "testimonial_id": "testimonial--anonymous-no-person--4",
     "person_id": null,
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -71,19 +87,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Beyond the Blueprint is the only session I genuinely look forward to every week.",
-    "quote_long": "Beyond the Blueprint is the only session I genuinely look forward to every week. It’s the only space where I feel like I’m learning how to handle the real world.",
+    "quote_long": "Beyond the Blueprint is the only session I genuinely look forward to every week. It's the only space where I feel like I'm learning how to handle the real world.",
     "rating": null,
     "language": "en",
-    "date": "2025-02-20",
+    "date": "2025-02-19",
     "priority": "high",
     "is_published": true,
     "internal_notes": "Anonymous BTB student quote; safe to use without a name."
   },
   {
-    "testimonial_id": "btb-2025-abhith",
+    "testimonial_id": "testimonial-abhith-b-5",
     "person_id": "abhith-b",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -94,16 +114,20 @@
     "quote_long": "I loved what Gautham explained from that video. My takeaway is to fill the gaps that come from limitations or fear with placeholders and keep your draft moving. The live demo really helped.",
     "rating": null,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Abhith B, Karunagapally."
   },
   {
-    "testimonial_id": "btb-2025-amrid",
+    "testimonial_id": "testimonial-amrid-6",
     "person_id": "amrid",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -114,16 +138,20 @@
     "quote_long": "The session was interactive and showed me how, when I conduct an online session, I can handle participants, encourage them, and highlight how important upcoming and ongoing tech skills are.",
     "rating": null,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Amrid."
   },
   {
-    "testimonial_id": "btb-2025-deva",
+    "testimonial_id": "testimonial-deva-7",
     "person_id": "deva",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -134,16 +162,20 @@
     "quote_long": "I never knew I could write a poem in just 5 minutes. The session helped me gather my thoughts quickly into a draft without overthinking what to write, and made me want to keep working on my path ahead.",
     "rating": null,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Deva."
   },
   {
-    "testimonial_id": "btb-2025-arjun",
+    "testimonial_id": "testimonial-arjun-vibeesh-8",
     "person_id": "arjun-vibeesh",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -151,19 +183,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Your first step can be chaotic and still be valid.",
-    "quote_long": "This session mainly taught me that for any goal we don’t always need a perfect action plan from the very first step. Our first step into our goal can be chaotic, messy and rambled, and that’s okay.",
+    "quote_long": "This session mainly taught me that for any goal we don't always need a perfect action plan from the very first step. Our first step into our goal can be chaotic, messy and rambled, and that's okay.",
     "rating": null,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Arjun Vibeesh."
   },
   {
-    "testimonial_id": "btb-2025-niranjana",
+    "testimonial_id": "testimonial-niranjana-9",
     "person_id": "niranjana",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -171,19 +207,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Only 9/10 because the session was too short.",
-    "quote_long": "Gave 9/10 only because the session was too short – I didn’t want it to end.",
+    "quote_long": "Gave 9/10 only because the session was too short – I didn't want it to end.",
     "rating": 9,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Niranjana (Malappuram)."
   },
   {
-    "testimonial_id": "btb-2025-sreehari",
+    "testimonial_id": "testimonial-r-sreehari-10",
     "person_id": "r-sreehari",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -191,19 +231,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Your session really helped me a lot.",
-    "quote_long": "Thank you. Your session really helped me a lot. I couldn’t unmute because I was travelling in a train, but I wanted to say this.",
+    "quote_long": "Thank you. Your session really helped me a lot. I couldn't unmute because I was travelling in a train, but I wanted to say this.",
     "rating": null,
     "language": "en",
-    "date": "2025-12-02",
+    "date": "2025-12-01",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – R Sreehari, Karunagapally."
   },
   {
-    "testimonial_id": "btb-2025-suha",
+    "testimonial_id": "testimonial-suha-shajahan-11",
     "person_id": "suha-shajahan",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -211,19 +255,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Kaalam maaruna anusarich nammalum maaran padikkanam.",
-    "quote_long": "Kaalam maaruna anusarich nammalum maaran padikkanam. Instead of just sitting and complaining, we should make efforts, learn one or two things, and accept that it doesn’t have to be perfect, just like a shitty first draft.",
+    "quote_long": "Kaalam maaruna anusarich nammalum maaran padikkanam. Instead of just sitting and complaining, we should make efforts, learn one or two things, and accept that it doesn't have to be perfect, just like a shitty first draft.",
     "rating": null,
     "language": "ml-en",
-    "date": "2025-11-18",
+    "date": "2025-11-17",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Suha Shajahan."
   },
   {
-    "testimonial_id": "btb-2025-arsha",
+    "testimonial_id": "testimonial-arsha-12",
     "person_id": "arsha",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -234,16 +282,20 @@
     "quote_long": "I don't know if I've been in any other session I enjoyed this much. The session made me write my first ever poem and spill things I want to do but never took a first step on. It made me realise it's not about being perfect or having all the resources. It's about starting.",
     "rating": null,
     "language": "en",
-    "date": "2025-11-18",
+    "date": "2025-11-17",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Arsha."
   },
   {
-    "testimonial_id": "btb-2025-shreya",
+    "testimonial_id": "testimonial-shreya-sajalan-13",
     "person_id": "shreya-sajalan",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -254,16 +306,20 @@
     "quote_long": "The session was so engaging. I really liked the idea of the workbook and how it made us work through the concepts.",
     "rating": null,
     "language": "en",
-    "date": "2025-11-18",
+    "date": "2025-11-17",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "BTB 2025 Shitty First Drafts – Shreya Sajalan."
   },
   {
-    "testimonial_id": "btb-2024-nahidah",
+    "testimonial_id": "testimonial-nahidah-student-jyothi-engineering-college-14",
     "person_id": "nahidah",
-    "product_ids": ["rwr-btb"],
-    "partner_ids": ["tinkerhub"],
+    "product_ids": [
+      "rwr-btb"
+    ],
+    "partner_ids": [
+      "tinkerhub"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -274,15 +330,17 @@
     "quote_long": "The workshop was truly engaging and enriching. It encouraged us to step out of our comfort zones and explore new ways of solving problems. The instructors created a welcoming environment, interacted as equals, and helped us break free from our safe level and build confidence.",
     "rating": null,
     "language": "en",
-    "date": "2024-11-08",
+    "date": "2024-11-07",
     "priority": "high",
     "is_published": true,
     "internal_notes": "BTB 2024 Developing Agency Part 1 – Nahidah, Jyothi Engineering College, Shornur."
   },
   {
-    "testimonial_id": "rik-designacbc-video-2022",
+    "testimonial_id": "testimonial-rik-van-den-berge-certified-coach-15",
     "person_id": "rik-van-den-berge",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -291,18 +349,20 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "You give us a clear lens to think through our own material, so the macro design is feelable in the micro exercises.",
-    "quote_long": "Rik explains that the course gives him a concrete lens to look at his own work. Different people bring different topics, but they all move through the same structure because of the way the exercises are designed. He says the coherence of the program is clearly felt and that you’re practicing what you preach by designing the course itself with the same care you advocate.",
+    "quote_long": "Rik explains that the course gives him a concrete lens to look at his own work. Different people bring different topics, but they all move through the same structure because of the way the exercises are designed. He says the coherence of the program is clearly felt and that you're practicing what you preach by designing the course itself with the same care you advocate.",
     "rating": null,
     "language": "en",
-    "date": "2022-05-01",
+    "date": "2022-04-30",
     "priority": "hero",
     "is_published": true,
     "internal_notes": "Hero testimonial for the Design Your First CBC page."
   },
   {
-    "testimonial_id": "alejandro-designacbc-2022",
+    "testimonial_id": "testimonial-alejandro-mashad-founder-edison-16",
     "person_id": "alejandro-mashad",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -314,15 +374,17 @@
     "quote_long": "Alejandro says Gautham and Aruna take you through an ordered process to design a course, with practice built in while learning new concepts. He highlights Aruna as intelligent, polite, and always wanting to help, and Gautham as intelligent, flexible, and always in a good mood with strong argumentation.",
     "rating": null,
     "language": "en",
-    "date": "2022-05-01",
+    "date": "2022-04-30",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "May 2022 Designacbc cohort – short text testimonial."
   },
   {
-    "testimonial_id": "azul-designacbc-2022",
+    "testimonial_id": "testimonial-azul-course-creator-17",
     "person_id": "azul",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -334,15 +396,17 @@
     "quote_long": "Azul writes that they were finally able to meet Ale in Buenos Aires and calls him a super nice and impressive person. They say that one of the perks of strong cohort-based courses is the quality of people you meet, and thank you for making that connection possible through the course.",
     "rating": null,
     "language": "en",
-    "date": "2022-05-01",
+    "date": "2022-04-30",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Designacbc May 2022 cohort testimonial."
   },
   {
-    "testimonial_id": "konstantin-designacbc-2022",
+    "testimonial_id": "testimonial-konstantin-starikov-course-creator-18",
     "person_id": "konstantin-starikov",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -354,15 +418,17 @@
     "quote_long": "Konstantin says Aruna and Gautham are warm, helpful and goal oriented. He highlights the structure of the course, the quality of materials, and the personal attention he received as key strengths.",
     "rating": null,
     "language": "en",
-    "date": "2022-05-01",
+    "date": "2022-04-30",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Another May 2022 Designacbc testimonial."
   },
   {
-    "testimonial_id": "shanak-designacbc-2022",
+    "testimonial_id": "testimonial-shanak-rahman-learning-experience-designer-img-aca-19",
     "person_id": "shanak-rahman",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -374,15 +440,17 @@
     "quote_long": "Shanak says his company was interested in offering cohort-based courses and he joined to understand the process and best practices. He explains that you packed a lot of knowledge into a short time, using tools like breakout rooms and workbook comments to keep them active. He calls you amazing instructors and highly recommends the course.",
     "rating": null,
     "language": "en",
-    "date": "2022-01-01",
+    "date": "2021-12-31",
     "priority": "high",
     "is_published": true,
     "internal_notes": "IMG Academy-linked student from the Jan 2022 cohort."
   },
   {
-    "testimonial_id": "rachel-designacbc-2022",
+    "testimonial_id": "testimonial-rachel-hoeft-learning-experience-designer-img-acad-20",
     "person_id": "rachel-hoeft",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -390,19 +458,21 @@
     "source_url": "https://www.linkedin.com/in/rachelahoeft/",
     "image_url": null,
     "image_alt": null,
-    "quote_short": "The course helped me feel empowered with knowledge that’s easy to apply.",
+    "quote_short": "The course helped me feel empowered with knowledge that's easy to apply.",
     "quote_long": "Rachel explains that the course helped her feel empowered to design cohort-based courses with lots of knowledge that is easy to apply. The fast pace forced her to get ideas down on paper quickly so she could start building options. She highlights peer feedback and 1:2 time with Aruna and Gautham as especially valuable.",
     "rating": null,
     "language": "en",
-    "date": "2022-01-01",
+    "date": "2021-12-31",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Jan 2022 Designacbc cohort – Rachel Hoeft."
   },
   {
-    "testimonial_id": "kira-designacbc-2022",
+    "testimonial_id": "testimonial-kira-milda-gai-learning-development-professional-21",
     "person_id": "kira-milda-gai",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -414,15 +484,17 @@
     "quote_long": "Kira says Aruna and Gautham teach key aspects of engaging online course design in a quick format and that the course combines theory with application. She designed a micro lesson with learning outcomes according to backward design and received valuable feedback on how to improve.",
     "rating": null,
     "language": "en",
-    "date": "2022-01-01",
+    "date": "2021-12-31",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Jan 2022 Designacbc cohort – Kira."
   },
   {
-    "testimonial_id": "rodolfo-designacbc-2021",
+    "testimonial_id": "testimonial-rodolfo-sagahon-cbc-creator-22",
     "person_id": "rodolfo-sagahon",
-    "product_ids": ["ocd-design-cbc"],
+    "product_ids": [
+      "ocd-design-cbc"
+    ],
     "partner_ids": [],
     "scope": "product",
     "audience_type": "student",
@@ -434,16 +506,20 @@
     "quote_long": "Rodolfo says the course was a great experience with the right level of demand and pace for a first-time CBC course creator. He highlights how involved Aruna and Gautham were in his learning, the office hours, and their feedback on his workbook, and says he now feels more confident about running his own course.",
     "rating": null,
     "language": "en",
-    "date": "2021-12-01",
+    "date": "2021-11-30",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "December 2021 Designacbc cohort – Rodolfo."
   },
   {
-    "testimonial_id": "alejandro-edison-consulting-2022",
+    "testimonial_id": "testimonial-alejandro-mashad-founder-edison-23",
     "person_id": "alejandro-mashad",
-    "product_ids": ["consulting-edison"],
-    "partner_ids": ["edison"],
+    "product_ids": [
+      "consulting-edison"
+    ],
+    "partner_ids": [
+      "edison"
+    ],
     "scope": "product",
     "audience_type": "client",
     "source_type": "video",
@@ -454,16 +530,20 @@
     "quote_long": "Alejandro explains that working with you was valuable in two dimensions: you helped their experts Carla and Agus build a better course, and the process helped Edison think more clearly about their own method for designing courses. He highlights the simplicity and power of the I do / we do / you do framework and says the outcomes were worth the money they invested.",
     "rating": null,
     "language": "en",
-    "date": "2022-04-01",
+    "date": "2022-03-31",
     "priority": "hero",
     "is_published": true,
     "internal_notes": "Hero consulting testimonial for Edison."
   },
   {
-    "testimonial_id": "matias-edison-consulting-2022",
+    "testimonial_id": "testimonial-matias-kahl-co-founder-edison-24",
     "person_id": "matias-kahl",
-    "product_ids": ["consulting-edison"],
-    "partner_ids": ["edison"],
+    "product_ids": [
+      "consulting-edison"
+    ],
+    "partner_ids": [
+      "edison"
+    ],
     "scope": "product",
     "audience_type": "client",
     "source_type": "video",
@@ -474,16 +554,20 @@
     "quote_long": "Matias says the lessons with you were super valuable and helped them improve learning outcomes and make classes focus more deeply on what students really want. He emphasises how proactive you were in checking whether what you were teaching was helpful, constantly requesting feedback, and how shifting to clear learning outcomes for each class changed how they design courses.",
     "rating": null,
     "language": "en",
-    "date": "2022-04-01",
+    "date": "2022-03-31",
     "priority": "high",
     "is_published": true,
     "internal_notes": "Video testimonial from Matias Kahl about consulting for Edison."
   },
   {
-    "testimonial_id": "udemy-ai-course-quincy",
+    "testimonial_id": "testimonial-quincy-p-25",
     "person_id": "quincy-p",
-    "product_ids": ["ocd-udemy-ai-course"],
-    "partner_ids": ["udemy"],
+    "product_ids": [
+      "ocd-udemy-ai-course"
+    ],
+    "partner_ids": [
+      "udemy"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -491,19 +575,23 @@
     "image_url": null,
     "image_alt": null,
     "quote_short": "Well done! Great course with tons of examples and direct application.",
-    "quote_long": "Quincy P calls it a great course with lots of examples and direct application, saying it’s definitely a step-by-step guide.",
+    "quote_long": "Quincy P calls it a great course with lots of examples and direct application, saying it's definitely a step-by-step guide.",
     "rating": null,
     "language": "en",
-    "date": "2024-01-01",
+    "date": "2023-12-31",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Short Udemy review to use as social proof."
   },
   {
-    "testimonial_id": "udemy-ai-course-chris",
+    "testimonial_id": "testimonial-chris-b-26",
     "person_id": "chris-b",
-    "product_ids": ["ocd-udemy-ai-course"],
-    "partner_ids": ["udemy"],
+    "product_ids": [
+      "ocd-udemy-ai-course"
+    ],
+    "partner_ids": [
+      "udemy"
+    ],
     "scope": "product",
     "audience_type": "student",
     "source_type": "text",
@@ -514,15 +602,17 @@
     "quote_long": "Chris B says the course is well structured and easy to follow so far.",
     "rating": null,
     "language": "en",
-    "date": "2024-01-01",
+    "date": "2023-12-31",
     "priority": "normal",
     "is_published": true,
     "internal_notes": "Additional Udemy review."
   },
   {
-    "testimonial_id": "brand-jonathan-woodruff",
+    "testimonial_id": "testimonial-jonathan-woodruff-27",
     "person_id": "jonathan-woodruff",
-    "product_ids": ["generic-brand"],
+    "product_ids": [
+      "generic-brand"
+    ],
     "partner_ids": [],
     "scope": "brand",
     "audience_type": "collaborator",
@@ -530,11 +620,11 @@
     "source_url": null,
     "image_url": null,
     "image_alt": null,
-    "quote_short": "They know their stuff and they’re really nice people. I always enjoy our conversations.",
-    "quote_long": "Jonathan says you know your stuff and that you’re also really nice people. He mentions that he has spoken with you several times and always enjoys the conversations, and that he respects the way you approach marketing and everything else, calling it top notch.",
+    "quote_short": "They know their stuff and they're really nice people. I always enjoy our conversations.",
+    "quote_long": "Jonathan says you know your stuff and that you're also really nice people. He mentions that he has spoken with you several times and always enjoys the conversations, and that he respects the way you approach marketing and everything else, calling it top notch.",
     "rating": null,
     "language": "en",
-    "date": "2024-01-01",
+    "date": "2023-12-31",
     "priority": "high",
     "is_published": true,
     "internal_notes": "Brand-level shoutout for homepage."
