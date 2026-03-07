@@ -1,12 +1,15 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
+import { getTestimonialsForProduct } from '~/data/testimonials';
 
 const metadata = {
   title: 'Consulting',
   description:
     'The Second Design is an education design studio that helps organisations design world-class learning environments for employees, students, and communities.',
 };
+
+const testimonials = getTestimonialsForProduct('consulting');
 ---
 
 <Layout metadata={metadata}>
@@ -389,6 +392,70 @@ const metadata = {
       </div>
     </div>
   </section>
+
+  <!-- Testimonials ******************************** -->
+  {testimonials.length > 0 && (
+    <section class="py-20 bg-white dark:bg-slate-950">
+      <div class="container max-w-5xl mx-auto space-y-12 px-4 sm:px-6">
+        <div class="text-center space-y-4">
+          <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
+            Client stories
+          </p>
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+            What our clients say
+          </h2>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          {testimonials.map((t) => {
+            const person = t.person;
+            const youtubeId = t.source_url?.includes('youtube') || t.source_url?.includes('youtu.be')
+              ? t.source_url.includes('youtu.be')
+                ? t.source_url.split('/').pop()?.split('?')[0]
+                : new URL(t.source_url).searchParams.get('v')
+              : null;
+
+            return (
+              <article class="rounded-2xl p-6 sm:p-8 border bg-slate-50 border-slate-200 shadow-sm dark:bg-slate-900/70 dark:border-slate-800 flex flex-col gap-5">
+                <p class="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">
+                  "{t.quote_short}"
+                </p>
+
+                {t.source_type === 'video' && youtubeId && (
+                  <div class="aspect-video rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${youtubeId}`}
+                      title="Video testimonial"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      class="w-full h-full"
+                    />
+                  </div>
+                )}
+
+                <div class="flex items-center gap-3 mt-auto pt-2">
+                  <div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-sm font-semibold text-slate-700 dark:text-slate-200">
+                    {person?.name ? person.name.charAt(0) : '?'}
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-900 dark:text-slate-50">
+                      {person?.name ?? 'Client'}
+                    </div>
+                    <div class="text-xs text-slate-500 dark:text-slate-400">
+                      {person?.designation}
+                      {person?.designation && person?.company ? ' · ' : ''}
+                      {person?.company}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- CTA ******************************** -->
   <section class="py-24 bg-white dark:bg-slate-950 text-center">
