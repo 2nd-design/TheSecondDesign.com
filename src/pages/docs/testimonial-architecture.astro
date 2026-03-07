@@ -8,7 +8,6 @@ const metadata = {
 };
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1xHTYHuGVZx6U4DwrzRbVZiDdxAbkKYtOJAc6FTA6DO0/edit';
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJXKvFgMqTbfnqxgKgWpNsWtplqPgQV5H5TgIBQlVqNqHvPw/viewform';
 ---
 
 <Layout metadata={metadata}>
@@ -27,9 +26,8 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJXKvFgMqTbfnqxgKgWp
 
       <div class="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg">
         <p class="text-sm text-blue-900 dark:text-blue-100">
-          <strong>Quick links:</strong>
-          <a href={SHEET_URL} target="_blank" rel="noopener noreferrer" class="ml-2 underline">Open Sheet</a> ·
-          <a href={FORM_URL} target="_blank" rel="noopener noreferrer" class="ml-2 underline">Add Testimonial (Form)</a>
+          <strong>Quick link:</strong>
+          <a href={SHEET_URL} target="_blank" rel="noopener noreferrer" class="ml-2 underline">Open Testimonials Sheet</a>
         </p>
       </div>
 
@@ -149,7 +147,7 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJXKvFgMqTbfnqxgKgWp
 
       <h3>3.4 Form Responses 1 tab (Testimonials)</h3>
       <p>
-        This tab receives submissions from the Google Form and contains all testimonial data. Key columns:
+        This tab contains all testimonial data. Key columns:
       </p>
       <ul>
         <li><strong>Select Person</strong> – dropdown to pick existing person or "Add New Person"</li>
@@ -171,13 +169,12 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfJXKvFgMqTbfnqxgKgWp
 
       <h2>4. How to add a testimonial</h2>
       <p>
-        The easiest way is to use the <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Google Form</a>.
-        The form has dropdowns for existing persons, products, and partners, plus fields for adding new people.
+        Add testimonials directly in the Google Sheet:
       </p>
-      <p>After submitting:</p>
       <ol>
-        <li>Open the Google Sheet and go to "Form Responses 1".</li>
-        <li>Review the new row. Set "Publish Immediately?" to Yes if ready.</li>
+        <li>Open the <a href={SHEET_URL} target="_blank" rel="noopener noreferrer">Google Sheet</a> and go to the "Form Responses 1" tab.</li>
+        <li>Add a new row at the bottom with testimonial details.</li>
+        <li>Set "Publish Immediately?" to Yes when ready to go live.</li>
         <li>Click "Website → Deploy to Live Site" in the menu bar.</li>
         <li>Wait 1-2 minutes for the site to rebuild.</li>
       </ol>
