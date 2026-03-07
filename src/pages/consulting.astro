@@ -1,7 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 import { getTestimonialsForProduct } from '~/data/testimonials';
+import fossHackFeedback from '~/assets/images/foss-hack-2025-feedback.png';
 
 const metadata = {
   title: 'Consulting',
@@ -434,8 +436,8 @@ const testimonials = getTestimonialsForProduct('consulting');
         </div>
 
         <figure class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden dark:border-slate-800 dark:bg-slate-900/80">
-          <img
-            src="https://fossunited.org/files/the-second-design-feedback-1.png"
+          <Image
+            src={fossHackFeedback}
             alt="Feedback from FOSS Hack 2025 participants"
             class="w-full h-auto"
           />
