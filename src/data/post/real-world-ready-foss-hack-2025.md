@@ -2,7 +2,7 @@
 publishDate: 2026-02-25T00:00:00Z
 title: "What Happened When We Helped 200+ Students Prepare for FOSS Hack 2025"
 excerpt: "FOSS United asked us to improve project quality at their hackathon. Here's what we learned about helping students figure out what to build."
-image: ~/assets/images/foss-hack-2025-feedback.png
+image: ~/assets/images/foss-hack-code.svg
 category: Real World Ready
 tags:
   - real-world-ready

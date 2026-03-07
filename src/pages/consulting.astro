@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import { getTestimonialsForProduct } from '~/data/testimonials';
-import fossHackFeedback from '~/assets/images/foss-hack-2025-feedback.png';
+import fossHackCode from '~/assets/images/foss-hack-code.svg';
 
 const metadata = {
   title: 'Consulting',
@@ -435,11 +435,11 @@ const testimonials = getTestimonialsForProduct('consulting');
           </a>
         </div>
 
-        <figure class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden dark:border-slate-800 dark:bg-slate-900/80">
-          <Image
-            src={fossHackFeedback}
-            alt="Feedback from FOSS Hack 2025 participants"
-            class="w-full h-auto"
+        <figure class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden dark:border-slate-800 dark:bg-slate-900/80 p-8 flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+          <img
+            src={fossHackCode.src}
+            alt="FOSS Hack code illustration"
+            class="w-full max-w-sm h-auto"
           />
         </figure>
       </div>
