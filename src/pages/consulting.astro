@@ -393,6 +393,57 @@ const testimonials = getTestimonialsForProduct('consulting');
     </div>
   </section>
 
+  <!-- Case Study ******************************** -->
+  <section class="py-20 border-t border-slate-200 bg-slate-50 dark:bg-slate-950/70 dark:border-slate-800">
+    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] items-center">
+        <div class="space-y-6">
+          <div class="space-y-3">
+            <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
+              Case study
+            </p>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+              FOSS Hack 2025 × Real World Ready
+            </h2>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            FOSS United asked us to help students submit better projects at India's largest open-source hackathon.
+            We designed a 90-minute intervention that ran 5 times in the lead-up to the event.
+          </p>
+          <ul class="grid grid-cols-3 gap-4 text-center py-2">
+            <li>
+              <div class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">605</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide">Registrations</div>
+            </li>
+            <li>
+              <div class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">217</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide">Participants</div>
+            </li>
+            <li>
+              <div class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">4.5/5</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide">Rating</div>
+            </li>
+          </ul>
+          <a
+            href="/blog/real-world-ready-foss-hack-2025"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Read the full case study
+            <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+
+        <figure class="rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden dark:border-slate-800 dark:bg-slate-900/80">
+          <img
+            src="https://fossunited.org/files/the-second-design-feedback-1.png"
+            alt="Feedback from FOSS Hack 2025 participants"
+            class="w-full h-auto"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials ******************************** -->
   {testimonials.length > 0 && (
     <section class="py-20 bg-white dark:bg-slate-950">
