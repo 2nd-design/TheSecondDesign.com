@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import partnersData from '~/data/partners.json';
 
 import testimonialsData from '~/data/testimonials.json';
 import personsData from '~/data/persons.json';
@@ -42,13 +43,20 @@ interface Product {
   variant_name?: string | null;
 }
 
+interface Partner {
+  partner_id: string;
+  name: string;
+}
+
 const testimonials = (testimonialsData as Testimonial[]).filter((t) => t.is_published !== false);
 
 const persons = personsData as Person[];
 const products = productsData as Product[];
+const partners = partnersData as Partner[];
 
 const personsMap = new Map(persons.map((p) => [p.person_id, p]));
 const productsMap = new Map(products.map((p) => [p.product_id, p]));
+const partnersMap = new Map(partners.map((p) => [p.partner_id, p]));
 
 function getProductLabelFromId(productId: string | null): string {
   if (!productId || productId === 'generic-brand') {
@@ -130,18 +138,42 @@ function extractYouTubeId(url: string | null): string | null {
   }
 }
 
-// Fisher–Yates shuffle – randomness at build time
-function shuffle<T>(arr: T[]): T[] {
-  const copy = [...arr];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
+function getCaseStudyLink(productId: string | null): string | null {
+  if (productId === 'rwr-foss2025') return '/blog/real-world-ready-foss-hack-2025';
+  // Add more case study links as they're created
+  return null;
 }
 
-// Shuffle all published testimonials
-const shuffledTestimonials = shuffle(testimonials);
+// Get unique filter options
+const uniqueProducts = Array.from(
+  new Set(
+    testimonials.flatMap((t) => t.product_ids || []).filter((id) => id !== 'generic-brand')
+  )
+)
+  .map((id) => ({
+    id,
+    label: getProductLabelFromId(id),
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const uniqueAudienceTypes = Array.from(
+  new Set(testimonials.map((t) => t.audience_type).filter(Boolean))
+)
+  .map((type) => ({
+    id: type!,
+    label: type!.charAt(0).toUpperCase() + type!.slice(1),
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const uniquePartners = Array.from(
+  new Set(testimonials.flatMap((t) => t.partner_ids || []))
+)
+  .map((id) => ({
+    id,
+    label: partnersMap.get(id)?.name || id,
+  }))
+  .filter((p) => p.label)
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <Layout metadata={metadata}>
@@ -150,29 +182,140 @@ const shuffledTestimonials = shuffle(testimonials);
     <div class="container max-w-3xl mx-auto space-y-6 px-4 sm:px-6">
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Testimonials</h1>
       <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-        A mixed wall of voices from partners, organisers, and learners who’ve been through our programs and consulting
-        work.
-      </p>
-      <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        Loaded in random order from our full testimonial library.
+        Voices from partners, organisations, and learners who've been through our programs and consulting work.
       </p>
     </div>
   </section>
 
+  <!-- Filters -->
+  <section class="py-8 bg-slate-50 dark:bg-slate-950/70 border-y border-slate-200 dark:border-slate-800">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="space-y-6">
+        <!-- Product Filter -->
+        <div class="space-y-3">
+          <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Product</h3>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                     bg-blue-600 text-white border-blue-600
+                     dark:bg-blue-500 dark:border-blue-500"
+              data-filter-type="product"
+              data-filter-value="all"
+            >
+              All
+            </button>
+            {
+              uniqueProducts.map((product) => (
+                <button
+                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                         bg-white text-slate-700 border-slate-200
+                         hover:border-blue-600 hover:bg-blue-50
+                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
+                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
+                  data-filter-type="product"
+                  data-filter-value={product.id}
+                >
+                  {product.label}
+                </button>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Audience Type Filter -->
+        <div class="space-y-3">
+          <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Audience</h3>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                     bg-white text-slate-700 border-slate-200
+                     hover:border-blue-600 hover:bg-blue-50
+                     dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
+                     dark:hover:border-blue-500 dark:hover:bg-slate-800"
+              data-filter-type="audience"
+              data-filter-value="all"
+            >
+              All
+            </button>
+            {
+              uniqueAudienceTypes.map((audience) => (
+                <button
+                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                         bg-white text-slate-700 border-slate-200
+                         hover:border-blue-600 hover:bg-blue-50
+                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
+                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
+                  data-filter-type="audience"
+                  data-filter-value={audience.id}
+                >
+                  {audience.label}
+                </button>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Partner Filter -->
+        {uniquePartners.length > 0 && (
+          <div class="space-y-3">
+            <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Partner</h3>
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                       bg-white text-slate-700 border-slate-200
+                       hover:border-blue-600 hover:bg-blue-50
+                       dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
+                       dark:hover:border-blue-500 dark:hover:bg-slate-800"
+                data-filter-type="partner"
+                data-filter-value="all"
+              >
+                All
+              </button>
+              {uniquePartners.map((partner) => (
+                <button
+                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
+                         bg-white text-slate-700 border-slate-200
+                         hover:border-blue-600 hover:bg-blue-50
+                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
+                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
+                  data-filter-type="partner"
+                  data-filter-value={partner.id}
+                >
+                  {partner.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Results count -->
+        <div class="text-sm text-slate-600 dark:text-slate-400">
+          Showing <span id="results-count">{testimonials.length}</span> of {testimonials.length} testimonials
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Masonry wall -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-950/70 border-y border-slate-200 dark:border-slate-800">
+  <section class="py-20 bg-slate-50 dark:bg-slate-950/70">
     <div class="container max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
-      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6">
+      <div id="testimonials-grid" class="columns-1 sm:columns-2 lg:columns-3 gap-6">
         {
-          shuffledTestimonials.map((t) => {
+          testimonials.map((t) => {
             const person = getPerson(t);
             const audienceLabel = getAudienceLabel(t, person);
             const productLabel = getProductLabelForTestimonial(t);
             const sourceLabel = getSourceLabel(t);
             const youtubeId = extractYouTubeId(t.source_url);
+            const caseStudyLink = getCaseStudyLink(t.product_ids?.[0] || null);
 
             return (
-              <article class="mb-6 break-inside-avoid rounded-2xl p-6 sm:p-7 border bg-white border-slate-200 shadow-sm shadow-slate-200/70 dark:bg-slate-900/70 dark:border-slate-800 dark:shadow-black/30 flex flex-col gap-4">
+              <article
+                class="testimonial-card mb-6 break-inside-avoid rounded-2xl p-6 sm:p-7 border bg-white border-slate-200 shadow-sm shadow-slate-200/70 dark:bg-slate-900/70 dark:border-slate-800 dark:shadow-black/30 flex flex-col gap-4"
+                data-product-ids={JSON.stringify(t.product_ids || [])}
+                data-audience-type={t.audience_type || ''}
+                data-partner-ids={JSON.stringify(t.partner_ids || [])}
+              >
                 <div class="flex items-center justify-between gap-3">
                   <div class="text-xs font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">
                     {productLabel}
@@ -184,7 +327,19 @@ const shuffledTestimonials = shuffle(testimonials);
                   </div>
                 </div>
 
-                <p class="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">“{t.quote_short}”</p>
+                <p class="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">"{t.quote_short}"</p>
+
+                {/* Case study link */}
+                {caseStudyLink && (
+                  <div class="mt-1">
+                    <a
+                      href={caseStudyLink}
+                      class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      View case study →
+                    </a>
+                  </div>
+                )}
 
                 {/* Source-specific render */}
                 {t.source_type === 'video' && youtubeId && (
@@ -245,7 +400,7 @@ const shuffledTestimonials = shuffle(testimonials);
                     </div>
                   </div>
 
-                  {t.source_url && !youtubeId && t.source_type !== 'blog' && (
+                  {t.source_url && !youtubeId && t.source_type !== 'blog' && !caseStudyLink && (
                     <a
                       href={t.source_url}
                       target="_blank"
@@ -271,7 +426,7 @@ const shuffledTestimonials = shuffle(testimonials);
         Want to work with The Second Design?
       </h2>
       <p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
-        Whether you’re a college, NGO, foundation, or company, we’re happy to explore building a serious learning
+        Whether you're a college, NGO, foundation, or company, we're happy to explore building a serious learning
         program with you.
       </p>
 
@@ -287,4 +442,70 @@ const shuffledTestimonials = shuffle(testimonials);
       </a>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.testimonial-card');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const resultsCount = document.getElementById('results-count');
+
+      let activeFilters = {
+        product: 'all',
+        audience: 'all',
+        partner: 'all',
+      };
+
+      function filterTestimonials() {
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const productIds = JSON.parse(card.getAttribute('data-product-ids') || '[]');
+          const audienceType = card.getAttribute('data-audience-type') || '';
+          const partnerIds = JSON.parse(card.getAttribute('data-partner-ids') || '[]');
+
+          const matchesProduct =
+            activeFilters.product === 'all' || productIds.includes(activeFilters.product);
+          const matchesAudience =
+            activeFilters.audience === 'all' || audienceType === activeFilters.audience;
+          const matchesPartner =
+            activeFilters.partner === 'all' || partnerIds.includes(activeFilters.partner);
+
+          if (matchesProduct && matchesAudience && matchesPartner) {
+            (card as HTMLElement).style.display = '';
+            visibleCount++;
+          } else {
+            (card as HTMLElement).style.display = 'none';
+          }
+        });
+
+        if (resultsCount) {
+          resultsCount.textContent = visibleCount.toString();
+        }
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filterType = button.getAttribute('data-filter-type') as 'product' | 'audience' | 'partner';
+          const filterValue = button.getAttribute('data-filter-value') || 'all';
+
+          activeFilters[filterType] = filterValue;
+
+          // Update button styles for this filter type
+          filterButtons.forEach((btn) => {
+            if (btn.getAttribute('data-filter-type') === filterType) {
+              if (btn.getAttribute('data-filter-value') === filterValue) {
+                btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-700');
+                btn.classList.add('bg-blue-600', 'dark:bg-blue-500', 'text-white', 'border-blue-600', 'dark:border-blue-500');
+              } else {
+                btn.classList.remove('bg-blue-600', 'dark:bg-blue-500', 'text-white', 'border-blue-600', 'dark:border-blue-500');
+                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-700');
+              }
+            }
+          });
+
+          filterTestimonials();
+        });
+      });
+    });
+  </script>
 </Layout>
