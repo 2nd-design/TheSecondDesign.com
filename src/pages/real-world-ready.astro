@@ -7,7 +7,7 @@ import { getSessionsByGroup, plannedSessionsSummary } from '~/data/sessions';
 // Event images
 import heroImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/workshop-circle-01.jpg';
 import collage1 from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/presenter-stage-01.jpg';
-import collage2 from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-02.jpg';
+import collage2 from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-01.jpg';
 import collage3 from '~/assets/images/real-world-ready/events/btb-summer-camp-feb-2025/session-openair-04.jpg';
 import collage4 from '~/assets/images/real-world-ready/events/btb-summer-camp-feb-2025/recognition-01.jpg';
 import outcomesImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/workshop-hall-01.jpg';
@@ -16,7 +16,16 @@ import nonprofitsImg from '~/assets/images/real-world-ready/events/btb-summer-ca
 import communitiesImg from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-01.jpg';
 import formatsImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/students-working-01.jpg';
 import btbCaseImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/presenter-hall-01.jpg';
-import fossCaseImg from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-02.jpg';
+import fossCaseImg from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-01.jpg';
+
+// Online session images - showing real engagement
+import sessionJan01 from '~/assets/images/real-world-ready/events/btb-online-sessions/session-jan2026-01.png';
+import sessionJan02 from '~/assets/images/real-world-ready/events/btb-online-sessions/session-jan2026-02.png';
+import sessionJan03 from '~/assets/images/real-world-ready/events/btb-online-sessions/session-jan2026-03.png';
+import attendeesDec from '~/assets/images/real-world-ready/events/btb-online-sessions/attendees-dec2025.png';
+import feedbackGeneral from '~/assets/images/real-world-ready/events/btb-online-sessions/feedback-general.png';
+import surveyDec01 from '~/assets/images/real-world-ready/events/btb-online-sessions/survey-dec2025-01.png';
+import surveyDec05 from '~/assets/images/real-world-ready/events/btb-online-sessions/survey-dec2025-05.png';
 
 const readySessions = getSessionsByGroup('ready-and-tested');
 const upcomingSessions = getSessionsByGroup('upcoming');
@@ -219,13 +228,90 @@ const metadata = {
     </div>
   </section>
 
+  <!-- Real engagement proof ******************** -->
+  <section class="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Real Results</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          Not theory. Actual attendee participation.
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Screenshots from live sessions showing attendees actively working, sharing ideas, and giving feedback.
+        </p>
+      </div>
+
+      <!-- Large group photo showing scale -->
+      <div class="mb-12">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
+          <img
+            src={attendeesDec.src}
+            alt="Large group of attendees participating in online Real World Ready session"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+            <div class="max-w-3xl">
+              <p class="text-sm font-semibold tracking-wide text-violet-300 uppercase mb-2">At Scale</p>
+              <h3 class="text-2xl sm:text-3xl font-bold mb-3">
+                Hundreds of attendees, fully engaged
+              </h3>
+              <p class="text-white/90 text-base">
+                From intimate cohorts to large-scale bootcamps with 200+ attendees — Real World Ready maintains engagement and quality at every scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session screenshots grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={sessionJan01.src}
+            alt="Online session with attendees actively participating and sharing work"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Attendees sharing their work in real-time</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={sessionJan03.src}
+            alt="Session showing attendees actively working and collaborating"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Active collaboration during exercises</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={feedbackGeneral.src}
+            alt="Attendee feedback from chat showing engagement and insights"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Real-time feedback during sessions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- How Institutions Get Started ************* -->
   <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">Getting Started</p>
         <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          Bring this to your attendees
+          Bring this to your students
         </h2>
         <p class="text-lg text-slate-600 dark:text-slate-400">
           A low-risk path from first experience to full adoption. Start with a free session and decide from there.
@@ -289,6 +375,75 @@ const metadata = {
           Book a free 'Shitty First Draft' session
           <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured: Shitty First Draft Impact ******* -->
+  <section class="py-20 bg-white dark:bg-slate-950">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">
+          Real Impact
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          What happens in a 'Shitty First Draft' session
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Attendees describe how one 90-minute session shifted their approach to starting, creating, and overcoming perfectionism.
+        </p>
+      </div>
+
+      <div class="relative rounded-3xl overflow-hidden border-2 border-violet-200 dark:border-violet-900 shadow-2xl shadow-violet-500/20">
+        <img
+          src={surveyDec05.src}
+          alt="Detailed attendee feedback showing concrete takeaways and mindset shifts from the Shitty First Draft session"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+          Actual responses from attendees after their first session
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Survey feedback evidence ***************** -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Immediate Feedback</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          63% rated it 10/10
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Real-time reactions and post-session ratings from attendees.
+        </p>
+      </div>
+
+      <!-- Featured: Rating chart showing 63% gave 10/10 -->
+      <div class="mb-8">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl hover:shadow-3xl transition-all duration-300">
+          <img
+            src={surveyDec01.src}
+            alt="Survey showing 63% of attendees rated the session 10/10"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Chat feedback -->
+      <div class="max-w-2xl mx-auto">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={feedbackGeneral.src}
+            alt="Real-time chat feedback: 'yesss really good session', 'yes peak session'"
+            class="w-full h-auto"
+          />
+        </div>
       </div>
     </div>
   </section>
