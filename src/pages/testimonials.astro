@@ -188,110 +188,44 @@ const uniquePartners = Array.from(
   </section>
 
   <!-- Filters -->
-  <section class="py-8 bg-slate-50 dark:bg-slate-950/70 border-y border-slate-200 dark:border-slate-800">
+  <section class="py-6 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
     <div class="container max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="space-y-6">
-        <!-- Product Filter -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Product</h3>
-          <div class="flex flex-wrap gap-2">
-            <button
-              class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                     bg-blue-600 text-white border-blue-600
-                     dark:bg-blue-500 dark:border-blue-500"
-              data-filter-type="product"
-              data-filter-value="all"
-            >
-              All
-            </button>
-            {
-              uniqueProducts.map((product) => (
-                <button
-                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                         bg-white text-slate-700 border-slate-200
-                         hover:border-blue-600 hover:bg-blue-50
-                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
-                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
-                  data-filter-type="product"
-                  data-filter-value={product.id}
-                >
-                  {product.label}
-                </button>
-              ))
-            }
-          </div>
-        </div>
+      <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+        <span class="text-sm text-slate-600 dark:text-slate-400">Filter:</span>
 
-        <!-- Audience Type Filter -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Audience</h3>
-          <div class="flex flex-wrap gap-2">
-            <button
-              class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                     bg-white text-slate-700 border-slate-200
-                     hover:border-blue-600 hover:bg-blue-50
-                     dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
-                     dark:hover:border-blue-500 dark:hover:bg-slate-800"
-              data-filter-type="audience"
-              data-filter-value="all"
-            >
-              All
-            </button>
-            {
-              uniqueAudienceTypes.map((audience) => (
-                <button
-                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                         bg-white text-slate-700 border-slate-200
-                         hover:border-blue-600 hover:bg-blue-50
-                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
-                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
-                  data-filter-type="audience"
-                  data-filter-value={audience.id}
-                >
-                  {audience.label}
-                </button>
-              ))
-            }
-          </div>
-        </div>
+        <select
+          id="product-filter"
+          class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200"
+        >
+          <option value="all">All Products</option>
+          {uniqueProducts.map((product) => (
+            <option value={product.id}>{product.label}</option>
+          ))}
+        </select>
 
-        <!-- Partner Filter -->
-        {uniquePartners.length > 0 && (
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Filter by Partner</h3>
-            <div class="flex flex-wrap gap-2">
-              <button
-                class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                       bg-white text-slate-700 border-slate-200
-                       hover:border-blue-600 hover:bg-blue-50
-                       dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
-                       dark:hover:border-blue-500 dark:hover:bg-slate-800"
-                data-filter-type="partner"
-                data-filter-value="all"
-              >
-                All
-              </button>
-              {uniquePartners.map((partner) => (
-                <button
-                  class="filter-btn px-4 py-2 text-sm rounded-lg border transition
-                         bg-white text-slate-700 border-slate-200
-                         hover:border-blue-600 hover:bg-blue-50
-                         dark:bg-slate-900 dark:text-slate-300 dark:border-slate-700
-                         dark:hover:border-blue-500 dark:hover:bg-slate-800"
-                  data-filter-type="partner"
-                  data-filter-value={partner.id}
-                >
-                  {partner.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        <select
+          id="audience-filter"
+          class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200"
+        >
+          <option value="all">All Audiences</option>
+          {uniqueAudienceTypes.map((audience) => (
+            <option value={audience.id}>{audience.label}</option>
+          ))}
+        </select>
 
-        <!-- Results count -->
-        <div class="text-sm text-slate-600 dark:text-slate-400">
-          Showing <span id="results-count">{testimonials.length}</span> of {testimonials.length} testimonials
-        </div>
+        <select
+          id="partner-filter"
+          class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200"
+        >
+          <option value="all">All Partners</option>
+          {uniquePartners.map((partner) => (
+            <option value={partner.id}>{partner.label}</option>
+          ))}
+        </select>
+
+        <span class="text-xs text-slate-500 dark:text-slate-400 sm:ml-auto">
+          <span id="results-count">{testimonials.length}</span> / {testimonials.length}
+        </span>
       </div>
     </div>
   </section>
@@ -446,29 +380,26 @@ const uniquePartners = Array.from(
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const cards = document.querySelectorAll('.testimonial-card');
-      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productFilter = document.getElementById('product-filter') as HTMLSelectElement;
+      const audienceFilter = document.getElementById('audience-filter') as HTMLSelectElement;
+      const partnerFilter = document.getElementById('partner-filter') as HTMLSelectElement;
       const resultsCount = document.getElementById('results-count');
-
-      let activeFilters = {
-        product: 'all',
-        audience: 'all',
-        partner: 'all',
-      };
 
       function filterTestimonials() {
         let visibleCount = 0;
+
+        const productValue = productFilter?.value || 'all';
+        const audienceValue = audienceFilter?.value || 'all';
+        const partnerValue = partnerFilter?.value || 'all';
 
         cards.forEach((card) => {
           const productIds = JSON.parse(card.getAttribute('data-product-ids') || '[]');
           const audienceType = card.getAttribute('data-audience-type') || '';
           const partnerIds = JSON.parse(card.getAttribute('data-partner-ids') || '[]');
 
-          const matchesProduct =
-            activeFilters.product === 'all' || productIds.includes(activeFilters.product);
-          const matchesAudience =
-            activeFilters.audience === 'all' || audienceType === activeFilters.audience;
-          const matchesPartner =
-            activeFilters.partner === 'all' || partnerIds.includes(activeFilters.partner);
+          const matchesProduct = productValue === 'all' || productIds.includes(productValue);
+          const matchesAudience = audienceValue === 'all' || audienceType === audienceValue;
+          const matchesPartner = partnerValue === 'all' || partnerIds.includes(partnerValue);
 
           if (matchesProduct && matchesAudience && matchesPartner) {
             (card as HTMLElement).style.display = '';
@@ -483,29 +414,9 @@ const uniquePartners = Array.from(
         }
       }
 
-      filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const filterType = button.getAttribute('data-filter-type') as 'product' | 'audience' | 'partner';
-          const filterValue = button.getAttribute('data-filter-value') || 'all';
-
-          activeFilters[filterType] = filterValue;
-
-          // Update button styles for this filter type
-          filterButtons.forEach((btn) => {
-            if (btn.getAttribute('data-filter-type') === filterType) {
-              if (btn.getAttribute('data-filter-value') === filterValue) {
-                btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-700');
-                btn.classList.add('bg-blue-600', 'dark:bg-blue-500', 'text-white', 'border-blue-600', 'dark:border-blue-500');
-              } else {
-                btn.classList.remove('bg-blue-600', 'dark:bg-blue-500', 'text-white', 'border-blue-600', 'dark:border-blue-500');
-                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-700');
-              }
-            }
-          });
-
-          filterTestimonials();
-        });
-      });
+      productFilter?.addEventListener('change', filterTestimonials);
+      audienceFilter?.addEventListener('change', filterTestimonials);
+      partnerFilter?.addEventListener('change', filterTestimonials);
     });
   </script>
 </Layout>
