@@ -144,17 +144,29 @@ function getCaseStudyLink(productId: string | null): string | null {
   return null;
 }
 
-// Get unique filter options
-const uniqueProducts = Array.from(
-  new Set(
-    testimonials.flatMap((t) => t.product_ids || []).filter((id) => id !== 'generic-brand')
-  )
-)
-  .map((id) => ({
-    id,
-    label: getProductLabelFromId(id),
+// Get unique filter options - group by base product name
+const productsByName = new Map<string, string[]>();
+const usedProductIds = new Set(
+  testimonials.flatMap((t) => t.product_ids || []).filter((id) => id !== 'generic-brand')
+);
+
+usedProductIds.forEach((id) => {
+  const product = productsMap.get(id);
+  if (product) {
+    const baseName = product.name;
+    if (!productsByName.has(baseName)) {
+      productsByName.set(baseName, []);
+    }
+    productsByName.get(baseName)!.push(id);
+  }
+});
+
+const uniqueProducts = Array.from(productsByName.entries())
+  .map(([name, ids]) => ({
+    name,
+    ids,
   }))
-  .sort((a, b) => a.label.localeCompare(b.label));
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const uniqueAudienceTypes = Array.from(
   new Set(testimonials.map((t) => t.audience_type).filter(Boolean))
@@ -199,7 +211,7 @@ const uniquePartners = Array.from(
         >
           <option value="all">All Products</option>
           {uniqueProducts.map((product) => (
-            <option value={product.id}>{product.label}</option>
+            <option value={product.ids.join(',')}>{product.name}</option>
           ))}
         </select>
 
@@ -397,7 +409,13 @@ const uniquePartners = Array.from(
           const audienceType = card.getAttribute('data-audience-type') || '';
           const partnerIds = JSON.parse(card.getAttribute('data-partner-ids') || '[]');
 
-          const matchesProduct = productValue === 'all' || productIds.includes(productValue);
+          // Product filter now uses comma-separated list of IDs for product groups
+          let matchesProduct = productValue === 'all';
+          if (!matchesProduct && productValue) {
+            const selectedProductIds = productValue.split(',');
+            matchesProduct = productIds.some((id: string) => selectedProductIds.includes(id));
+          }
+
           const matchesAudience = audienceValue === 'all' || audienceType === audienceValue;
           const matchesPartner = partnerValue === 'all' || partnerIds.includes(partnerValue);
 
