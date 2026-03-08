@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import partnersData from '~/data/partners.json';
 
 import testimonialsData from '~/data/testimonials.json';
 import personsData from '~/data/persons.json';
@@ -43,20 +42,13 @@ interface Product {
   variant_name?: string | null;
 }
 
-interface Partner {
-  partner_id: string;
-  name: string;
-}
-
 const testimonials = (testimonialsData as Testimonial[]).filter((t) => t.is_published !== false);
 
 const persons = personsData as Person[];
 const products = productsData as Product[];
-const partners = partnersData as Partner[];
 
 const personsMap = new Map(persons.map((p) => [p.person_id, p]));
 const productsMap = new Map(products.map((p) => [p.product_id, p]));
-const partnersMap = new Map(partners.map((p) => [p.partner_id, p]));
 
 function getProductLabelFromId(productId: string | null): string {
   if (!productId || productId === 'generic-brand') {
@@ -168,24 +160,6 @@ const uniqueProducts = Array.from(productsByName.entries())
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const uniqueAudienceTypes = Array.from(
-  new Set(testimonials.map((t) => t.audience_type).filter(Boolean))
-)
-  .map((type) => ({
-    id: type!,
-    label: type!.charAt(0).toUpperCase() + type!.slice(1),
-  }))
-  .sort((a, b) => a.label.localeCompare(b.label));
-
-const uniquePartners = Array.from(
-  new Set(testimonials.flatMap((t) => t.partner_ids || []))
-)
-  .map((id) => ({
-    id,
-    label: partnersMap.get(id)?.name || id,
-  }))
-  .filter((p) => p.label)
-  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <Layout metadata={metadata}>
@@ -212,26 +186,6 @@ const uniquePartners = Array.from(
           <option value="all">All Products</option>
           {uniqueProducts.map((product) => (
             <option value={product.ids.join(',')}>{product.name}</option>
-          ))}
-        </select>
-
-        <select
-          id="audience-filter"
-          class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200"
-        >
-          <option value="all">All Audiences</option>
-          {uniqueAudienceTypes.map((audience) => (
-            <option value={audience.id}>{audience.label}</option>
-          ))}
-        </select>
-
-        <select
-          id="partner-filter"
-          class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200"
-        >
-          <option value="all">All Partners</option>
-          {uniquePartners.map((partner) => (
-            <option value={partner.id}>{partner.label}</option>
           ))}
         </select>
 
@@ -393,33 +347,23 @@ const uniquePartners = Array.from(
     document.addEventListener('DOMContentLoaded', () => {
       const cards = document.querySelectorAll('.testimonial-card');
       const productFilter = document.getElementById('product-filter') as HTMLSelectElement;
-      const audienceFilter = document.getElementById('audience-filter') as HTMLSelectElement;
-      const partnerFilter = document.getElementById('partner-filter') as HTMLSelectElement;
       const resultsCount = document.getElementById('results-count');
 
       function filterTestimonials() {
         let visibleCount = 0;
-
         const productValue = productFilter?.value || 'all';
-        const audienceValue = audienceFilter?.value || 'all';
-        const partnerValue = partnerFilter?.value || 'all';
 
         cards.forEach((card) => {
           const productIds = JSON.parse(card.getAttribute('data-product-ids') || '[]');
-          const audienceType = card.getAttribute('data-audience-type') || '';
-          const partnerIds = JSON.parse(card.getAttribute('data-partner-ids') || '[]');
 
-          // Product filter now uses comma-separated list of IDs for product groups
+          // Product filter uses comma-separated list of IDs for product groups
           let matchesProduct = productValue === 'all';
           if (!matchesProduct && productValue) {
             const selectedProductIds = productValue.split(',');
             matchesProduct = productIds.some((id: string) => selectedProductIds.includes(id));
           }
 
-          const matchesAudience = audienceValue === 'all' || audienceType === audienceValue;
-          const matchesPartner = partnerValue === 'all' || partnerIds.includes(partnerValue);
-
-          if (matchesProduct && matchesAudience && matchesPartner) {
+          if (matchesProduct) {
             (card as HTMLElement).style.display = '';
             visibleCount++;
           } else {
@@ -433,8 +377,6 @@ const uniquePartners = Array.from(
       }
 
       productFilter?.addEventListener('change', filterTestimonials);
-      audienceFilter?.addEventListener('change', filterTestimonials);
-      partnerFilter?.addEventListener('change', filterTestimonials);
     });
   </script>
 </Layout>
