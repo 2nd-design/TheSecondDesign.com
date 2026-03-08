@@ -2,7 +2,7 @@
 publishDate: 2026-01-15T00:00:00Z
 title: 'From Idea to App in 30 Days'
 studentName: 'Ananya Krishnan'
-excerpt: 'A second-year CS student who stopped waiting for the perfect idea and shipped a transit app used by 200 people in her city.'
+excerpt: 'A second-year CS attendee who stopped waiting for the perfect idea and shipped a transit app used by 200 people in her city.'
 videoUrl: ''
 tags:
   - building
@@ -18,7 +18,7 @@ Ananya had been "planning to build something" for over a year. She had notebooks
 
 - **Week 1**: Built the ugliest possible version. Just a list of bus times hardcoded into a Flutter app. No backend, no design.
 - **Week 2**: Shared it with 10 classmates. Got brutal feedback. Half the times were wrong. She fixed them.
-- **Week 3**: Added a simple feedback form. Students started requesting more routes. She added three.
+- **Week 3**: Added a simple feedback form. Attendees started requesting more routes. She added three.
 - **Week 4**: Published to the Play Store. Posted about it on LinkedIn. 200 downloads in the first week.
 
 ## What Happened

@@ -45,7 +45,7 @@ export type RawTestimonial = {
   product_ids: string[];
   partner_ids: string[];
   scope: 'brand' | 'product';
-  audience_type: 'partner' | 'student' | 'client' | 'collaborator' | 'generic';
+  audience_type: 'partner' | 'attendee' | 'client' | 'collaborator' | 'generic';
   source_type: 'text' | 'video' | 'image' | 'tweet' | 'email' | 'blog';
   source_url: string | null;
   image_url: string | null;

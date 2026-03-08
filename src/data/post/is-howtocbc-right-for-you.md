@@ -30,6 +30,6 @@ Subscribe to the newsletter to stay tuned!
 
 ## What are Cohort Based Courses?
 
-Cohort Based Courses (CBCs) are a new format of online education that combines live, interactive sessions with community-driven learning. Unlike traditional MOOCs where students learn in isolation, CBCs bring together a group of students who progress through the material together, creating accountability, peer support, and richer learning experiences.
+Cohort Based Courses (CBCs) are a new format of online education that combines live, interactive sessions with community-driven learning. Unlike traditional MOOCs where attendees learn in isolation, CBCs bring together a group of attendees who progress through the material together, creating accountability, peer support, and richer learning experiences.
 
 CBCs have been shown to have significantly higher completion rates than traditional online courses, largely due to the social elements and structured timeline they provide.

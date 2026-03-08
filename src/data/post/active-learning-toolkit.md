@@ -24,7 +24,7 @@ This time we present one of the most effective sets of tools available to a teac
 
 [Active Learning](https://cft.vanderbilt.edu/guides-sub-pages/active-learning/) is a set of techniques of learning and teaching that engage learners through various tasks apart from simply listening to lectures.
 
-These methods increase student participation in class and improve engagement with the learning material.
+These methods increase attendee participation in class and improve engagement with the learning material.
 
 Because of the forgetting curve.
 

@@ -18,16 +18,16 @@ Welcome to our fortnightly newsletter howtocbc Pulse, where we share tried and t
 
 In this opening letter, we want to introduce ourselves and tell you why we are excited about CBCs!
 
-Online education has been around in a massive way (think MOOCs) for at least a decade now. But time has shown that when it comes to true learning outcomes for students, online education has simply [not delivered on its promise](https://www.brookings.edu/research/promises-and-pitfalls-of-online-education/).
+Online education has been around in a massive way (think MOOCs) for at least a decade now. But time has shown that when it comes to true learning outcomes for attendees, online education has simply [not delivered on its promise](https://www.brookings.edu/research/promises-and-pitfalls-of-online-education/).
 
 
 ## Hello fellow CBC creator,
 
-This story is swiftly and surely turning around with the emergence and growth of online learning experiences that foster student communities through live and interactive sessions. This evolution of online learning as it becomes truly internet native has been captured by the catch-all phrase [Cohort Based Courses](https://future.a16z.com/cohort-based-courses/).
+This story is swiftly and surely turning around with the emergence and growth of online learning experiences that foster attendee communities through live and interactive sessions. This evolution of online learning as it becomes truly internet native has been captured by the catch-all phrase [Cohort Based Courses](https://future.a16z.com/cohort-based-courses/).
 
-We’re a team of an educator and an edtech company founder. In the past decade we’ve learned a lot through our collective experience of teaching over 10,000 students at traditional schools and universities, and CBCs.
+We’re a team of an educator and an edtech company founder. In the past decade we’ve learned a lot through our collective experience of teaching over 10,000 attendees at traditional schools and universities, and CBCs.
 
-We believe CBCs are the format that can help teachers deliver optimum student outcomes and achieve true financial freedom in the process.
+We believe CBCs are the format that can help teachers deliver optimum attendee outcomes and achieve true financial freedom in the process.
 
 
 ## What are Cohort Based Courses?

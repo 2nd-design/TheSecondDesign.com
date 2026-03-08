@@ -112,7 +112,7 @@
   {
     "person_id": "quincy-p",
     "name": "Quincy P",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -123,7 +123,7 @@
   {
     "person_id": "chris-b",
     "name": "Chris B",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -145,7 +145,7 @@
   {
     "person_id": "abhith-b",
     "name": "Abhith B",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -156,7 +156,7 @@
   {
     "person_id": "amrid",
     "name": "Amrid",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -167,7 +167,7 @@
   {
     "person_id": "deva",
     "name": "Deva",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -178,7 +178,7 @@
   {
     "person_id": "arjun-vibeesh",
     "name": "Arjun Vibeesh",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -189,7 +189,7 @@
   {
     "person_id": "niranjana",
     "name": "Niranjana",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -200,7 +200,7 @@
   {
     "person_id": "r-sreehari",
     "name": "R Sreehari",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -211,7 +211,7 @@
   {
     "person_id": "suha-shajahan",
     "name": "Suha Shajahan",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -222,7 +222,7 @@
   {
     "person_id": "arsha",
     "name": "Arsha",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -233,7 +233,7 @@
   {
     "person_id": "shreya-sajalan",
     "name": "Shreya Sajalan",
-    "designation": "",
+    "designation": "Attendee",
     "company": "",
     "partner_id": null,
     "linkedin_url": null,
@@ -244,7 +244,7 @@
   {
     "person_id": "nahidah",
     "name": "Nahidah",
-    "designation": "Student",
+    "designation": "Attendee",
     "company": "Jyothi Engineering College",
     "partner_id": null,
     "linkedin_url": null,

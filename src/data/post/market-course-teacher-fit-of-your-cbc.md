@@ -25,7 +25,7 @@ In today’s issue we dive deep into one of the most important but often overloo
 
 The earliest decision you’ll make as a first time Course Creator is 1️⃣ what are you going to teach and 2️⃣to whom. Not spending enough time testing and iterating on this key decision is one of the most common mistakes🥲 first time course creators end up making.
 
-While there’s tons of literature to help you figure out how to make your course🏋🏼‍♂️ and reach more students 👯‍♂️, there’s very little information out there to guide you through this critical decision.
+While there’s tons of literature to help you figure out how to make your course🏋🏼‍♂️ and reach more attendees 👯‍♂️, there’s very little information out there to guide you through this critical decision.
 
 However, if we are to contextualise this problem into the world of tech startups, this is a celebrated concept called ‘Product Market Fit’. To put in simple words, this is what it boils down to;
 

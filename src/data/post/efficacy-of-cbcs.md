@@ -23,7 +23,7 @@ Are you aware that CBCs have [very high completion rates](https://medium.com/beh
 
 ## Hello Teacher-Creators!
 
-Over the past decade, our team has taught over 10,000 students across different subjects and cohort sizes. We present our insights below.
+Over the past decade, our team has taught over 10,000 attendees across different subjects and cohort sizes. We present our insights below.
 
 We have organised our data into the following graph displaying completion rate as a function of cohort size.
 
@@ -32,9 +32,9 @@ Our data is compared to the average completion rates of MOOCs. We assume a consi
 
 ## Why are CBCs more effective than MOOCs?
 
-As you can see, the efficacy of CBCs is near perfect for smaller batch sizes. We see a dramatic drop in completion rates while scaling from around 40 to 100 students per cohort and a slow downward taper there onwards. But CBCs continue to be at least twice as effective as MOOCs even for large cohorts of 1000+ students.
+As you can see, the efficacy of CBCs is near perfect for smaller batch sizes. We see a dramatic drop in completion rates while scaling from around 40 to 100 attendees per cohort and a slow downward taper there onwards. But CBCs continue to be at least twice as effective as MOOCs even for large cohorts of 1000+ attendees.
 
-At cohort sizes of 10,000 students and greater, the benefits of CBCs can be seen to diminish. At this scale, the educator has very little direct contact with the students and is, therefore, ignorant of their individual needs. Furthermore, the educator has limited ability to make any considerable impact in their learning process.
+At cohort sizes of 10,000 attendees and greater, the benefits of CBCs can be seen to diminish. At this scale, the educator has very little direct contact with the attendees and is, therefore, ignorant of their individual needs. Furthermore, the educator has limited ability to make any considerable impact in their learning process.
 
 Let’s now try and understand why CBCs have better outcomes than MOOCs.
 

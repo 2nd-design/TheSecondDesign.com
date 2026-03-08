@@ -14,11 +14,11 @@ metadata:
   canonical: https://theseconddesign.com/blog/tech-stack-for-your-cohort-based-course
 ---
 
-Delivering a transformational learning experience for your students in a Cohort Based Course requires well defined [Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906) 💥, effective application of [Active Learning](https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109) 🏃 techniques and a stellar community 👯.
+Delivering a transformational learning experience for your attendees in a Cohort Based Course requires well defined [Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906) 💥, effective application of [Active Learning](https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109) 🏃 techniques and a stellar community 👯.
 
 Modern tech tooling ⚙️ takes these time-tested teaching methods and puts them on overdrive.
 
-In this letter, we help you find the right tech stack for your course so that you can deliver outstanding results for your students in the most seamless manner.
+In this letter, we help you find the right tech stack for your course so that you can deliver outstanding results for your attendees in the most seamless manner.
 
 
 ## Hi everybody!
@@ -37,25 +37,25 @@ File Storage: Most of these platforms do not support uploading large files. Uplo
 
 📝 Marketing & Logistics
 
-A lot of the tech tools will be specific to the subject you are teaching. If you’re teaching a CBC on online stock trading, having access to an online trading account is a must for your students.
+A lot of the tech tools will be specific to the subject you are teaching. If you’re teaching a CBC on online stock trading, having access to an online trading account is a must for your attendees.
 
 In addition to infrastructural factors  specific to your course, here are 3 main factors  to consider while choosing the tech stack for your CBC.
 
 📈 Phase of your CBC
 
-If you’re in the idea / validation phase of CBC, we recommend using free no-code tools that do a ‘good enough’ job to get you started. Prioritise your core value proposition and student outcomes over using more sophisticated tooling.
+If you’re in the idea / validation phase of CBC, we recommend using free no-code tools that do a ‘good enough’ job to get you started. Prioritise your core value proposition and attendee outcomes over using more sophisticated tooling.
 
-Once you run a few cohorts and get student feedback you can incorporate more advanced tools as needed. This takes the pressure off you in the beginning, as well as lowers on-boarding time for your students.
+Once you run a few cohorts and get attendee feedback you can incorporate more advanced tools as needed. This takes the pressure off you in the beginning, as well as lowers on-boarding time for your attendees.
 
-👩‍🎓 Your Student Profile
+👩‍🎓 Your Attendee Profile
 
-Go where your audience is. While choosing tools for use-cases like community, go with something that your audience is already familiar with. Avoid wasting time onboarding your students to a completely new tool that they’re unfamiliar with.
+Go where your audience is. While choosing tools for use-cases like community, go with something that your audience is already familiar with. Avoid wasting time onboarding your attendees to a completely new tool that they’re unfamiliar with.
 
-If your students are teenagers or web3 enthusiasts, your community tool had better be Discord.
+If your attendees are teenagers or web3 enthusiasts, your community tool had better be Discord.
 
 On the other hand, if you expect your audience not to be tech savvy, then go gentle with your range of tools, and choose options like WhatsApp, Telegram or Facebook groups.
 
-Students taking a technology course would need to get familiar with a tool like Slack that is a widely used communication tool in tech companies.
+Attendees taking a technology course would need to get familiar with a tool like Slack that is a widely used communication tool in tech companies.
 
 Similarly, make payments, video conferencing and access to content as frictionless as possible.
 
@@ -75,15 +75,15 @@ For an exhaustive list of tools used by CBC creators - both beginner and advance
 
 An updated and detailed list of tools used by beginner and advanced CBC creators.
 
-⏲️ Ensure that all your students are completely onboarded to all the tools you will be using during the course before you begin the course. The learning curve for getting comfortable with tools is to be accounted for separately in addition to the subject/topic you intend to teach in your CBC.
+⏲️ Ensure that all your attendees are completely onboarded to all the tools you will be using during the course before you begin the course. The learning curve for getting comfortable with tools is to be accounted for separately in addition to the subject/topic you intend to teach in your CBC.
 
-💲 Many of the more sophisticated tools come with either a freemium version or a free trial period, which you can avail to see if the service works for you and your students. Be aware that the free versions are generally feature restricted. So take that into account when planning your sessions.
+💲 Many of the more sophisticated tools come with either a freemium version or a free trial period, which you can avail to see if the service works for you and your attendees. Be aware that the free versions are generally feature restricted. So take that into account when planning your sessions.
 
-🎯 Remember, the goal of using tech tools is always to deliver the best outcomes for your learners. NOT to showcase your tech skills. Use technology to make the learning journey smoother, richer and more rewarding. If a certain tool causes frustration for your students, rethink its use immediately.
+🎯 Remember, the goal of using tech tools is always to deliver the best outcomes for your learners. NOT to showcase your tech skills. Use technology to make the learning journey smoother, richer and more rewarding. If a certain tool causes frustration for your attendees, rethink its use immediately.
 
 Applications for our next [cohort](https://maven.com/howtocbc/designacbc) are open.
 
-Come join us and learn how to design an unforgettable and impactful Cohort Based Course for your students.
+Come join us and learn how to design an unforgettable and impactful Cohort Based Course for your attendees.
 
 Share with a friend or a colleague who might benefit from the program.
 

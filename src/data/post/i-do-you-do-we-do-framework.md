@@ -30,7 +30,7 @@ It’s been only two days since the lecture, and this realization is dawning upo
 You’re not alone.
 
 
-## 1️⃣ Introduce the concept. Ensure you don’t overload students with information about the topic. Focus on giving them just the right amount of information so that they can immediately start applying it.
+## 1️⃣ Introduce the concept. Ensure you don’t overload attendees with information about the topic. Focus on giving them just the right amount of information so that they can immediately start applying it.
 
 Everyone struggles with this problem, and it’s been extensively documented by [Psychologist Herman Ebbinghaus](https://www.sanidasacademy.com/journal/2020/2/28/the-forgetting-curve).
 
@@ -39,7 +39,7 @@ Most teachers make the common mistake of focussing their lecture largely on ‘W
 What’s often left for later as home exercise is the ‘How’. Arguably, the ‘How’ is the most important component of learning something new, one that directly deals with;
 
 
-## 2️⃣ Right after the concept is introduced, demonstrate how you have used the framework yourselves, or, take students through a popular example in a step by step manner. That’s the ‘I Do’ bit.
+## 2️⃣ Right after the concept is introduced, demonstrate how you have used the framework yourselves, or, take attendees through a popular example in a step by step manner. That’s the ‘I Do’ bit.
 
 🤹🏽 How will the topic be applied in a particular context?
 
@@ -48,9 +48,9 @@ What’s often left for later as home exercise is the ‘How’. Arguably, the �
 ❌ What are the common mistakes made while applying?
 
 
-## 3️⃣ Give time for your students to attempt it on their own. Share the necessary guidelines in detail and ensure they’ve access to all resources to look up while making an attempt. That’s the ‘You Do’ bit.
+## 3️⃣ Give time for your attendees to attempt it on their own. Share the necessary guidelines in detail and ensure they’ve access to all resources to look up while making an attempt. That’s the ‘You Do’ bit.
 
-Many times, teachers will spend a good amount of time focussing on explaining a particular topic, spending very little time with students on the exact steps to effectively apply it.
+Many times, teachers will spend a good amount of time focussing on explaining a particular topic, spending very little time with attendees on the exact steps to effectively apply it.
 
 🤝 Both the above problems can be effectively addressed by using a framework called ‘I Do, You Do, We Do 🤝’, a very effective meta framework that is built using the principles of [Active Learning](https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109), a topic which we’ve addressed in a previous edition.
 
@@ -63,16 +63,16 @@ In the spirit of [Anne Lamott’s shitty first drafts](https://wrd.as.uky.edu/si
 
 Note: We’ll use the topic of ‘[Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906)’ to illustrate how we apply the ‘I Do, You Do, We Do 🤝’ framework in the context of our [2 week program on designing Cohort Based Courses](https://maven.com/howtocbc).
 
-Example: Right after we introduced the topic of [Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906), we share the draft of the Learner outcome for [our 2 week program](https://maven.com/howtocbc) with our students. This effectively illustrates how we used best practices to formulate Learner Outcomes ourselves.
+Example: Right after we introduced the topic of [Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906), we share the draft of the Learner outcome for [our 2 week program](https://maven.com/howtocbc) with our attendees. This effectively illustrates how we used best practices to formulate Learner Outcomes ourselves.
 
 
 ## At HowToCBC We have found the ‘I Do, You Do, We Do 🤝’ framework to be immensely successful in our sessions.
 
-Example: We urge our students to open their Course Workbook and write down the shitty first draft of their Learner Outcome statements. All the required resources and examples are provided in the workbook itself. The activity is time-boxed.
+Example: We urge our attendees to open their Course Workbook and write down the shitty first draft of their Learner Outcome statements. All the required resources and examples are provided in the workbook itself. The activity is time-boxed.
 
 Send them to Breakout rooms on Zoom and encourage them to give feedback to each other. Give them pointers on how to give good feedback.
 
-Pick and choose a few students and ask them to share their shitty first drafts. Give them real time detailed feedback on (1) what they did well (2) what and how they can improve upon etc. Do this in the presence of other students so they can observe and learn. Encourage the students to give feedback to each other. Allow the students to iterate in real time based on the feedback you and other students give. That’s the ‘We Do’ bit!
+Pick and choose a few attendees and ask them to share their shitty first drafts. Give them real time detailed feedback on (1) what they did well (2) what and how they can improve upon etc. Do this in the presence of other attendees so they can observe and learn. Encourage the attendees to give feedback to each other. Allow the attendees to iterate in real time based on the feedback you and other attendees give. That’s the ‘We Do’ bit!
 
 Note: Our method above is a slight modification of the [I do We Do You Do framework](https://strategiesforspecialinterventions.weebly.com/i-do-we-do-you-do.html). The modification is mainly done for two reasons
 
@@ -82,7 +82,7 @@ Note: Our method above is a slight modification of the [I do We Do You Do framew
 
 Thus, we can design Learning Units to allow for one or more iterations of learning to occur.
 
-Demonstration of the entire loop in class is a powerful device. It demystifies the process of learning for the student. It equips them to go out of class and continue to iterate on their learning.
+Demonstration of the entire loop in class is a powerful device. It demystifies the process of learning for the attendee. It equips them to go out of class and continue to iterate on their learning.
 
 We’ve come up with a workbook with exercises and illustrative examples for the ‘I Do, You Do, We Do 🤝’ and many other useful [Active Learning](https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109) frameworks for online courses.
 

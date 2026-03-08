@@ -27,7 +27,7 @@ Conventional teaching is largely teacher-centred, theory-focused and lecture-bas
 
 This system is a relic of the past. In the pre-printing press age, the oral tradition was the most efficient way to transfer expertise, art and culture. The classroom was the only avenue for learners to access it. The internet 🌎 has now brought video, audio and text content right to our fingertips.
 
-So what are the needs of students today, and consequently, the role of the teacher?
+So what are the needs of attendees today, and consequently, the role of the teacher?
 
 Learners need a safe space to learn, explore ideas, try things, make mistakes and have support when they face obstacles.
 
@@ -35,13 +35,13 @@ The main task of the teacher is to construct this learning environment. ⚒️
 
 To this end, educators across the world are actively moving from teacher centred lecturing to task based teaching.
 
-Performing tasks helps the students approach the topic from their perspective, rather than following an order pre-set by the teacher or textbook authors. Thus, students have greater freedom and control over how they learn.
+Performing tasks helps the attendees approach the topic from their perspective, rather than following an order pre-set by the teacher or textbook authors. Thus, attendees have greater freedom and control over how they learn.
 
 Further, there are endless interventions and feedback loops 🔄 to support the learner when they hit roadblocks.
 
-However, LCT does not imply a student can do whatever they want. The teacher, leveraging their years of domain expertise, carefully designs a syllabus. They curate / create content setting broad boundaries within which a student is free to explore their own learning path.
+However, LCT does not imply a attendee can do whatever they want. The teacher, leveraging their years of domain expertise, carefully designs a syllabus. They curate / create content setting broad boundaries within which a attendee is free to explore their own learning path.
 
-Another task for the teacher is providing mentorship and support to students. This can be done via a community 🤝🏽of open and approachable peers and mentors with varied experiences who can widen and enhance the learning experience.
+Another task for the teacher is providing mentorship and support to attendees. This can be done via a community 🤝🏽of open and approachable peers and mentors with varied experiences who can widen and enhance the learning experience.
 
 In the next newsletters we will expand on the learning paths and interventions we’ve discovered from our implementation of LCT in our CBCs. Stay tuned. 🙂
 
@@ -49,7 +49,7 @@ In the next newsletters we will expand on the learning paths and interventions w
 
 Kevon embodies the idea of Learner Centred Teaching.
 
-He is one of the best self-taught students of the Build In Public movement, sharing all his learnings in public. This makes Kevon the best guide to anyone who wishes to learn the ropes of the BIP movement. The upcoming cohort starts on 28 February 2022. And there are [scholarships](https://tally.so/r/mB9k5n) too!
+He is one of the best self-taught attendees of the Build In Public movement, sharing all his learnings in public. This makes Kevon the best guide to anyone who wishes to learn the ropes of the BIP movement. The upcoming cohort starts on 28 February 2022. And there are [scholarships](https://tally.so/r/mB9k5n) too!
 
 *Application deadline: Feb 21, 2022 (Mon) 23:59 PST
 
