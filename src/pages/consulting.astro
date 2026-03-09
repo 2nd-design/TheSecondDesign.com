@@ -462,7 +462,7 @@ const testimonials = getTestimonialsForProduct('consulting');
           <img
             src={fossHackCode.src}
             alt="FOSS Hack code illustration"
-            class="w-full max-w-sm h-auto"
+            class="w-full max-w-[180px] h-auto"
           />
         </figure>
       </div>
@@ -532,6 +532,158 @@ const testimonials = getTestimonialsForProduct('consulting');
       </div>
     </section>
   )}
+
+  <!-- Pricing ******************************** -->
+  <section class="py-24 border-y border-slate-200 bg-slate-50 dark:bg-slate-950/70 dark:border-slate-800">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center space-y-4 mb-16">
+        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">Pricing</p>
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">How we price our work</h2>
+        <p class="text-slate-700 dark:text-slate-300 max-w-3xl mx-auto text-base leading-relaxed">
+          Transparent, stage-based pricing that matches how serious learning programs actually get built.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <!-- Stage 1: Discovery -->
+        <div class="relative rounded-2xl p-8 space-y-5 border bg-white border-slate-200 shadow-sm dark:bg-slate-900/70 dark:border-slate-800">
+          <div class="absolute -top-3 left-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">
+              Stage 1
+            </span>
+          </div>
+
+          <div class="inline-flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-500 p-2.5 dark:bg-blue-500/15 dark:text-blue-300">
+            <Icon name="tabler:search" class="w-5 h-5" />
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-2">Discovery</h3>
+            <p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">~3 weeks</p>
+          </div>
+
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            Before we design anything, we spend three weeks understanding your learners, constraints, and gaps.
+          </p>
+
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+              <span>Deep diagnostic calls & documentation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+              <span>Learner profiling & needs analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+              <span>Clear recommendations & proposal</span>
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+            <p class="text-xs font-semibold text-slate-900 dark:text-slate-50 uppercase tracking-wide">Fixed diagnostic fee</p>
+          </div>
+        </div>
+
+        <!-- Stage 2: Design + Pilot -->
+        <div class="relative rounded-2xl p-8 space-y-5 border-2 bg-white border-violet-200 shadow-lg dark:bg-slate-900/70 dark:border-violet-900/50">
+          <div class="absolute -top-3 left-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-violet-500 text-white">
+              Stage 2
+            </span>
+          </div>
+
+          <div class="inline-flex items-center justify-center rounded-xl bg-violet-500/10 text-violet-500 p-2.5 dark:bg-violet-500/15 dark:text-violet-300">
+            <Icon name="tabler:rocket" class="w-5 h-5" />
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-2">Design + Pilot</h3>
+            <p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">One-time build</p>
+          </div>
+
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            We design the program, run a pilot with real learners, and iterate based on feedback.
+          </p>
+
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-violet-500 flex-shrink-0 mt-0.5" />
+              <span>Custom curriculum & session design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-violet-500 flex-shrink-0 mt-0.5" />
+              <span>Pilot delivery with your learners</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-violet-500 flex-shrink-0 mt-0.5" />
+              <span>Refinement based on real feedback</span>
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+            <p class="text-xs font-semibold text-slate-900 dark:text-slate-50 uppercase tracking-wide">Creation cost + first delivery</p>
+          </div>
+        </div>
+
+        <!-- Stage 3: Scale -->
+        <div class="relative rounded-2xl p-8 space-y-5 border bg-white border-slate-200 shadow-sm dark:bg-slate-900/70 dark:border-slate-800">
+          <div class="absolute -top-3 left-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-white">
+              Stage 3
+            </span>
+          </div>
+
+          <div class="inline-flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 p-2.5 dark:bg-emerald-500/15 dark:text-emerald-300">
+            <Icon name="tabler:repeat" class="w-5 h-5" />
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-2">Scale</h3>
+            <p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">Ongoing</p>
+          </div>
+
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            You've proven it works. Now we run the program repeatedly for different cohorts.
+          </p>
+
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+              <span>Delivery to new cohorts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+              <span>Continuous refinement</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="tabler:check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+              <span>Flexible scheduling</span>
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+            <p class="text-xs font-semibold text-slate-900 dark:text-slate-50 uppercase tracking-wide">Per-session delivery fee</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Lower than Stage 2)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing note -->
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        <div class="rounded-2xl p-6 bg-blue-50 border border-blue-100 dark:bg-blue-950/20 dark:border-blue-900/30">
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            <span class="font-semibold text-slate-900 dark:text-slate-50">Not sure where to start?</span> Most organizations begin with a diagnostic sprint. It's low-risk, gives you clarity, and helps us both decide if we're the right fit.
+          </p>
+        </div>
+
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          Exact fees depend on scope, cohort size, and complexity. We'll give you a clear proposal after the intro call.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA ******************************** -->
   <section class="py-24 bg-white dark:bg-slate-950 text-center">
