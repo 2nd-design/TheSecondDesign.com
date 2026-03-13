@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Agency</title>
+  <link rel="stylesheet" href="css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+<!-- ============================================================
+     SLIDE 1 — Title
+     ============================================================ -->
+<section class="slide title-slide layout-center active" id="slide-1">
+  <div class="slide-content">
+    <p class="label" style="letter-spacing:0.2em; margin-bottom:16px;">A Visual Exploration</p>
+    <h1>Understanding Agency</h1>
+    <p class="subtitle" style="margin-top:12px;">From Action to Autonomy</p>
+    <div class="anim-step" style="margin-top:48px;">
+      <p style="font-size:clamp(18px,2vw,28px); color:var(--text-secondary); max-width:700px; margin:0 auto;">
+        What does it mean for a system—biological or artificial—to act with purpose?
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 2 — The Spectrum
+     ============================================================ -->
+<section class="slide layout-center" id="slide-2">
+  <div class="slide-content">
+    <h2>The Spectrum of Agency</h2>
+    <p style="margin-bottom:40px;">Agency exists on a continuum, from simple reactions to sophisticated autonomy.</p>
+
+    <div class="agency-spectrum">
+      <div class="anim-step agency-level">
+        <div class="level-number" style="background:var(--accent-red);">1</div>
+        <h3>Reactive</h3>
+        <p>Responds to stimuli without planning</p>
+        <div class="example">A thermostat turning on when temperature drops</div>
+      </div>
+
+      <div class="anim-step agency-level">
+        <div class="level-number" style="background:var(--accent-orange);">2</div>
+        <h3>Goal-Directed</h3>
+        <p>Acts toward predefined objectives</p>
+        <div class="example">A chess program maximizing win probability</div>
+      </div>
+
+      <div class="anim-step agency-level">
+        <div class="level-number" style="background:var(--accent-cyan);">3</div>
+        <h3>Adaptive</h3>
+        <p>Learns and adjusts strategies over time</p>
+        <div class="example">An AI assistant improving from feedback</div>
+      </div>
+
+      <div class="anim-step agency-level">
+        <div class="level-number" style="background:var(--accent-green);">4</div>
+        <h3>Autonomous</h3>
+        <p>Sets own goals and determines actions</p>
+        <div class="example">A human choosing their life direction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 3 — The Components
+     ============================================================ -->
+<section class="slide layout-split" id="slide-3">
+  <div class="slide-text">
+    <h2>Components of Agency</h2>
+    <p>True agency requires the integration of multiple capabilities.</p>
+
+    <div class="anim-step component-box">
+      <div class="component-icon" style="color:var(--accent-cyan);">🎯</div>
+      <h3>Intentionality</h3>
+      <p>The capacity to represent goals and pursue them</p>
+    </div>
+
+    <div class="anim-step component-box">
+      <div class="component-icon" style="color:var(--accent-orange);">🧠</div>
+      <h3>World Model</h3>
+      <p>Internal representation of how the environment works</p>
+    </div>
+
+    <div class="anim-step component-box">
+      <div class="component-icon" style="color:var(--accent-green);">⚡</div>
+      <h3>Action Space</h3>
+      <p>Set of possible interventions in the world</p>
+    </div>
+
+    <div class="anim-step component-box">
+      <div class="component-icon" style="color:var(--accent-purple);">🔄</div>
+      <h3>Feedback Loop</h3>
+      <p>Ability to perceive outcomes and adjust behavior</p>
+    </div>
+  </div>
+
+  <div class="slide-visual">
+    <div class="diagram-container">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Central circle -->
+        <circle cx="200" cy="200" r="60" fill="var(--accent-cyan)" opacity="0.2" stroke="var(--accent-cyan)" stroke-width="2"/>
+        <text x="200" y="205" fill="var(--text-primary)" font-size="18" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">AGENCY</text>
+
+        <!-- Orbiting components -->
+        <g class="orbit-element">
+          <circle cx="200" cy="100" r="35" fill="var(--accent-orange)" opacity="0.15" stroke="var(--accent-orange)" stroke-width="2"/>
+          <text x="200" y="100" fill="var(--text-primary)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Goals</text>
+        </g>
+
+        <g class="orbit-element">
+          <circle cx="300" cy="200" r="35" fill="var(--accent-green)" opacity="0.15" stroke="var(--accent-green)" stroke-width="2"/>
+          <text x="300" y="200" fill="var(--text-primary)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Action</text>
+        </g>
+
+        <g class="orbit-element">
+          <circle cx="200" cy="300" r="35" fill="var(--accent-purple)" opacity="0.15" stroke="var(--accent-purple)" stroke-width="2"/>
+          <text x="200" y="300" fill="var(--text-primary)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Feedback</text>
+        </g>
+
+        <g class="orbit-element">
+          <circle cx="100" cy="200" r="35" fill="var(--accent-pink)" opacity="0.15" stroke="var(--accent-pink)" stroke-width="2"/>
+          <text x="100" y="200" fill="var(--text-primary)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Model</text>
+        </g>
+
+        <!-- Connecting lines -->
+        <line x1="200" y1="140" x2="200" y2="135" stroke="var(--text-dim)" stroke-width="1" opacity="0.5"/>
+        <line x1="260" y1="200" x2="265" y2="200" stroke="var(--text-dim)" stroke-width="1" opacity="0.5"/>
+        <line x1="200" y1="260" x2="200" y2="265" stroke="var(--text-dim)" stroke-width="1" opacity="0.5"/>
+        <line x1="140" y1="200" x2="135" y2="200" stroke="var(--text-dim)" stroke-width="1" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- UI Controls -->
+<div class="nav-hint">Right arrow to advance · Left arrow to go back · F for fullscreen</div>
+<div class="progress-bar"></div>
+<div class="slide-counter"></div>
+<div class="step-indicator"></div>
+
+<script src="js/presentation.js"></script>
+</body>
+</html>
