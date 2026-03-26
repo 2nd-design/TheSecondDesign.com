@@ -16,7 +16,6 @@ import nonprofitsImg from '~/assets/images/real-world-ready/events/btb-summer-ca
 import communitiesImg from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-01.jpg';
 import formatsImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/students-working-01.jpg';
 import btbCaseImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/presenter-hall-01.jpg';
-import fossCaseImg from '~/assets/images/real-world-ready/events/btb-online-sessions/zoom-session-01.jpg';
 
 // Online session images - showing real engagement
 import sessionJan01 from '~/assets/images/real-world-ready/events/btb-online-sessions/session-jan2026-01.png';
@@ -305,6 +304,27 @@ const metadata = {
     </div>
   </section>
 
+  <!-- Sessions ********************************* -->
+  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Sessions</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          Topics we cover
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Each session is a focused, practice-heavy experience designed around a specific problem attendees face.
+        </p>
+      </div>
+
+      <SessionAccordion
+        readySessions={readySessions}
+        upcomingSessions={upcomingSessions}
+        plannedSummary={plannedSessionsSummary}
+      />
+    </div>
+  </section>
+
   <!-- How Institutions Get Started ************* -->
   <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
@@ -571,27 +591,6 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Sessions ********************************* -->
-  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
-    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Sessions</p>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          Topics we cover
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
-          Each session is a focused, practice-heavy experience designed around a specific problem attendees face.
-        </p>
-      </div>
-
-      <SessionAccordion
-        readySessions={readySessions}
-        upcomingSessions={upcomingSessions}
-        plannedSummary={plannedSessionsSummary}
-      />
-    </div>
-  </section>
-
   <!-- Who it's for ***************************** -->
   <section class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
@@ -799,68 +798,62 @@ const metadata = {
 
       <div class="grid lg:grid-cols-2 gap-8 mb-16">
         <!-- Featured case study -->
-        <div class="group relative rounded-3xl overflow-hidden p-8 md:p-10">
-          <img
-            src={btbCaseImg.src}
-            alt="Beyond the Blueprint workshop presenter"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/95 to-emerald-700/90"></div>
-          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div class="absolute bottom-0 left-0 w-48 h-48 bg-emerald-400/20 rounded-full blur-2xl"></div>
-          <div class="relative flex flex-col h-full min-h-[300px]">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-medium text-white w-fit mb-4 backdrop-blur-sm">
-              <Icon name="tabler:star" class="w-3 h-3" />
-              Featured
-            </div>
-            <div class="flex-1"></div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">Beyond the Blueprint</h3>
-              <p class="text-emerald-100 mb-3">TinkerHub Foundation</p>
-              <p class="text-white/80 text-sm leading-relaxed max-w-lg mb-4">
-                A multi-session series for undergraduates across Kerala. 170+ attendees explored agency, career design, and navigating their future.
-              </p>
-              <a
-                href="/beyond-the-blueprint"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:gap-3 transition-all"
-              >
-                Read case study
-                <Icon name="tabler:arrow-right" class="w-4 h-4" />
-              </a>
+        <a
+          href="/beyond-the-blueprint"
+          class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 block hover:-translate-y-1"
+        >
+          <div class="h-52 relative overflow-hidden">
+            <img
+              src={btbCaseImg.src}
+              alt="Beyond the Blueprint workshop presenter"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-semibold">
+                <Icon name="tabler:star" class="w-3 h-3" />
+                Featured
+              </span>
             </div>
           </div>
-        </div>
+          <div class="p-7">
+            <p class="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase mb-2">TinkerHub Foundation</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Beyond the Blueprint</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+              A multi-session series for undergraduates across Kerala. 170+ attendees explored agency, career design, and navigating their future.
+            </p>
+            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold transition-colors">
+              Read case study
+              <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </div>
+        </a>
 
         <!-- FOSS Hack -->
-        <div class="group relative rounded-3xl overflow-hidden p-8 md:p-10">
-          <img
-            src={fossCaseImg.src}
-            alt="FOSS Hack online session"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-600/95 to-blue-700/90"></div>
-          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/20 rounded-full blur-2xl"></div>
-          <div class="relative flex flex-col h-full min-h-[300px]">
-            <div class="flex-1"></div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">FOSS Hack 2025</h3>
-              <p class="text-blue-100 mb-3">FOSS United</p>
-              <p class="text-white/80 text-sm leading-relaxed max-w-lg mb-4">
-                Helping attendee developers choose meaningful problems, scope projects realistically, and showcase their work, from README to demos.
-              </p>
-              <a
-                href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:gap-3 transition-all"
-              >
-                Read on FOSS United
-                <Icon name="tabler:external-link" class="w-4 h-4" />
-              </a>
-            </div>
+        <a
+          href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design"
+          target="_blank"
+          rel="noreferrer"
+          class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 block hover:-translate-y-1"
+        >
+          <div class="h-52 relative overflow-hidden">
+            <img
+              src="https://api.microlink.io/?url=https%3A%2F%2Ffossunited.org%2Fblog%2Ffoss-events%2Ffosshack2025-the-second-design&screenshot=true&meta=false&embed=screenshot.url"
+              alt="FOSS Hack 2025 — FOSS United blog post"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
-        </div>
+          <div class="p-7">
+            <p class="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-2">FOSS United</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">FOSS Hack 2025</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+              Helping attendee developers choose meaningful problems, scope projects realistically, and showcase their work, from README to demos.
+            </p>
+            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-colors">
+              Read on FOSS United
+              <Icon name="tabler:external-link" class="w-4 h-4" />
+            </span>
+          </div>
+        </a>
       </div>
 
       <!-- Video testimonial -->
