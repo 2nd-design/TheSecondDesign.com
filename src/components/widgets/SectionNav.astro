@@ -1,0 +1,238 @@
+---
+interface Chapter {
+  label: string;
+  id: string;
+  sections: string[];
+}
+
+const chapters: Chapter[] = [
+  { label: 'The Program',       id: 'ch-program',  sections: ['sec-intro', 'sec-approach'] },
+  { label: 'What Students Get', id: 'ch-outcomes', sections: ['sec-outcomes'] },
+  { label: 'Topics',            id: 'ch-sessions', sections: ['sec-sessions'] },
+  { label: 'Partners',          id: 'ch-who',      sections: ['sec-who', 'sec-case-studies'] },
+  { label: 'Get Started',       id: 'ch-start',    sections: ['sec-get-started', 'sec-formats', 'sec-free-session'] },
+  { label: 'Testimonials',      id: 'ch-proof',    sections: ['sec-sfd-session', 'sec-pow', 'sec-testimonials', 'sec-ratings', 'sec-real-results'] },
+];
+---
+
+<!-- Sticky section nav bar -->
+<nav
+  id="section-nav"
+  class="fixed left-0 right-0 z-30 translate-y-0 transition-all duration-300 opacity-0 pointer-events-none"
+  aria-label="Page sections"
+>
+  <div class="bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <!-- Desktop: chapter pills -->
+      <div class="hidden md:flex items-center gap-1 py-2 overflow-x-auto" style="scrollbar-width:none">
+        {chapters.map((ch) => (
+          <button
+            class="section-pill flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
+            data-chapter={ch.id}
+            data-target={ch.sections[0]}
+          >
+            {ch.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Mobile: current label + menu icon -->
+      <div class="flex md:hidden items-center justify-between py-3">
+        <span id="mob-label" class="text-sm font-semibold text-slate-900 dark:text-white">
+          {chapters[0].label}
+        </span>
+        <button
+          id="mob-open"
+          aria-label="Open sections menu"
+          class="p-1.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile bottom drawer -->
+<div id="mob-drawer-wrap" class="fixed inset-0 z-50 pointer-events-none" aria-hidden="true">
+  <!-- Backdrop -->
+  <div id="mob-backdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+
+  <!-- Sheet -->
+  <div id="mob-sheet" class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-3xl translate-y-full transition-transform duration-300 ease-out shadow-2xl">
+    <!-- Handle -->
+    <div class="flex justify-center pt-3 pb-1">
+      <div class="w-10 h-1 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 pt-3 pb-4 border-b border-slate-100 dark:border-slate-800">
+      <p class="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 dark:text-slate-500">Jump to section</p>
+      <button id="mob-close" aria-label="Close" class="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Links -->
+    <ul class="px-4 py-3 space-y-1">
+      {chapters.map((ch) => (
+        <li>
+          <button
+            class="mob-link w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl text-left transition-colors hover:bg-slate-50 dark:hover:bg-slate-800"
+            data-chapter={ch.id}
+            data-target={ch.sections[0]}
+          >
+            <span class="mob-dot w-2.5 h-2.5 rounded-full bg-slate-200 dark:bg-slate-700 flex-shrink-0 transition-colors" data-chapter={ch.id}></span>
+            <span class="text-base font-medium text-slate-700 dark:text-slate-300">{ch.label}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+    <div class="h-safe-area-inset-bottom pb-4"></div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    // ── Data ──────────────────────────────────────────────────────────────────
+    const chapters = [
+      { label: 'The Program',       id: 'ch-program',  sections: ['sec-intro', 'sec-approach'] },
+      { label: 'What Students Get', id: 'ch-outcomes', sections: ['sec-outcomes'] },
+      { label: 'Topics',            id: 'ch-sessions', sections: ['sec-sessions'] },
+      { label: 'Partners',          id: 'ch-who',      sections: ['sec-who', 'sec-case-studies'] },
+      { label: 'Get Started',       id: 'ch-start',    sections: ['sec-get-started', 'sec-formats', 'sec-free-session'] },
+      { label: 'Testimonials',      id: 'ch-proof',    sections: ['sec-sfd-session', 'sec-pow', 'sec-testimonials', 'sec-ratings', 'sec-real-results'] },
+    ];
+
+    const sectionToChapter: Record<string, string> = {};
+    chapters.forEach(ch => ch.sections.forEach(s => { sectionToChapter[s] = ch.id; }));
+
+    // ── Elements ──────────────────────────────────────────────────────────────
+    const nav          = document.getElementById('section-nav')!;
+    const mobLabel     = document.getElementById('mob-label')!;
+    const mobOpen      = document.getElementById('mob-open')!;
+    const mobClose     = document.getElementById('mob-close')!;
+    const mobBackdrop  = document.getElementById('mob-backdrop')!;
+    const mobSheet     = document.getElementById('mob-sheet')!;
+    const mobWrap      = document.getElementById('mob-drawer-wrap')!;
+    const siteHeader   = document.querySelector('header');
+
+    // ── Position nav below site header ────────────────────────────────────────
+    function positionNav() {
+      const h = siteHeader ? siteHeader.getBoundingClientRect().height : 64;
+      nav.style.top = `${h}px`;
+    }
+    positionNav();
+    window.addEventListener('resize', positionNav);
+
+    // ── Show / hide nav after hero leaves ─────────────────────────────────────
+    const hero = document.getElementById('sec-intro');
+    if (hero) {
+      new IntersectionObserver(([e]) => {
+        if (!e.isIntersecting) {
+          nav.classList.remove('opacity-0', 'pointer-events-none');
+          nav.classList.add('opacity-100');
+        } else {
+          nav.classList.add('opacity-0', 'pointer-events-none');
+          nav.classList.remove('opacity-100');
+        }
+      }, { threshold: 0 }).observe(hero);
+    }
+
+    // ── Active chapter tracking ───────────────────────────────────────────────
+    let active = chapters[0].id;
+
+    function setActive(chapterId: string) {
+      if (chapterId === active) return;
+      active = chapterId;
+
+      // Desktop pills
+      document.querySelectorAll<HTMLElement>('.section-pill').forEach(pill => {
+        const on = pill.dataset.chapter === chapterId;
+        pill.classList.toggle('bg-slate-900',            on);
+        pill.classList.toggle('dark:bg-white',           on);
+        pill.classList.toggle('text-white',              on);
+        pill.classList.toggle('dark:text-slate-900',     on);
+        pill.classList.toggle('text-slate-500',         !on);
+        pill.classList.toggle('dark:text-slate-400',    !on);
+      });
+
+      // Mobile label
+      const ch = chapters.find(c => c.id === chapterId);
+      if (ch) mobLabel.textContent = ch.label;
+
+      // Mobile drawer dots
+      document.querySelectorAll<HTMLElement>('.mob-dot').forEach(dot => {
+        const on = dot.dataset.chapter === chapterId;
+        dot.classList.toggle('bg-violet-500',           on);
+        dot.classList.toggle('scale-125',               on);
+        dot.classList.toggle('bg-slate-200',           !on);
+        dot.classList.toggle('dark:bg-slate-700',      !on);
+      });
+    }
+
+    // Observe all sections
+    const allIds = chapters.flatMap(ch => ch.sections);
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const ch = sectionToChapter[entry.target.id];
+          if (ch) setActive(ch);
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+
+    allIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) sectionObserver.observe(el);
+    });
+
+    // ── Click to scroll ───────────────────────────────────────────────────────
+    function scrollTo(targetId: string) {
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      const offset = (siteHeader?.offsetHeight ?? 64) + (nav.offsetHeight ?? 48) + 8;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll<HTMLElement>('.section-pill, .mob-link').forEach(btn => {
+      btn.addEventListener('click', () => {
+        scrollTo(btn.dataset.target!);
+        closeDrawer();
+      });
+    });
+
+    // ── Mobile drawer ─────────────────────────────────────────────────────────
+    function openDrawer() {
+      mobWrap.classList.remove('pointer-events-none');
+      mobWrap.setAttribute('aria-hidden', 'false');
+      mobBackdrop.classList.replace('opacity-0', 'opacity-100');
+      mobSheet.classList.remove('translate-y-full');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      mobWrap.classList.add('pointer-events-none');
+      mobWrap.setAttribute('aria-hidden', 'true');
+      mobBackdrop.classList.replace('opacity-100', 'opacity-0');
+      mobSheet.classList.add('translate-y-full');
+      document.body.style.overflow = '';
+    }
+
+    mobOpen.addEventListener('click', openDrawer);
+    mobClose.addEventListener('click', closeDrawer);
+    mobBackdrop.addEventListener('click', closeDrawer);
+
+    // Swipe down to close
+    let startY = 0;
+    mobSheet.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    mobSheet.addEventListener('touchend', e => {
+      if (e.changedTouches[0].clientY - startY > 60) closeDrawer();
+    }, { passive: true });
+  })();
+</script>

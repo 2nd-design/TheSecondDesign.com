@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 import SessionAccordion from '~/components/widgets/SessionAccordion.astro';
+import SectionNav from '~/components/widgets/SectionNav.astro';
 import { getSessionsByGroup, plannedSessionsSummary } from '~/data/sessions';
 
 // Event images
@@ -37,8 +38,10 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero ************************************* -->
-  <section class="relative overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
+  <SectionNav />
+
+  <!-- 1. Hero ************************************* -->
+  <section id="sec-intro" class="relative overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
     <!-- Animated gradient background -->
     <div class="absolute inset-0">
       <div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-slate-950 to-emerald-600/20"></div>
@@ -86,7 +89,7 @@ const metadata = {
               <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#case-studies"
+              href="#sec-case-studies"
               class="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/10 text-white
                      px-8 py-4 text-sm font-semibold backdrop-blur-sm
                      hover:bg-white/10 transition-all duration-300"
@@ -125,8 +128,8 @@ const metadata = {
     </div>
   </section>
 
-  <!-- What makes it different ***************** -->
-  <section class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative overflow-hidden">
+  <!-- 2. More Details - The Approach ***************** -->
+  <section id="sec-approach" class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent"></div>
 
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
@@ -227,254 +230,13 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Real engagement proof ******************** -->
-  <section class="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
-    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Real Results</p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
-          Not theory. Actual attendee participation.
-        </h2>
-        <p class="text-base text-slate-600 dark:text-slate-400">
-          Screenshots from live sessions showing attendees actively working, sharing ideas, and giving feedback.
-        </p>
-      </div>
-
-      <!-- Large group photo showing scale -->
-      <div class="mb-12">
-        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
-          <img
-            src={attendeesDec.src}
-            alt="Large group of attendees participating in online Real World Ready session"
-            class="w-full h-auto"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <div class="max-w-3xl">
-              <p class="text-sm font-semibold tracking-wide text-violet-300 uppercase mb-2">At Scale</p>
-              <h3 class="text-2xl sm:text-3xl font-bold mb-3">
-                Hundreds of attendees, fully engaged
-              </h3>
-              <p class="text-white/90 text-base">
-                From intimate cohorts to large-scale bootcamps with 200+ attendees — Real World Ready maintains engagement and quality at every scale.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Session screenshots grid -->
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-          <img
-            src={sessionJan01.src}
-            alt="Online session with attendees actively participating and sharing work"
-            class="w-full h-auto"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <p class="text-white text-sm font-medium">Attendees sharing their work in real-time</p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-          <img
-            src={sessionJan03.src}
-            alt="Session showing attendees actively working and collaborating"
-            class="w-full h-auto"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <p class="text-white text-sm font-medium">Active collaboration during exercises</p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-          <img
-            src={feedbackGeneral.src}
-            alt="40 participants in an online Real World Ready session on March 2026"
-            class="w-full h-auto"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <p class="text-white text-sm font-medium">Real-time feedback during sessions</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sessions ********************************* -->
-  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
-    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Sessions</p>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          Topics we cover
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
-          Each session is a focused, practice-heavy experience designed around a specific problem attendees face.
-        </p>
-      </div>
-
-      <SessionAccordion
-        readySessions={readySessions}
-        upcomingSessions={upcomingSessions}
-        plannedSummary={plannedSessionsSummary}
-      />
-    </div>
-  </section>
-
-  <!-- How Institutions Get Started ************* -->
-  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
-    <div class="container max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">Getting Started</p>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          Bring this to your students
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
-          A low-risk path from first experience to full adoption. Start with a free session and decide from there.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <!-- Step 1 -->
-        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <Icon name="tabler:player-play" class="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-            </div>
-            <div>
-              <span class="text-xs font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase">Step 1</span>
-              <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Free</span>
-            </div>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Experience</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            We run a free online '<a href="/open-source" class="underline hover:no-underline">Shitty First Draft</a>' session for your attendees. They participate, faculty observe. No logistics, no cost.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-              <Icon name="tabler:eye-check" class="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            </div>
-            <span class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Step 2</span>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Evaluate</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Your team reflects on the fit. Did attendees engage? Does the approach match your goals? No pressure, no commitment.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
-              <Icon name="tabler:arrow-fork" class="w-6 h-6 text-violet-600 dark:text-violet-400" />
-            </div>
-            <span class="text-xs font-bold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Step 3</span>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Deepen</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Choose what works for you: on-campus workshops or an online series. We tailor sessions to your context.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a
-          href="/contact"
-          class="group inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 text-white
-                 px-8 py-4 text-sm font-semibold shadow-lg shadow-emerald-500/20
-                 hover:bg-emerald-700 transition-all duration-300 hover:scale-105"
-        >
-          Book a free 'Shitty First Draft' session
-          <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured: Shitty First Draft Impact ******* -->
-  <section class="py-20 bg-white dark:bg-slate-950">
-    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">
-          Real Impact
-        </p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
-          What happens in a 'Shitty First Draft' session
-        </h2>
-        <p class="text-base text-slate-600 dark:text-slate-400">
-          Attendees describe how one 90-minute session shifted their approach to starting, creating, and overcoming perfectionism.
-        </p>
-      </div>
-
-      <div class="relative rounded-3xl overflow-hidden border-2 border-violet-200 dark:border-violet-900 shadow-2xl shadow-violet-500/20">
-        <img
-          src={surveyDec05.src}
-          alt="Detailed attendee feedback showing concrete takeaways and mindset shifts from the Shitty First Draft session"
-          class="w-full h-auto"
-        />
-      </div>
-
-      <div class="text-center mt-8">
-        <p class="text-sm text-slate-500 dark:text-slate-400 italic">
-          Actual responses from attendees after their first session
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Survey feedback evidence ***************** -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
-    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Immediate Feedback</p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
-          63% rated it 10/10
-        </h2>
-        <p class="text-base text-slate-600 dark:text-slate-400">
-          Real-time reactions and post-session ratings from attendees.
-        </p>
-      </div>
-
-      <!-- Featured: Rating chart showing 63% gave 10/10 -->
-      <div class="mb-8">
-        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl hover:shadow-3xl transition-all duration-300">
-          <img
-            src={surveyDec01.src}
-            alt="Survey showing 63% of attendees rated the session 10/10"
-            class="w-full h-auto"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
-        </div>
-      </div>
-
-      <!-- Chat feedback -->
-      <div class="max-w-2xl mx-auto">
-        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-          <img
-            src={feedbackGeneral.src}
-            alt="Real-time chat feedback: 'yesss really good session', 'yes peak session'"
-            class="w-full h-auto"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bento grid section ********************** -->
-  <section class="py-24 sm:py-32 bg-white dark:bg-slate-950">
+  <!-- 3. What attendees walk away with ************** -->
+  <section id="sec-outcomes" class="py-24 sm:py-32 bg-white dark:bg-slate-950">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Outcomes</p>
         <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          What attendees walk away with
+          What students walk away with
         </h2>
       </div>
 
@@ -547,52 +309,29 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Attendee testimonials ********************** -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
-    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
+  <!-- 4. Topics we cover ********************************* -->
+  <section id="sec-sessions" class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">What attendees say</p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
-          In their words
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Sessions</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          Topics we cover
         </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Each session is a focused, practice-heavy experience designed around a specific problem students face.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
-          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
-          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"The workshop was truly engaging and enriching."</blockquote>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">Nahidah, Jyothi Engineering College</p>
-        </div>
-
-        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
-          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
-          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"Your first step can be chaotic and still be valid."</blockquote>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">Arjun Vibeesh, Beyond the Blueprint</p>
-        </div>
-
-        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
-          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
-          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"I never knew I could write a poem in 5 minutes."</blockquote>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">Deva, Beyond the Blueprint</p>
-        </div>
-
-        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
-          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
-          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"It's not about being perfect. It's about starting."</blockquote>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">Arsha, Beyond the Blueprint</p>
-        </div>
-
-        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
-          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
-          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"Gave 9/10 only because the session was too short – I didn't want it to end."</blockquote>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">Niranjana, Beyond the Blueprint</p>
-        </div>
-      </div>
+      <SessionAccordion
+        readySessions={readySessions}
+        upcomingSessions={upcomingSessions}
+        plannedSummary={plannedSessionsSummary}
+      />
     </div>
   </section>
 
-  <!-- Who it's for ***************************** -->
-  <section class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative">
+  <!-- 5. Who's it for ***************************** -->
+  <section id="sec-who" class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">Partners</p>
@@ -689,7 +428,7 @@ const metadata = {
             <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center -mt-14 mb-4 shadow-lg shadow-blue-500/30 relative border-4 border-white dark:border-slate-900">
               <Icon name="tabler:users-group" class="w-7 h-7 text-white" />
             </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Attendee & Tech Communities</h3>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Student & Tech Communities</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
               Turn curiosity into projects and real opportunities.
             </p>
@@ -713,8 +452,165 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Program formats *************************** -->
-  <section class="py-24 sm:py-32 bg-slate-950 text-white relative overflow-hidden">
+  <!-- 6. See it in action **************************** -->
+  <section id="sec-case-studies" class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50 relative">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">In the wild</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          See it in action
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Real World Ready runs under co-branded names with partners. The DNA stays the same: real-world learning, initiative, execution.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Featured case study -->
+        <a
+          href="/blog/beyond-the-blueprint"
+          class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 block hover:-translate-y-1"
+        >
+          <div class="h-52 relative overflow-hidden">
+            <img
+              src={btbCaseImg.src}
+              alt="Beyond the Blueprint workshop presenter"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-semibold">
+                <Icon name="tabler:star" class="w-3 h-3" />
+                Featured
+              </span>
+            </div>
+          </div>
+          <div class="p-7">
+            <p class="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase mb-2">TinkerHub Foundation</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Beyond the Blueprint</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+              A multi-session series for undergraduates across Kerala. 170+ students explored agency, career design, and navigating their future.
+            </p>
+            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold transition-colors">
+              Read case study
+              <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </div>
+        </a>
+
+        <!-- FOSS Hack — with Rahul's video blended in -->
+        <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
+          <div class="relative overflow-hidden">
+            <div class="aspect-video bg-slate-900">
+              <iframe
+                src="https://www.youtube.com/embed/vd9-Ayw7WNU"
+                title="Sai Rahul Poruri on Real World Ready at FOSS Hack 2025"
+                class="w-full h-full"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="p-7">
+            <p class="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-2">FOSS United</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">FOSS Hack 2025</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-2">
+              Helping developers choose meaningful problems, scope projects realistically, and showcase their work, from README to demos.
+            </p>
+            <p class="text-slate-500 dark:text-slate-500 text-xs italic mb-6">
+              Sai Rahul Poruri, CEO of FOSS United, on how Real World Ready shaped FOSS Hack 2025.
+            </p>
+            <a
+              href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-colors"
+            >
+              Read on FOSS United
+              <Icon name="tabler:external-link" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. How to bring this to students ************* -->
+  <section id="sec-get-started" class="py-24 sm:py-32 bg-white dark:bg-slate-950">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">Getting Started</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          Bring this to your students
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          A low-risk path from first experience to full adoption. Start with a free session and decide from there.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Step 1 -->
+        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <Icon name="tabler:player-play" class="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <div>
+              <span class="text-xs font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase">Step 1</span>
+              <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Experience</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            We run a free online '<a href="/open-source" class="underline hover:no-underline">Shitty First Draft</a>' session for your students. They participate, faculty observe. No logistics, no cost.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+              <Icon name="tabler:eye-check" class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            </div>
+            <span class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Step 2</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Evaluate</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Your team reflects on the fit. Did students engage? Does the approach match your goals? No pressure, no commitment.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+              <Icon name="tabler:arrow-fork" class="w-6 h-6 text-violet-600 dark:text-violet-400" />
+            </div>
+            <span class="text-xs font-bold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Step 3</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Deepen</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Choose what works for you: on-campus workshops or an online series. We tailor sessions to your context.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a
+          href="/contact"
+          class="group inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 text-white
+                 px-8 py-4 text-sm font-semibold shadow-lg shadow-emerald-500/20
+                 hover:bg-emerald-700 transition-all duration-300 hover:scale-105"
+        >
+          Book a free 'Shitty First Draft' session
+          <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Flexible formats *************************** -->
+  <section id="sec-formats" class="py-24 sm:py-32 bg-slate-950 text-white relative overflow-hidden">
     <!-- Background pattern -->
     <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-violet-500/20 to-transparent blur-3xl"></div>
@@ -783,102 +679,134 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Case studies **************************** -->
-  <section id="case-studies" class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative">
-    <div class="container max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">In the wild</p>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          See it in action
+  <!-- 9. Get a free SFD session (CTA) **************** -->
+  <section id="sec-free-session" class="py-24 sm:py-32 bg-slate-950 relative overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[150px]"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+    </div>
+
+    <div class="relative container max-w-7xl mx-auto px-4 sm:px-6">
+      <!-- Section label -->
+      <div class="text-center mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-400 uppercase mb-4">The Starting Point</p>
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+          Start with a Shitty First Draft
         </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
-          Real World Ready runs under co-branded names with partners. The DNA stays the same: real-world learning, initiative, execution.
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+          Before anything else, we run one session. 90 minutes. No slides for them to copy, no perfect template to follow — just a prompt and a deadline.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8 mb-16">
-        <!-- Featured case study -->
-        <a
-          href="/beyond-the-blueprint"
-          class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 block hover:-translate-y-1"
-        >
-          <div class="h-52 relative overflow-hidden">
-            <img
-              src={btbCaseImg.src}
-              alt="Beyond the Blueprint workshop presenter"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute top-4 left-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-semibold">
-                <Icon name="tabler:star" class="w-3 h-3" />
-                Featured
-              </span>
+      <!-- Two-column: video + copy -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+        <!-- Video -->
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-violet-500/30 via-blue-500/10 to-emerald-500/20 rounded-3xl blur-2xl"></div>
+          <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
+            <div class="aspect-video bg-slate-900">
+              <iframe
+                src="https://www.youtube.com/embed/zc3okOwRB3s"
+                title="Shitty First Draft — full session recording"
+                class="w-full h-full"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             </div>
           </div>
-          <div class="p-7">
-            <p class="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase mb-2">TinkerHub Foundation</p>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Beyond the Blueprint</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              A multi-session series for undergraduates across Kerala. 170+ attendees explored agency, career design, and navigating their future.
+          <p class="text-center text-sm text-slate-500 mt-4">Full recording of a live Shitty First Draft session</p>
+        </div>
+
+        <!-- Copy -->
+        <div class="space-y-8">
+          <div class="space-y-5">
+            <p class="text-xl text-slate-200 leading-relaxed">
+              The session works because it removes the biggest blocker: the belief that you need to get it right before you start.
             </p>
-            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold transition-colors">
-              Read case study
+            <p class="text-lg text-slate-400 leading-relaxed">
+              In 90 minutes, attendees produce something — a first draft of a project idea, a pitch, a plan — and discover that starting messy is still starting. The room changes.
+            </p>
+            <p class="text-lg text-slate-400 leading-relaxed">
+              63% rate it 10/10. The rest wish it was longer.
+            </p>
+          </div>
+
+          <!-- Open-source callout -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center mt-0.5">
+                <Icon name="tabler:brand-open-source" class="w-5 h-5 text-emerald-400" />
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-1">Open Source</p>
+                <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                  We've released the entire session publicly — slides, facilitator notes, exercises. Anyone can run it for free. We run it too, and we're happy to bring it to your learners.
+                </p>
+                <a
+                  href="/open-source/shitty-first-draft"
+                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  View the open-source session
+                  <Icon name="tabler:arrow-right" class="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/contact"
+              class="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-slate-900
+                     px-8 py-4 text-sm font-semibold shadow-2xl shadow-white/20
+                     hover:bg-slate-100 transition-all duration-300 hover:scale-105"
+            >
+              Book a free session for your students
               <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </div>
-        </a>
-
-        <!-- FOSS Hack -->
-        <a
-          href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design"
-          target="_blank"
-          rel="noreferrer"
-          class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 block hover:-translate-y-1"
-        >
-          <div class="h-52 relative overflow-hidden">
-            <img
-              src="https://api.microlink.io/?url=https%3A%2F%2Ffossunited.org%2Fblog%2Ffoss-events%2Ffosshack2025-the-second-design&screenshot=true&meta=false&embed=screenshot.url"
-              alt="FOSS Hack 2025 — FOSS United blog post"
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div class="p-7">
-            <p class="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-2">FOSS United</p>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">FOSS Hack 2025</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              Helping attendee developers choose meaningful problems, scope projects realistically, and showcase their work, from README to demos.
-            </p>
-            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-colors">
-              Read on FOSS United
-              <Icon name="tabler:external-link" class="w-4 h-4" />
-            </span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Video testimonial -->
-      <div class="max-w-4xl mx-auto">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-300/50 dark:shadow-black/30">
-          <div class="aspect-video bg-slate-900">
-            <iframe
-              src="https://www.youtube.com/embed/vd9-Ayw7WNU"
-              title="Real World Ready testimonial"
-              class="w-full h-full"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            </a>
+            <p class="text-slate-500 text-sm self-center">No logistics. No cost. No commitment.</p>
           </div>
         </div>
-        <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
-          Sai Rahul Poruri, CEO of FOSS United, on how Real World Ready shaped FOSS Hack 2025.
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. What happens in a SFD session ************** -->
+  <section id="sec-sfd-session" class="py-20 bg-white dark:bg-slate-950">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">
+          Real Impact
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          What happens in a 'Shitty First Draft' session
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Attendees describe how one 90-minute session shifted their approach to starting, creating, and overcoming perfectionism.
+        </p>
+      </div>
+
+      <div class="relative rounded-3xl overflow-hidden border-2 border-violet-200 dark:border-violet-900 shadow-2xl shadow-violet-500/20">
+        <img
+          src={surveyDec05.src}
+          alt="Detailed attendee feedback showing concrete takeaways and mindset shifts from the Shitty First Draft session"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+          Actual responses from attendees after their first session
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Proof of Work teaser ***************** -->
-  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
+  <!-- 11. Proof of Work teaser ***************** -->
+  <section id="sec-pow" class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
     <div class="container max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto">
         <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Proof of Work</p>
@@ -904,34 +832,152 @@ const metadata = {
     </div>
   </section>
 
-  <!-- CTA *************************************** -->
-  <section class="py-24 sm:py-32 bg-slate-950 relative overflow-hidden">
-    <!-- Background effects -->
-    <div class="absolute inset-0">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/20 rounded-full blur-[150px]"></div>
-      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px]"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+  <!-- 12. In their words ************************** -->
+  <section id="sec-testimonials" class="py-20 bg-white dark:bg-slate-950">
+    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">What students say</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          In their words
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
+          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
+          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"The workshop was truly engaging and enriching."</blockquote>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Nahidah, Jyothi Engineering College</p>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
+          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
+          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"Your first step can be chaotic and still be valid."</blockquote>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Arjun Vibeesh, Beyond the Blueprint</p>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
+          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
+          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"I never knew I could write a poem in 5 minutes."</blockquote>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Deva, Beyond the Blueprint</p>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
+          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
+          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"It's not about being perfect. It's about starting."</blockquote>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Arsha, Beyond the Blueprint</p>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 p-6 border border-slate-200 dark:border-slate-700">
+          <Icon name="tabler:quote" class="w-6 h-6 text-slate-300 dark:text-slate-600 mb-3" />
+          <blockquote class="text-base font-medium text-slate-900 dark:text-white mb-4">"Gave 9/10 only because the session was too short – I didn't want it to end."</blockquote>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">Niranjana, Beyond the Blueprint</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="relative container max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
-        Start with a free session
-        <span class="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent"> for your attendees</span>
-      </h2>
-      <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-        We'll run a free '<a href="/open-source" class="underline hover:no-underline">Shitty First Draft</a>' session online for your attendees. They participate, your team observes. No logistics, no cost, no commitment. See what happens when attendees actually start.
-      </p>
+  <!-- 13. 63% rated it 10/10 ******************** -->
+  <section id="sec-ratings" class="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <div class="container max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Immediate Feedback</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          63% rated it 10/10
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Real-time reactions and post-session ratings from attendees.
+        </p>
+      </div>
 
-      <a
-        href="/contact"
-        class="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-slate-900
-               px-10 py-5 text-base font-semibold shadow-2xl shadow-white/20
-               hover:bg-slate-100 transition-all duration-300 hover:scale-105"
-      >
-        Book a free 'Shitty First Draft' session
-        <Icon name="tabler:arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </a>
+      <!-- Featured: Rating chart showing 63% gave 10/10 -->
+      <div class="mb-8">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl hover:shadow-3xl transition-all duration-300">
+          <img
+            src={surveyDec01.src}
+            alt="Survey showing 63% of attendees rated the session 10/10"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 14. Real Results - Photos, Screenshots of sessions -->
+  <section id="sec-real-results" class="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Real Results</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+          Not theory. Actual attendee participation.
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400">
+          Screenshots from live sessions showing attendees actively working, sharing ideas, and giving feedback.
+        </p>
+      </div>
+
+      <!-- Large group photo showing scale -->
+      <div class="mb-12">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
+          <img
+            src={attendeesDec.src}
+            alt="Large group of attendees participating in online Real World Ready session"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+            <div class="max-w-3xl">
+              <p class="text-sm font-semibold tracking-wide text-violet-300 uppercase mb-2">At Scale</p>
+              <h3 class="text-2xl sm:text-3xl font-bold mb-3">
+                Hundreds of attendees, fully engaged
+              </h3>
+              <p class="text-white/90 text-base">
+                From intimate cohorts to large-scale bootcamps with 200+ attendees — Real World Ready maintains engagement and quality at every scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session screenshots grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={sessionJan01.src}
+            alt="Online session with attendees actively participating and sharing work"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Attendees sharing their work in real-time</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={sessionJan03.src}
+            alt="Session showing attendees actively working and collaborating"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Active collaboration during exercises</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+          <img
+            src={feedbackGeneral.src}
+            alt="40 participants in an online Real World Ready session on March 2026"
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white text-sm font-medium">Real-time feedback during sessions</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
-
