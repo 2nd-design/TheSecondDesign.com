@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const nodes = [
+  { id: 'meaning',      label: 'Meaning',      icon: 'tabler:target',          caption: 'Teach young people skills to improve the workforce.',  num: '01', from: 'from-pink-400',    to: 'to-rose-400',    text: 'text-pink-600 dark:text-pink-400' },
+  { id: 'satisfaction', label: 'Satisfaction',  icon: 'tabler:seedling',         caption: 'Using our skills for the benefit of others.',          num: '02', from: 'from-amber-400',   to: 'to-orange-400',  text: 'text-amber-600 dark:text-amber-400' },
+  { id: 'fun',          label: 'Fun',           icon: 'tabler:confetti',         caption: 'We want to enjoy doing this.',                          num: '03', from: 'from-teal-400',    to: 'to-cyan-400',    text: 'text-teal-600 dark:text-teal-400' },
+  { id: 'money',        label: 'Money',         icon: 'tabler:currency-dollar',  caption: 'Fund this entire operation.',                           num: '04', from: 'from-yellow-400',  to: 'to-amber-400',   text: 'text-yellow-600 dark:text-yellow-400' },
+  { id: 'scale',        label: 'Scale',         icon: 'tabler:users',            caption: 'Reach as many young people as possible.',               num: '05', from: 'from-violet-400',  to: 'to-purple-400',  text: 'text-violet-600 dark:text-violet-400' },
+  { id: 'impact',       label: 'Impact',        icon: 'tabler:trending-up',      caption: 'Create true and lasting transformation.',               num: '06', from: 'from-emerald-400', to: 'to-green-400',   text: 'text-emerald-600 dark:text-emerald-400' },
+];
+---
+
+<div class="my-10 divide-y divide-slate-100 dark:divide-slate-800">
+  {nodes.map((n) => (
+    <div class="group flex items-center gap-6 py-6 cursor-default">
+      <!-- Decorative number -->
+      <span class="text-5xl font-black text-slate-100 dark:text-slate-800 group-hover:text-slate-200 dark:group-hover:text-slate-700 transition-colors tabular-nums w-16 shrink-0 select-none leading-none">
+        {n.num}
+      </span>
+      <!-- Gradient icon pill -->
+      <div class={`w-12 h-12 rounded-2xl bg-gradient-to-br ${n.from} ${n.to} flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform duration-200`}>
+        <Icon name={n.icon} class="w-6 h-6 text-white" />
+      </div>
+      <!-- Text -->
+      <div class="flex-1 min-w-0">
+        <p class={`text-xs font-black tracking-[0.18em] uppercase mb-1 ${n.text}`}>{n.label}</p>
+        <p class="text-base text-slate-700 dark:text-slate-300 leading-snug">{n.caption}</p>
+      </div>
+    </div>
+  ))}
+</div>
