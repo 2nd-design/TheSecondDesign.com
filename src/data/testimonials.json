@@ -608,6 +608,28 @@
     "internal_notes": "Additional Udemy review."
   },
   {
+    "testimonial_id": "testimonial-abhijith-b-rwr-zoom-chat-28",
+    "person_id": "abhith-b",
+    "product_ids": [
+      "rwr"
+    ],
+    "partner_ids": [],
+    "scope": "product",
+    "audience_type": "student",
+    "source_type": "screenshot",
+    "source_url": null,
+    "image_url": "/images/rwr-chat-abhijith-b.png",
+    "image_alt": "Zoom chat message from Abhijith B praising the Real World Ready session",
+    "quote_short": "I've already attended this session but why I attended again was... I was sure I'd get something from this.",
+    "quote_long": "Abhijith writes in the session chat: Thanks Gautham and Aruna for the wonderful opportunity for being part of the session. I've learned a lot today, lots of wide perspectives. I've already attended this session but I came again because I was sure I'd get something new from this. He praises Gautham for bringing ideas as solutions to student problems, Aruna for sharing the Harvard story on personality and systems, and Shan for stealing the whole session. He ends by saying he'd love to see the session keep going.",
+    "rating": null,
+    "language": "en",
+    "date": "2026-03-27",
+    "priority": "high",
+    "is_published": true,
+    "internal_notes": "Zoom chat screenshot from a Real World Ready session. Mentions Gautham, Aruna, and Shan. Student returned for a second session. Screenshot at /images/rwr-chat-abhijith-b.png."
+  },
+  {
     "testimonial_id": "testimonial-jonathan-woodruff-27",
     "person_id": "jonathan-woodruff",
     "product_ids": [
