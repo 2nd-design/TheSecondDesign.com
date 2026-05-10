@@ -29,6 +29,22 @@ export default {
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
+
+      typography: {
+        DEFAULT: {
+          css: {
+            blockquote: {
+              fontStyle: 'normal',
+              fontWeight: '500',
+              borderLeftWidth: '3px',
+              borderLeftColor: 'var(--aw-color-primary)',
+              paddingLeft: '1.25rem',
+            },
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:last-of-type::after': { content: 'none' },
+          },
+        },
+      },
     },
   },
   plugins: [

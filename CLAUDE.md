@@ -68,3 +68,41 @@ Uses Astro file-based routing in `src/pages/`. Blog routes at `[...blog]/` suppo
 ## Deployment
 
 Configured for Netlify deployment via `netlify.toml`. Build output goes to `dist/`.
+
+## Writing Blog Posts
+
+Blog posts live in `src/data/post/` as `.md` or `.mdx` files. Use `.mdx` when the post needs custom components.
+
+### Frontmatter (required fields)
+
+```yaml
+---
+publishDate: 2026-01-01T00:00:00Z
+title: 'Post Title Here'
+excerpt: 'One punchy sentence — the "why should I read this" pitch. This renders as the deck below the title and is critical for the header to look good.'
+image: https://images.unsplash.com/photo-XXXXXXX?auto=format&fit=crop&w=2084&q=80
+category: Category Name
+tags:
+  - tag-one
+  - tag-two
+---
+```
+
+### Rules for every post
+
+- **`excerpt` is mandatory.** Without it the post header looks skeletal — just a title floating in space. One sentence, 15–25 words, present tense.
+- **`image` is mandatory.** A hero image from Unsplash is fine. Without it the template falls back to a thin divider line, which looks sparse. Use a wide, high-quality photo (`w=2084&q=80`).
+- **`category` is mandatory.** It renders prominently above the title as an uppercase label. Use title case (e.g. `Mission`, `Learning Design`, `Real World Ready`).
+- **`tags`** are optional but useful for related post discovery. Use lowercase kebab-case.
+
+### Content structure
+
+- Use **H2s** (`##`) to separate major sections — they render beautifully in the prose template.
+- Use `---` dividers sparingly — only for a true thematic break, not between every section. They render as an ornament (`· · ·`), which looks good but loses impact if overused.
+- Keep paragraphs to 3–5 sentences. White space is free.
+- Use **blockquotes** (`>`) to pull out key ideas — they're styled with the primary brand colour and create visual rhythm in long posts.
+- The first paragraph is styled slightly larger than the body — make it count.
+
+### Filename convention
+
+Use lowercase kebab-case matching the intended URL slug: `my-post-title.mdx` → `/blog/my-post-title`.

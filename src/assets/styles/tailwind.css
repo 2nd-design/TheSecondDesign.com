@@ -90,3 +90,29 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+/* Blog prose refinements */
+.prose hr {
+  border: none;
+  text-align: center;
+  margin: 3rem auto;
+  overflow: visible;
+}
+
+.prose hr::after {
+  content: '· · ·';
+  display: inline-block;
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  letter-spacing: 0.5em;
+  padding: 0 0.25em;
+}
+
+.dark .prose hr::after {
+  color: #334155;
+}
+
+.prose > p:first-of-type {
+  font-size: 1.125em;
+  color: inherit;
+}
