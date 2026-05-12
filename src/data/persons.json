@@ -317,5 +317,16 @@
     "other_link": null,
     "headshot_url": null,
     "relationship_type": "partner"
+  },
+  {
+    "person_id": "emmanuel-vinod",
+    "name": "Emmanuel Vinod",
+    "designation": "Student",
+    "company": "College of Engineering, Kallooppara",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
   }
 ]

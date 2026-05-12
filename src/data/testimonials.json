@@ -832,6 +832,26 @@
     "internal_notes": "BTB 2025 Shitty First Drafts – unnamed student, eureka moment. YouTube Short."
   },
   {
+    "testimonial_id": "testimonial-emmanuel-vinod-rwr-btb-39",
+    "person_id": "emmanuel-vinod",
+    "product_ids": ["rwr-btb"],
+    "partner_ids": ["tinkerhub"],
+    "scope": "product",
+    "audience_type": "student",
+    "source_type": "screenshot",
+    "source_url": null,
+    "image_url": "/images/rwr-whatsapp-emmanuel-vinod.png",
+    "image_alt": "WhatsApp message from Emmanuel Vinod after a Real World Ready Understanding Agency session",
+    "quote_short": "After the last session I literally was on fire and did something I never even tried. I built web apps.",
+    "quote_long": "Emmanuel sent a WhatsApp message after the Understanding Agency session saying he was on fire and built web apps he had never tried before, including AI-assisted ones. He wrote in a mix of English and Malayalam: 'Ai vech anee enkil polum' (even using AI). He thanked the team profusely.",
+    "rating": null,
+    "language": "ml-en",
+    "date": "2025-12-01",
+    "priority": "high",
+    "is_published": true,
+    "internal_notes": "WhatsApp screenshot. BTB 2025 Understanding Agency – Emmanuel Vinod, College of Engineering Kallooppara, Pathanamthitta. Screenshot at /images/rwr-whatsapp-emmanuel-vinod.png."
+  },
+  {
     "testimonial_id": "testimonial-mehar-tinkerhub-rwr-38",
     "person_id": "mehar",
     "product_ids": ["rwr", "rwr-btb"],
