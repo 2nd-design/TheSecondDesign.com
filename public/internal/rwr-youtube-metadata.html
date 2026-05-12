@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RWR YouTube Titles & Descriptions</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f0f0f; color: #e8e8e8; padding: 32px 16px; }
+  h1 { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 40px; }
+  .video-block { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; margin-bottom: 28px; max-width: 800px; }
+  .video-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #666; margin-bottom: 4px; }
+  .video-name { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 20px; }
+  .field-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 6px; }
+  .copy-wrap { position: relative; margin-bottom: 16px; }
+  textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 12px 48px 12px 14px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  textarea:focus { border-color: #555; }
+  textarea.title-field { height: 60px; resize: none; }
+  textarea.desc-field { height: 280px; }
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    transition: all 0.15s;
+  }
+  .copy-btn:hover { background: #333; color: #fff; }
+  .copy-btn.copied { background: #1a3a1a; border-color: #2a5a2a; color: #4caf50; }
+  hr { border: none; border-top: 1px solid #2a2a2a; margin: 8px 0 20px; }
+</style>
+</head>
+<body>
+
+<h1>Real World Ready  -  YouTube Titles & Descriptions</h1>
+<p class="subtitle">Click "Copy" on any field. Pastes as plain text  -  no formatting issues.</p>
+
+<!-- VIDEO 2 -->
+<div class="video-block">
+  <div class="video-label">Video 2</div>
+  <div class="video-name">Unnamed Student</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"This Is a Model the Education System Has to Follow" | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>A student from a Beyond the Blueprint session on what makes Real World Ready genuinely different.
+
+Not just the content. The format. The willingness to actually ask for feedback  -  and mean it. In a world where most education flows one way, that alone stood out.
+
+"The way you guys curate this thing  -  it's a model that the education system has to follow."
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="video-block">
+  <div class="video-label">Video 3</div>
+  <div class="video-name">Sania  -  2nd Year CS, CUSAT (Alapuzha)</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"I Couldn't Start Without Over-Preparing" - Sania | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>Sania, a 2nd year Computer Science student at CUSAT Alapuzha, had a pattern she hadn't fully named: she could not approach anything without preparing extensively first.
+
+The Shitty First Drafts session gave her a framework to recognise it  -  and a practical way to break out of it.
+
+"They pointed out how to rectify it. It is a common problem that everyone has."
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. The Shitty First Drafts session helps students recognise and overcome the paralysis of over-preparation  -  by making starting imperfectly feel not just acceptable, but necessary.
+
+Sessions include:
+- Shitty First Drafts
+- Understanding Agency
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 4 -->
+<div class="video-block">
+  <div class="video-label">Video 4</div>
+  <div class="video-name">Anina  -  Campus Head, Jyothi Engineering College</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"We Had a Different Idea of Agency. It Changed Today."  -  Anina, Campus Head | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>Anina, Campus Head at Jyothi Engineering College, came in with one idea of what agency meant.
+
+She left with a different one.
+
+The session felt nothing like a formal workshop  -  everyone was talking, thinking out loud, actually engaged. That is what made the shift happen.
+
+"It was a session where we felt a normal connection. The main thing was the agency. We had a different perspective. But it changed today."
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. Understanding Agency is one of the programme's core sessions  -  designed to show students what high-agency behaviour looks like and how to build it in their own lives.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 5 -->
+<div class="video-block">
+  <div class="video-label">Video 5</div>
+  <div class="video-name">Cain Binoy  -  3rd Year BCA, Sahardai College of Advanced Studies</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"No Hierarchy. Everyone Was Just Part of It." - Cain Binoy | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>By the time Cain Binoy sat down for this session, it was his third Real World Ready experience. He had attended one online with his core team, a morning session earlier that day, and now this  -  an exclusive afternoon session for campus leads and learning coordinators.
+
+What made it the most impactful of the three was not the content alone. It was the format. No stage. No hierarchy. Facilitators moving through the room, handing the mic to anyone.
+
+"Arun and Gautam were just walking around us and giving us the mic. That made me more open to speaking without being afraid."
+
+Cain Binoy is a 3rd year BCA student at Sahardai College of Advanced Studies.
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. Sessions are designed so that everyone in the room is a participant  -  not an audience.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 6 -->
+<div class="video-block">
+  <div class="video-label">Video 6</div>
+  <div class="video-name">Anjali  -  School Student</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"I Thought an Online Session Would Be Boring. I Was Wrong."  -  Anjali | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>Anjali did not expect much from an online session. Usually when she attends workshops, she leaves with a list of things she would have done differently  -  ideas on how it could be better.
+
+This time, she had nothing.
+
+She left so energised that she told all her friends to join. And when she found out there would be a physical session too, she showed up.
+
+"I have a desire to do the same session with my college students. I will definitely do that when I reach college."
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. The programme runs online and in-person  -  both with the same level of engagement and depth.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 7 -->
+<div class="video-block">
+  <div class="video-label">Video 7</div>
+  <div class="video-name">Unnamed Student</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"For Once, There Were No Right or Wrong Answers" | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>In most college settings, sharing an idea means waiting to hear whether it is right or wrong. Ideas get classified, ranked, passed over.
+
+This student found something different in a Beyond the Blueprint session.
+
+"They gave importance to everyone's opinion. When I heard that, I felt that our idea is so worthy."
+
+"Everyone wants to hear my idea. It was you who made it come out."
+
+They called it a dream session  -  not because it was comfortable, but because everyone in the room was actually present.
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. Sessions are deeply interactive  -  participation is not optional, and every voice is treated as worth hearing.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 8 -->
+<div class="video-block">
+  <div class="video-label">Video 8</div>
+  <div class="video-name">Unnamed Student  -  Singapore AUV Challenge</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"We Had a Goal. We Couldn't Start. The Session Changed That." | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>He and his team had been wanting to enter the Singapore Autonomous Underwater Vehicle Challenge (SAUVC) for a while. The goal was clear. The problem was starting  -  not knowing where to begin, unsure if they were ready, finding reasons to wait.
+
+A Shitty First Drafts session changed that.
+
+"The most important thing is to take the first step. If we take the first step, we can only understand whether we have done it or not."
+
+That night, they had dinner, sat down together, and spent 4-5 hours going through the SAUVC website, sourcing parts, making a document, and forming a team.
+
+That was all it took to begin.
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. The Shitty First Drafts session helps students break through the paralysis of not knowing how to start  -  and just start anyway.
+
+Learn more about SAUVC: sauvc.org
+Learn more about Real World Ready: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 9 -->
+<div class="video-block">
+  <div class="video-label">Video 9</div>
+  <div class="video-name">Unnamed Student</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"I Wasn't Aware of Shitty First Drafts. It Was a Eureka Moment." | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>Sometimes one idea is all it takes.
+
+This student walked into the session without knowing about the Shitty First Drafts technique. By the end, it was a complete reframe  -  a new way of approaching anything they wanted to start.
+
+"It was like  -  oh, you can do it like that too. That kind of thing."
+
+They left not just with a new idea, but with the intention to share it with their peers.
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. The Shitty First Drafts session is one of the programme's core experiences  -  normalising imperfect starts and helping students overcome perfectionism and procrastination.
+
+Sessions include:
+- Shitty First Drafts
+- Understanding Agency
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<!-- VIDEO 10 -->
+<div class="video-block">
+  <div class="video-label">Video 10</div>
+  <div class="video-name">Mehar  -  Founder, TinkerHub Foundation</div>
+  <hr>
+  <div class="copy-wrap">
+    <div class="field-label">Title</div>
+    <textarea class="title-field" readonly>"One Session on Agency. It Stuck."  -  Mehar, Founder of TinkerHub Foundation | Real World Ready</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+  <div class="copy-wrap">
+    <div class="field-label">Description</div>
+    <textarea class="desc-field" readonly>Mehar is the founder of TinkerHub Foundation. He has worked alongside The Second Design for over a year. In all that time, he personally attended just one session  -  on agency.
+
+It was enough.
+
+The concept gave him a lens to understand his own team  -  why some people thrive in high-ownership environments, and why others struggle. It became the language he used whenever he introduced The Second Design to anyone.
+
+"I really wish that if people have at least what I went through  -  if they really have agency in themselves and they are in a position to recognise that, I think that itself is going to be a great revolution."
+
+He ends with a belief that what India's young people need is not more certification. It is ownership. The ability to see an opportunity and decide  -  that one is mine.
+
+"I'm rooting for you guys."
+
+About Real World Ready
+
+Real World Ready is The Second Design's flagship programme - a training ground for mindset and real-world thinking for college students. Delivered in partnership with TinkerHub, it runs as Beyond the Blueprint. The programme runs online and in-person across Kerala, reaching students across colleges, campuses, and communities.
+
+Sessions include:
+- Understanding Agency
+- Shitty First Drafts
+- Navigating Your Future
+- Agency in Action
+- Understanding System Design
+
+Learn more: theseconddesign.com/real-world-ready
+</textarea>
+    <button class="copy-btn" onclick="copyField(this)">Copy</button>
+  </div>
+</div>
+
+<script>
+function copyField(btn) {
+  const textarea = btn.previousElementSibling;
+  navigator.clipboard.writeText(textarea.value).then(() => {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>

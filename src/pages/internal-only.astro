@@ -1,0 +1,48 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Internal — The Second Design',
+  robots: 'noindex, nofollow',
+};
+
+const links = [
+  {
+    title: 'Testimonials Table',
+    href: '/docs/testimonials-table',
+    description: 'All testimonials in a structured table view — filter by product, person, source type.',
+  },
+  {
+    title: 'Testimonial Architecture',
+    href: '/docs/testimonial-architecture',
+    description: 'Schema reference for the testimonials data model — fields, types, and usage notes.',
+  },
+  {
+    title: 'RWR YouTube Metadata',
+    href: '/internal/rwr-youtube-metadata.html',
+    description: 'Titles and descriptions for all 10 Beyond the Blueprint testimonial videos. Copy-paste ready for YouTube.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="py-24 bg-white dark:bg-slate-950 min-h-screen">
+    <div class="container max-w-2xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-2">Internal Pages</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mb-12">Not linked publicly. Direct URL access only.</p>
+
+      <div class="space-y-4">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="block p-5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 transition bg-slate-50 dark:bg-slate-900"
+          >
+            <div class="text-base font-semibold text-slate-900 dark:text-slate-50 mb-1">{link.title}</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400">{link.description}</div>
+            <div class="text-xs text-slate-400 dark:text-slate-600 mt-2">{link.href}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
