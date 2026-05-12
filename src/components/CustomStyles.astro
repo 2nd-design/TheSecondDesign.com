@@ -1,5 +1,5 @@
 ---
-import '@fontsource-variable/playfair-display';
+import '@fontsource/dm-serif-display';
 import '@fontsource-variable/dm-sans';
 
 // 'DM Sans'
@@ -24,7 +24,7 @@ import '@fontsource-variable/dm-sans';
   :root {
     --aw-font-sans: 'DM Sans Variable';
     --aw-font-serif: 'DM Sans Variable';
-    --aw-font-heading: 'Playfair Display Variable';
+    --aw-font-heading: 'DM Serif Display';
 
     --aw-color-primary: rgb(1 97 239);
     --aw-color-secondary: rgb(1 84 207);
@@ -40,12 +40,17 @@ import '@fontsource-variable/dm-sans';
     ::selection {
       background-color: lavender;
     }
+
+    /* DM Serif Display looks better with open letter-spacing at display sizes */
+    .font-heading {
+      letter-spacing: 0.01em;
+    }
   }
 
   .dark {
     --aw-font-sans: 'DM Sans Variable';
     --aw-font-serif: 'DM Sans Variable';
-    --aw-font-heading: 'Playfair Display Variable';
+    --aw-font-heading: 'DM Serif Display';
 
     --aw-color-primary: rgb(1 97 239);
     --aw-color-secondary: rgb(1 84 207);

@@ -19,6 +19,10 @@ export default {
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
       },
 
+      lineHeight: {
+        tighter: '1.2',
+      },
+
       animation: {
         fade: 'fadeInUp 1s both',
       },
