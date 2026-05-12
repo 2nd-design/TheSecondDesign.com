@@ -251,5 +251,71 @@
     "other_link": null,
     "headshot_url": null,
     "relationship_type": "participant"
+  },
+  {
+    "person_id": "rahul-rp",
+    "name": "Rahul R.P.",
+    "designation": "3rd Year B.Tech Student",
+    "company": "Crusad",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
+  },
+  {
+    "person_id": "sania",
+    "name": "Sania",
+    "designation": "2nd Year CS Student",
+    "company": "CUSAT Alapuzha",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
+  },
+  {
+    "person_id": "anina",
+    "name": "Anina",
+    "designation": "Campus Head",
+    "company": "Jyothi Engineering College",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
+  },
+  {
+    "person_id": "cain-binoy",
+    "name": "Cain Binoy",
+    "designation": "3rd Year BCA Student",
+    "company": "Sahrdaya College of Advanced Studies",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
+  },
+  {
+    "person_id": "anjali",
+    "name": "Anjali",
+    "designation": "Student",
+    "company": "",
+    "partner_id": null,
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "participant"
+  },
+  {
+    "person_id": "mehar",
+    "name": "Mehar",
+    "designation": "Founder",
+    "company": "TinkerHub Foundation",
+    "partner_id": "tinkerhub",
+    "linkedin_url": null,
+    "other_link": null,
+    "headshot_url": null,
+    "relationship_type": "partner"
   }
 ]

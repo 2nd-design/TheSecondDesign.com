@@ -138,6 +138,10 @@ function extractYouTubeId(url: string | null): string | null {
       const parts = u.pathname.split('/');
       return parts[2] || null;
     }
+    if (u.pathname.startsWith('/shorts/')) {
+      const parts = u.pathname.split('/');
+      return parts[2] || null;
+    }
     return null;
   } catch {
     return null;
