@@ -10,9 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node scripts/fetch-testimonials.js",
     "build": "astro build",
-    "fetch:testimonials": "node scripts/fetch-testimonials.js",
     "preview": "astro preview",
     "astro": "astro",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
