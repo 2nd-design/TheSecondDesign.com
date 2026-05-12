@@ -315,6 +315,17 @@ const uniqueProducts = Array.from(productsByName.entries())
                   </div>
                 )}
 
+                {t.source_type === 'screenshot' && t.image_url && (
+                  <div class="mt-1 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                    <img
+                      src={t.image_url}
+                      alt={t.image_alt ?? 'Screenshot testimonial'}
+                      loading="lazy"
+                      class="w-full h-auto"
+                    />
+                  </div>
+                )}
+
                 {/* Product info at bottom - prominent base name, secondary variant */}
                 <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
                   <div>
