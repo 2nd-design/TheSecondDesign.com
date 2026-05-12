@@ -106,3 +106,35 @@ tags:
 ### Filename convention
 
 Use lowercase kebab-case matching the intended URL slug: `my-post-title.mdx` → `/blog/my-post-title`.
+
+## Changelog
+
+The changelog lives at `src/pages/changelog.astro`. **Always update it before pushing commits.**
+
+### Rules
+
+- Every meaningful change gets a changelog entry — new blog posts, page redesigns, new features, content updates, bug fixes.
+- Group commits from the same work session into one version entry. Don't create a new version per commit.
+- Version numbering: increment the minor version (e.g. 2.0.0 → 2.1.0) for features and content; patch (2.1.0 → 2.1.1) for bug fixes only.
+- Each entry needs: `date`, `version`, `title` (one-line summary), and `changes` (array of categories with items).
+- For items that link to external URLs or internal pages, use `{ text: 'Description', url: 'https://...' }` instead of a plain string — this renders a clickable "Watch" or "View" link next to the item.
+- The changelog is linked from `/internal-only` and is how Aruna tracks what was shipped. Keep it clear enough that she can read it and verify each change without needing to ask.
+
+### Data structure reference
+
+```js
+{
+  date: '2026-05-13',
+  version: '2.1.0',
+  title: 'Short description of what changed',
+  changes: [
+    {
+      category: 'Category Name',
+      items: [
+        'Plain string for items with no link',
+        { text: 'Item with a link', url: 'https://example.com' },
+      ],
+    },
+  ],
+}
+```

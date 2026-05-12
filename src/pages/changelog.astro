@@ -16,7 +16,7 @@ const changelog = [
       {
         category: 'Blog',
         items: [
-          'Published new Real World Ready blog post: "We Told 220 Students Our Sessions Were Open Source. Some of Them Ran It Themselves."',
+          { text: 'Published new Real World Ready blog post: "We Told 220 Students Our Sessions Were Open Source. Some of Them Ran It Themselves."', url: '/blog/students-ran-our-sessions-themselves' },
           'Documents the fourth scaling vector — students becoming facilitators themselves, without The Second Design in the room',
           'Covers TinkerHub Beyond the Blueprint sessions in Kochi (~170 students) and Kozhikode (~50 students) where open-source materials were announced',
           'Dedicated section on CE Kallooppara, Pathanamthitta (February 2026) — student-organised Shitty First Draft session with photos',
@@ -37,17 +37,17 @@ const changelog = [
       {
         category: 'Testimonials: 10 Video Testimonials Added',
         items: [
-          'Added Rahul R.P. (3rd Year B.Tech, Crusad) — shifted mindset after Understanding Agency, co-founded Lanyard Green: https://youtube.com/shorts/GI9raP_JaCY',
-          'Added Sania (2nd Year CS, CUSAT Alapuzha) — Shitty First Drafts gave her frameworks to break out of over-preparation: https://youtube.com/shorts/FJJ_EOGfR4s',
-          'Added Anina (Campus Head, Jyothi Engineering College) — her understanding of agency completely changed after the session: https://youtube.com/shorts/Xfv_9juAmVs',
-          'Added Cain Binoy (3rd Year BCA, Sahrdaya College) — no host-participant hierarchy made him far more open to speaking: https://youtube.com/shorts/JRDIhgZo9AE',
-          'Added Anjali (school student) — wants to run the same session for her own college students: https://youtube.com/shorts/VnvRa24d38Q',
-          'Added anonymous student — says the session curation model is what the education system needs to learn from: https://youtube.com/shorts/1qBZ1Zn9CWo',
-          'Added anonymous student (dream session) — every idea was treated as worthy, calls it a dream session: https://youtube.com/shorts/IrT2ePjRLRM',
-          'Added anonymous student (SAUVC) — after Shitty First Drafts, formed a team and entered the Singapore Autonomous Underwater Vehicle Challenge that same night: https://youtube.com/shorts/8oeOUDgv1l0',
-          'Added anonymous student (eureka) — learning about Shitty First Drafts was a mind-blown eureka moment: https://youtube.com/shorts/jjv7qU_42Zc',
-          'Added Mehar, Founder of TinkerHub Foundation — calls Real World Ready meaningful for the country, says agency is what young people need: https://youtu.be/AI7YX97Fn2s',
-          'Added Emmanuel Vinod (College of Engineering, Kallooppara) — WhatsApp screenshot testimonial, built web apps he had never tried after Understanding Agency session',
+          { text: 'Rahul R.P. (3rd Year B.Tech, Crusad) — shifted mindset after Understanding Agency, co-founded Lanyard Green', url: 'https://youtube.com/shorts/GI9raP_JaCY' },
+          { text: 'Sania (2nd Year CS, CUSAT Alapuzha) — Shitty First Drafts gave her frameworks to break out of over-preparation', url: 'https://youtube.com/shorts/FJJ_EOGfR4s' },
+          { text: 'Anina (Campus Head, Jyothi Engineering College) — her understanding of agency completely changed after the session', url: 'https://youtube.com/shorts/Xfv_9juAmVs' },
+          { text: 'Cain Binoy (3rd Year BCA, Sahrdaya College) — no host-participant hierarchy made him far more open to speaking', url: 'https://youtube.com/shorts/JRDIhgZo9AE' },
+          { text: 'Anjali (school student) — wants to run the same session for her own college students', url: 'https://youtube.com/shorts/VnvRa24d38Q' },
+          { text: 'Anonymous student — says the session curation model is what the education system needs to learn from', url: 'https://youtube.com/shorts/1qBZ1Zn9CWo' },
+          { text: 'Anonymous student (dream session) — every idea was treated as worthy, calls it a dream session', url: 'https://youtube.com/shorts/IrT2ePjRLRM' },
+          { text: 'Anonymous student (SAUVC) — after Shitty First Drafts, formed a team and entered the Singapore Autonomous Underwater Vehicle Challenge that same night', url: 'https://youtube.com/shorts/8oeOUDgv1l0' },
+          { text: 'Anonymous student (eureka) — learning about Shitty First Drafts was a mind-blown eureka moment', url: 'https://youtube.com/shorts/jjv7qU_42Zc' },
+          { text: 'Mehar, Founder of TinkerHub Foundation — calls Real World Ready meaningful for the country, says agency is what young people need', url: 'https://youtu.be/AI7YX97Fn2s' },
+          'Emmanuel Vinod (College of Engineering, Kallooppara) — WhatsApp screenshot testimonial, built web apps he had never tried after Understanding Agency session',
         ],
       },
       {
@@ -69,6 +69,100 @@ const changelog = [
         category: 'Infrastructure',
         items: [
           'Removed Google Sheets auto-refresh prebuild script — testimonials.json and persons.json are now managed directly via Claude Code, preventing accidental overwrites on every build',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-10',
+    version: '1.14.0',
+    title: 'Editorial redesign of blog listing and individual post pages',
+    changes: [
+      {
+        category: 'Blog',
+        items: [
+          'Redesigned blog listing page with a more editorial, magazine-style layout',
+          'Redesigned individual blog post pages for improved reading experience',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-04-20',
+    version: '1.13.0',
+    title: 'Terminology fix on Proof of Work pages',
+    changes: [
+      {
+        category: 'Proof of Work',
+        items: [
+          'Replaced "attendees" with "students" across all Proof of Work episode pages — more accurate for the audience these stories are about',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-04-03',
+    version: '1.12.0',
+    title: 'Restore video testimonials on homepage',
+    changes: [
+      {
+        category: 'Homepage',
+        items: [
+          'Restored 4 video testimonials that had been accidentally removed from the homepage testimonials section',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-03-27',
+    version: '1.11.0',
+    title: 'Real World Ready redesign, Mission blog post, and TinkerHub branding',
+    changes: [
+      {
+        category: 'Real World Ready Page',
+        items: [
+          'Reordered sections for better narrative flow and added sticky section navigation',
+          'Redesigned case study cards to editorial layout — full image on top, text below',
+          'Added Mission section linking to the new mission blog post',
+        ],
+      },
+      {
+        category: 'Blog',
+        items: [
+          { text: 'Published new Mission post: "The Mission Behind Real World Ready"', url: '/blog/mission-why-we-do-this' },
+        ],
+      },
+      {
+        category: 'Testimonials',
+        items: [
+          'Added Abhijith B zoom chat screenshot testimonial from a Real World Ready session',
+        ],
+      },
+      {
+        category: 'Branding',
+        items: [
+          'Added TinkerHub label beneath the TinkerHub logo on homepage and consulting page for clearer partner identification',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-03-26',
+    version: '1.10.0',
+    title: 'Real World Ready page content and infrastructure fixes',
+    changes: [
+      {
+        category: 'Real World Ready Page',
+        items: [
+          'Replaced feedback chat screenshot with a wider 40-participant session photo for better social proof',
+          'Renamed "Sessions" heading to "Topics we cover" for clearer framing',
+        ],
+      },
+      {
+        category: 'Infrastructure',
+        items: [
+          'Fixed CSS and JS paths to use absolute URLs — resolved asset loading issues on certain routes',
+          'Added Understanding Agency test slides to the open source session page',
         ],
       },
     ],
@@ -388,7 +482,14 @@ const changelog = [
                     {section.items.map((item) => (
                       <li class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex gap-2">
                         <Icon name="tabler:check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
+                        {typeof item === 'string' ? (
+                          <span>{item}</span>
+                        ) : (
+                          <span>
+                            {item.text}{' '}
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-medium">Watch</a>
+                          </span>
+                        )}
                       </li>
                     ))}
                   </ul>
