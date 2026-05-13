@@ -41,9 +41,9 @@ import '@fontsource-variable/dm-sans';
       background-color: lavender;
     }
 
-    /* DM Serif Display looks better with open letter-spacing at display sizes */
+    /* DM Serif Display needs open tracking — override Tailwind's tracking-tighter on all headings */
     .font-heading {
-      letter-spacing: 0.01em;
+      letter-spacing: 0.01em !important;
     }
   }
 

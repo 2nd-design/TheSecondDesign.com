@@ -10,8 +10,28 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-13',
+    version: '2.2.0',
+    title: 'Blog polish: em dash removal, hero image caption, and site-wide heading tracking fix',
+    changes: [
+      {
+        category: 'Blog',
+        items: [
+          'Removed all em dashes from the peer-sessions blog post — replaced with commas, colons, and parentheses',
+          'Added hero image caption below the lead photo on the peer-sessions post: college name, location, date, and organiser credit',
+        ],
+      },
+      {
+        category: 'Design',
+        items: [
+          'Fixed letter-spacing on all headings site-wide — DM Serif Display was too tightly tracked; 0.01em now applies across hero, blog titles, and prose headings via !important override',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-13',
     version: '2.1.0',
-    title: 'Typography refinement — open letter-spacing on headings',
+    title: 'Typography refinement: switch to DM Serif Display headings',
     changes: [
       {
         category: 'Design',
