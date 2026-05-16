@@ -9,6 +9,20 @@ const metadata = {
 
 const changelog = [
   {
+    date: '2026-05-16',
+    version: '2.3.2',
+    title: 'Fix nav dark mode contrast and active link visibility',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Fixed main nav links being barely visible in dark mode — added explicit dark:text-slate-300 so links have proper contrast on the dark scrolled header',
+          'Active nav link (current page) now uses brand blue (text-link / dark:text-blue-400) so the current page is clearly marked',
+        ],
+      },
+    ],
+  },
+  {
     date: '2026-05-13',
     version: '2.3.1',
     title: 'Fix dark mode on Topics section of Real World Ready page',
