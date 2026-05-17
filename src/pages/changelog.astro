@@ -10,6 +10,20 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-17',
+    version: '2.6.0',
+    title: 'Removed all em dashes from the entire site',
+    changes: [
+      {
+        category: 'Copy',
+        items: [
+          'Removed all em dashes site-wide: replaced with colons, commas, parentheses, or periods depending on context',
+          'Files cleaned: changelog.astro, real-world-ready.astro, proof-of-work.astro, testimonials.json, from-idea-to-app-in-30-days.md, CustomStyles.astro, internal-only.astro, testimonial-architecture.astro',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-17',
     version: '2.5.0',
     title: 'Pitch page overhaul, Proof of Work episode update, video thumbnails',
     changes: [
@@ -17,7 +31,7 @@ const changelog = [
         category: 'Pitch Page',
         items: [
           'Renamed Section 01 from "What Has Worked" to "What\'s Been Done"',
-          'Restructured Section 02 as four explicit scaling vectors (more sessions, more students per session, more topics, students run sessions themselves) — with the fourth vector linking to the peer-facilitation blog post',
+          'Restructured Section 02 as four explicit scaling vectors (more sessions, more students per session, more topics, students run sessions themselves): with the fourth vector linking to the peer-facilitation blog post',
           'Added year-end milestones below the four vectors',
           'Added three embedded YouTube Shorts video testimonials with pull quotes and a link to the full testimonials page',
           'Added link to the Beyond the Blueprint blog post in the delivery partner section',
@@ -27,8 +41,8 @@ const changelog = [
         category: 'Proof of Work',
         items: [
           'Added Aksa Rose episode video (YouTube embed) to the episode page',
-          'Rewrote episode text with material from the recorded conversation — specific decisions, Man Slater going viral, the India Partner trip, the LinkedIn posting process, building in public',
-          'Featured episode card now shows the YouTube thumbnail with a play button instead of the episode number — signals immediately that there\'s a video inside',
+          'Rewrote episode text with material from the recorded conversation: specific decisions, Man Slater going viral, the India Partner trip, the LinkedIn posting process, building in public',
+          'Featured episode card now shows the YouTube thumbnail with a play button instead of the episode number: signals immediately that there\'s a video inside',
           'CTA on featured card updated to "Watch & read" when a video is present',
           'Simplified coming-soon placeholders to a single "Episode 02 · Coming soon" card',
         ],
@@ -43,8 +57,8 @@ const changelog = [
       {
         category: 'New Content',
         items: [
-          'Published new blog post: How We Design Real World Ready Sessions — covers the meta-learning philosophy, the do-feedback-iterate candy core, and the three pedagogical layers underneath',
-          'New page: /real-world-ready/pitch — a full pitch deck for Real World Ready in the TSD theme, with four sections (what has worked, how we scale, what we need, our belief)',
+          'Published new blog post: How We Design Real World Ready Sessions: covers the meta-learning philosophy, the do-feedback-iterate candy core, and the three pedagogical layers underneath',
+          'New page: /real-world-ready/pitch: a full pitch deck for Real World Ready in the TSD theme, with four sections (what has worked, how we scale, what we need, our belief)',
           'Replaced stock photo on the mission blog post with a real workshop photo from the December 2025 TinkerHub Kochi camp',
         ],
       },
@@ -65,7 +79,7 @@ const changelog = [
       {
         category: 'Bug Fix',
         items: [
-          'Fixed main nav links being barely visible in dark mode — added explicit dark:text-slate-300 so links have proper contrast on the dark scrolled header',
+          'Fixed main nav links being barely visible in dark mode: added explicit dark:text-slate-300 so links have proper contrast on the dark scrolled header',
           'Active nav link (current page) now uses brand blue (text-link / dark:text-blue-400) so the current page is clearly marked',
         ],
       },
@@ -79,7 +93,7 @@ const changelog = [
       {
         category: 'Bug Fix',
         items: [
-          'Fixed washed-out gray appearance of the Topics section in dark mode — semi-transparent background was blending with the page and killing contrast',
+          'Fixed washed-out gray appearance of the Topics section in dark mode: semi-transparent background was blending with the page and killing contrast',
         ],
       },
     ],
@@ -107,14 +121,14 @@ const changelog = [
       {
         category: 'Blog',
         items: [
-          'Removed all em dashes from the peer-sessions blog post — replaced with commas, colons, and parentheses',
+          'Removed all em dashes from the peer-sessions blog post: replaced with commas, colons, and parentheses',
           'Added hero image caption below the lead photo on the peer-sessions post: college name, location, date, and organiser credit',
         ],
       },
       {
         category: 'Design',
         items: [
-          'Fixed letter-spacing on all headings site-wide — DM Serif Display was too tightly tracked; 0.01em now applies across hero, blog titles, and prose headings via !important override',
+          'Fixed letter-spacing on all headings site-wide: DM Serif Display was too tightly tracked; 0.01em now applies across hero, blog titles, and prose headings via !important override',
         ],
       },
     ],
@@ -128,7 +142,7 @@ const changelog = [
         category: 'Design',
         items: [
           'Switched site headings to DM Serif Display, body to DM Sans for a more editorial feel',
-          'Fixed letter-spacing on headings — DM Serif Display was too tightly tracked at display sizes; now set to 0.01em for a more open, readable feel',
+          'Fixed letter-spacing on headings: DM Serif Display was too tightly tracked at display sizes; now set to 0.01em for a more open, readable feel',
         ],
       },
     ],
@@ -142,10 +156,10 @@ const changelog = [
         category: 'Blog',
         items: [
           { text: 'Published new Real World Ready blog post: "We Told 220 Students Our Sessions Were Open Source. Some of Them Ran It Themselves."', url: '/blog/students-ran-our-sessions-themselves' },
-          'Documents the fourth scaling vector — students becoming facilitators themselves, without The Second Design in the room',
+          'Documents the fourth scaling vector: students becoming facilitators themselves, without The Second Design in the room',
           'Covers TinkerHub Beyond the Blueprint sessions in Kochi (~170 students) and Kozhikode (~50 students) where open-source materials were announced',
-          'Dedicated section on CE Kallooppara, Pathanamthitta (February 2026) — student-organised Shitty First Draft session with photos',
-          'Dedicated section on KAHM Unity Women\'s College — student-organised session with synthesised facilitator Q&A and Instagram embeds',
+          'Dedicated section on CE Kallooppara, Pathanamthitta (February 2026): student-organised Shitty First Draft session with photos',
+          'Dedicated section on KAHM Unity Women\'s College: student-organised session with synthesised facilitator Q&A and Instagram embeds',
           'Embeds three Instagram posts from student-run sessions',
           'Closes with a CTA inviting communities to book a free Shitty First Draft or Understanding Agency session',
         ],
@@ -162,38 +176,38 @@ const changelog = [
       {
         category: 'Testimonials: 10 Video Testimonials Added',
         items: [
-          { text: 'Rahul R.P. (3rd Year B.Tech, Crusad) — shifted mindset after Understanding Agency, co-founded Lanyard Green', url: 'https://youtube.com/shorts/GI9raP_JaCY' },
-          { text: 'Sania (2nd Year CS, CUSAT Alapuzha) — Shitty First Drafts gave her frameworks to break out of over-preparation', url: 'https://youtube.com/shorts/FJJ_EOGfR4s' },
-          { text: 'Anina (Campus Head, Jyothi Engineering College) — her understanding of agency completely changed after the session', url: 'https://youtube.com/shorts/Xfv_9juAmVs' },
-          { text: 'Cain Binoy (3rd Year BCA, Sahrdaya College) — no host-participant hierarchy made him far more open to speaking', url: 'https://youtube.com/shorts/JRDIhgZo9AE' },
-          { text: 'Anjali (school student) — wants to run the same session for her own college students', url: 'https://youtube.com/shorts/VnvRa24d38Q' },
-          { text: 'Anonymous student — says the session curation model is what the education system needs to learn from', url: 'https://youtube.com/shorts/1qBZ1Zn9CWo' },
-          { text: 'Anonymous student (dream session) — every idea was treated as worthy, calls it a dream session', url: 'https://youtube.com/shorts/IrT2ePjRLRM' },
-          { text: 'Anonymous student (SAUVC) — after Shitty First Drafts, formed a team and entered the Singapore Autonomous Underwater Vehicle Challenge that same night', url: 'https://youtube.com/shorts/8oeOUDgv1l0' },
-          { text: 'Anonymous student (eureka) — learning about Shitty First Drafts was a mind-blown eureka moment', url: 'https://youtube.com/shorts/jjv7qU_42Zc' },
-          { text: 'Mehar, Founder of TinkerHub Foundation — calls Real World Ready meaningful for the country, says agency is what young people need', url: 'https://youtu.be/AI7YX97Fn2s' },
-          'Emmanuel Vinod (College of Engineering, Kallooppara) — WhatsApp screenshot testimonial, built web apps he had never tried after Understanding Agency session',
+          { text: 'Rahul R.P. (3rd Year B.Tech, Crusad): shifted mindset after Understanding Agency, co-founded Lanyard Green', url: 'https://youtube.com/shorts/GI9raP_JaCY' },
+          { text: 'Sania (2nd Year CS, CUSAT Alapuzha): Shitty First Drafts gave her frameworks to break out of over-preparation', url: 'https://youtube.com/shorts/FJJ_EOGfR4s' },
+          { text: 'Anina (Campus Head, Jyothi Engineering College): her understanding of agency completely changed after the session', url: 'https://youtube.com/shorts/Xfv_9juAmVs' },
+          { text: 'Cain Binoy (3rd Year BCA, Sahrdaya College): no host-participant hierarchy made him far more open to speaking', url: 'https://youtube.com/shorts/JRDIhgZo9AE' },
+          { text: 'Anjali (school student): wants to run the same session for her own college students', url: 'https://youtube.com/shorts/VnvRa24d38Q' },
+          { text: 'Anonymous student: says the session curation model is what the education system needs to learn from', url: 'https://youtube.com/shorts/1qBZ1Zn9CWo' },
+          { text: 'Anonymous student (dream session): every idea was treated as worthy, calls it a dream session', url: 'https://youtube.com/shorts/IrT2ePjRLRM' },
+          { text: 'Anonymous student (SAUVC): after Shitty First Drafts, formed a team and entered the Singapore Autonomous Underwater Vehicle Challenge that same night', url: 'https://youtube.com/shorts/8oeOUDgv1l0' },
+          { text: 'Anonymous student (eureka): learning about Shitty First Drafts was a mind-blown eureka moment', url: 'https://youtube.com/shorts/jjv7qU_42Zc' },
+          { text: 'Mehar, Founder of TinkerHub Foundation: calls Real World Ready meaningful for the country, says agency is what young people need', url: 'https://youtu.be/AI7YX97Fn2s' },
+          'Emmanuel Vinod (College of Engineering, Kallooppara): WhatsApp screenshot testimonial, built web apps he had never tried after Understanding Agency session',
         ],
       },
       {
         category: 'Testimonials Page',
         items: [
-          'Fixed YouTube Shorts embed — extractYouTubeId now handles /shorts/ URL paths (previously returned null so Shorts would not render)',
-          'Added screenshot rendering — source_type: "screenshot" entries now display their image inline on the testimonials page',
+          'Fixed YouTube Shorts embed: extractYouTubeId now handles /shorts/ URL paths (previously returned null so Shorts would not render)',
+          'Added screenshot rendering: source_type: "screenshot" entries now display their image inline on the testimonials page',
         ],
       },
       {
         category: 'Internal Tools',
         items: [
-          'Added /internal-only page — unlisted index of all internal tools, not linked publicly',
-          'Added /internal/rwr-youtube-metadata.html — titles and descriptions for all 10 BTB testimonial videos, copy-paste ready for YouTube uploads',
+          'Added /internal-only page: unlisted index of all internal tools, not linked publicly',
+          'Added /internal/rwr-youtube-metadata.html: titles and descriptions for all 10 BTB testimonial videos, copy-paste ready for YouTube uploads',
           'Added /changelog to the internal-only page for easy access',
         ],
       },
       {
         category: 'Infrastructure',
         items: [
-          'Removed Google Sheets auto-refresh prebuild script — testimonials.json and persons.json are now managed directly via Claude Code, preventing accidental overwrites on every build',
+          'Removed Google Sheets auto-refresh prebuild script: testimonials.json and persons.json are now managed directly via Claude Code, preventing accidental overwrites on every build',
         ],
       },
     ],
@@ -220,7 +234,7 @@ const changelog = [
       {
         category: 'Proof of Work',
         items: [
-          'Replaced "attendees" with "students" across all Proof of Work episode pages — more accurate for the audience these stories are about',
+          'Replaced "attendees" with "students" across all Proof of Work episode pages: more accurate for the audience these stories are about',
         ],
       },
     ],
@@ -247,7 +261,7 @@ const changelog = [
         category: 'Real World Ready Page',
         items: [
           'Reordered sections for better narrative flow and added sticky section navigation',
-          'Redesigned case study cards to editorial layout — full image on top, text below',
+          'Redesigned case study cards to editorial layout: full image on top, text below',
           'Added Mission section linking to the new mission blog post',
         ],
       },
@@ -286,7 +300,7 @@ const changelog = [
       {
         category: 'Infrastructure',
         items: [
-          'Fixed CSS and JS paths to use absolute URLs — resolved asset loading issues on certain routes',
+          'Fixed CSS and JS paths to use absolute URLs: resolved asset loading issues on certain routes',
           'Added Understanding Agency test slides to the open source session page',
         ],
       },
@@ -351,9 +365,9 @@ const changelog = [
       {
         category: 'Testimonials Page',
         items: [
-          'Added product filter with instant client-side filtering — groups by base product name (e.g., "Real World Ready" instead of showing variants separately)',
-          'Restructured testimonial card layout — person info and credentials now at top, product info moved to bottom',
-          'Product names display with visual hierarchy — base product name prominent, variant name secondary and smaller',
+          'Added product filter with instant client-side filtering: groups by base product name (e.g., "Real World Ready" instead of showing variants separately)',
+          'Restructured testimonial card layout: person info and credentials now at top, product info moved to bottom',
+          'Product names display with visual hierarchy: base product name prominent, variant name secondary and smaller',
           'Added "View case study" links to relevant testimonials (FOSS Hack 2025)',
           'Live results counter shows number of visible testimonials',
           'Streamlined filter UI to single dropdown for cleaner, simpler design',
@@ -439,7 +453,7 @@ const changelog = [
         category: 'Open Source Pages',
         items: [
           'Redesigned license section from 2 columns to 3 columns: "You can", "You cannot", "You must"',
-          'Added visual icons for each permission type — green checkmarks for allowed, red X for prohibited, amber pins for requirements',
+          'Added visual icons for each permission type: green checkmarks for allowed, red X for prohibited, amber pins for requirements',
           'Clarified restrictions: no selling, no paid courses/cohorts/products, no commercial use without written permission',
           'Clarified requirements: credit The Second Design, retain license on adaptations, link to original source',
           'Hyperlinked "contact page" in the commercial licensing note for easy navigation',
@@ -456,14 +470,14 @@ const changelog = [
         category: 'Blog',
         items: [
           'Published new case study: "What Happened When We Helped 200+ Attendees Prepare for FOSS Hack 2025"',
-          'Details our Real World Ready collaboration with FOSS United — 605 registrations, 217 participants, 4.5/5 rating',
+          'Details our Real World Ready collaboration with FOSS United: 605 registrations, 217 participants, 4.5/5 rating',
           'Includes embedded video testimonial from Rahul Poruri (CEO, FOSS United)',
         ],
       },
       {
         category: 'Proof of Work',
         items: [
-          'Renamed "In Their Own Hands" show to "Proof of Work" — clearer name for attendee story videos',
+          'Renamed "In Their Own Hands" show to "Proof of Work": clearer name for attendee story videos',
           'Updated all navigation links and page routes to use /proof-of-work',
           'Refreshed episode detail page layout with improved video embedding',
         ],
@@ -478,8 +492,8 @@ const changelog = [
       {
         category: 'Real World Ready Page',
         items: [
-          "Removed 'We also run open cohorts for individuals' — we work exclusively with organisations that serve young people",
-          "Clarified session delivery — changed 'Run the free Shitty First Draft session' to 'Book a free Shitty First Draft session' across all CTAs",
+          "Removed 'We also run open cohorts for individuals': we work exclusively with organisations that serve young people",
+          "Clarified session delivery: changed 'Run the free Shitty First Draft session' to 'Book a free Shitty First Draft session' across all CTAs",
           "Updated descriptive text to reflect that The Second Design conducts sessions for partners ('We run' / 'We'll run')",
           "Added single quotes around 'Shitty First Draft' throughout the page for clarity",
           "Linked 'Shitty First Draft' references to the /open-source page in paragraph text, so visitors can learn about the methodology",
@@ -490,7 +504,7 @@ const changelog = [
         items: [
           'Replaced Netlify Forms with custom Google Sheets integration for form submissions',
           'All contact form entries now logged to a central Google Sheet with timestamp, name, email, organisation, interest, and message',
-          'Added automatic email notifications — 4 team members now receive instant alerts when someone submits the contact form',
+          'Added automatic email notifications: 4 team members now receive instant alerts when someone submits the contact form',
           'Added loading state with "Sending..." indicator while form submits',
           'Added success message confirmation when form submission completes',
           'Added error message with fallback guidance if submission fails',
@@ -506,7 +520,7 @@ const changelog = [
       {
         category: 'Homepage',
         items: [
-          'Updated hero subtitle to be more concise — changed "The Second Design is an Education Design Studio" to "We are an education design studio"',
+          'Updated hero subtitle to be more concise: changed "The Second Design is an Education Design Studio" to "We are an education design studio"',
           'Replaced "pedagogy" with "learning design" in the "What we do" note section',
           'Updated NGOs feature description to use "learning design" instead of "pedagogy"',
           'Refreshed blog section tagline to "instructional design and what we\'re learning"',
@@ -515,7 +529,7 @@ const changelog = [
       {
         category: 'Consulting Page',
         items: [
-          'Updated hero intro copy — "We turn it into an unforgettable, transformative learning experience"',
+          'Updated hero intro copy: "We turn it into an unforgettable, transformative learning experience"',
           'Replaced "pedagogy" references with "learning design" throughout (3 instances)',
         ],
       },
@@ -523,7 +537,7 @@ const changelog = [
         category: 'Real World Ready Page',
         items: [
           'Changed section title from "How institutions get started" to "Bring this to your attendees"',
-          'Redesigned the 3-step getting started section — now displays horizontally on desktop for a more compact layout',
+          'Redesigned the 3-step getting started section: now displays horizontally on desktop for a more compact layout',
           'Separated attendee testimonials from outcomes in the bento grid section',
           'Added new "Self-awareness" and "Confidence to act" outcome cards',
           'Created dedicated testimonials section with 5 named attendee quotes',
@@ -533,11 +547,11 @@ const changelog = [
       {
         category: 'Open Source Pages',
         items: [
-          'Changed resource links from "Open in Google Docs/Slides" to "Make a copy" — users now get their own editable copy directly',
+          'Changed resource links from "Open in Google Docs/Slides" to "Make a copy": users now get their own editable copy directly',
           'Added CC BY-NC-SA 4.0 license with badge, updated license section with clear permissions and restrictions',
           'Updated hero badges from "Open for reuse with attribution" to clickable "CC BY-NC-SA 4.0" linking to Creative Commons',
           'Added license badges to project cards on the main /open-source listing page',
-          'Fixed copy in Shitty First Draft page — changed "concrete shitty first draft" to "concrete first draft"',
+          'Fixed copy in Shitty First Draft page: changed "concrete shitty first draft" to "concrete first draft"',
         ],
       },
       {

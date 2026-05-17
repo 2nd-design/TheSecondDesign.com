@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
+import InstagramEmbed from '~/components/InstagramEmbed.astro';
 
 const metadata = {
   title: 'Shitty First Draft - Open Source Session · The Second Design',
@@ -241,6 +242,20 @@ const metadata = {
           </div>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Students ran it themselves ************************ -->
+
+  <section class="py-16 bg-white border-t border-slate-200 dark:bg-slate-950/90 dark:border-slate-800">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <InstagramEmbed url="https://www.instagram.com/p/DYbcqJGE4-P/" />
+        <InstagramEmbed url="https://www.instagram.com/p/DUNE8-oExvf/" />
+      </div>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        Students at CE Kallooppara and KAHM Unity Women's College ran this session for their own communities after attending one of ours, with no coordination from us. <a href="/blog/students-ran-our-sessions-themselves" class="text-emerald-700 dark:text-emerald-400 font-medium hover:underline">Read what happened →</a>
+      </p>
     </div>
   </section>
 

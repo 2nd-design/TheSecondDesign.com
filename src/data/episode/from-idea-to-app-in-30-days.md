@@ -12,7 +12,7 @@ draft: true
 
 ## The Decision
 
-Ananya had been "planning to build something" for over a year. She had notebooks full of app ideas, none of them started. After attending a Shitty First Drafts session, she picked the most imperfect idea she had — a bus timing app for her college route — and decided to ship it in 30 days.
+Ananya had been "planning to build something" for over a year. She had notebooks full of app ideas, none of them started. After attending a Shitty First Drafts session, she picked the most imperfect idea she had (a bus timing app for her college route) and decided to ship it in 30 days.
 
 ## The Steps
 
@@ -23,6 +23,6 @@ Ananya had been "planning to build something" for over a year. She had notebooks
 
 ## What Happened
 
-The app itself was not remarkable. What changed was Ananya's relationship with starting things. She went from someone who planned to someone who shipped. Three months later, she built a second tool — a study group matcher — that her department now officially recommends.
+The app itself was not remarkable. What changed was Ananya's relationship with starting things. She went from someone who planned to someone who shipped. Three months later, she built a second tool (a study group matcher) that her department now officially recommends.
 
 The act of shipping something imperfect, publicly, changed what she believed she was capable of.

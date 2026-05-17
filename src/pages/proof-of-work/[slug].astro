@@ -15,8 +15,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { episode } = Astro.props as Props;
 
 const metadata = {
-  title: `${episode.title} — Proof of Work`,
-  description: episode.excerpt || `${episode.studentName}'s story — Proof of Work by The Second Design.`,
+  title: `${episode.title}: Proof of Work`,
+  description: episode.excerpt || `${episode.studentName}'s story, Proof of Work by The Second Design.`,
 };
 
 const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1];
