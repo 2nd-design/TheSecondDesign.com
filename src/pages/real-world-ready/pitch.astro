@@ -245,9 +245,14 @@ const metadata = {
                 </div>
               ))}
             </div>
-            <a href="/blog/real-world-ready-foss-hack-2025" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 transition-colors">
-              Read the full case study →
-            </a>
+            <div class="flex flex-wrap gap-5">
+              <a href="/blog/real-world-ready-foss-hack-2025" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 transition-colors">
+                Read our case study →
+              </a>
+              <a href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-slate-300 transition-colors">
+                FOSS United's write-up →
+              </a>
+            </div>
           </div>
           <!-- Rahul Poruri video -->
           <div class="border-t border-white/10">
@@ -263,6 +268,28 @@ const metadata = {
                 allowfullscreen
               />
             </div>
+          </div>
+        </div>
+
+        <!-- Mehar Ranadive on Real World Ready -->
+        <div class="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden mb-10">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/AI7YX97Fn2s"
+              title="Mehar MP, Founder of TinkerHub, on Real World Ready"
+              class="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+          <div class="p-6">
+            <a href="https://www.linkedin.com/in/meharmp" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-bold uppercase tracking-widest text-violet-400 hover:text-violet-300 transition-colors mb-2">Mehar MP · Founder, TinkerHub →</a>
+            <blockquote class="text-slate-300 italic text-sm leading-relaxed mb-4">
+              "If people have at least what I went through -- agency in themselves, and the ability to recognise it -- that itself is going to be a great revolution."
+            </blockquote>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              If this resonates, we're happy to talk through the design philosophy behind it: why we build sessions the way we do, and what makes them different.
+            </p>
           </div>
         </div>
 
@@ -393,6 +420,23 @@ const metadata = {
               </div>
             </div>
           ))}
+        </div>
+
+        <!-- Format flexibility -->
+        <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">How sessions are structured</p>
+          <div class="grid md:grid-cols-3 gap-6">
+            {[
+              { label: "Signature series", desc: "Multi-week programmes with recurring cohorts. Our default format with TinkerHub: students attend across a semester, building on each session." },
+              { label: "Intensive bootcamps", desc: "2-5 days of concentrated sessions. Higher commitment, deeper impact. Our camp format has brought 100+ students together in a single day." },
+              { label: "Standalone sessions", desc: "One-off sessions designed around a partner's specific moment or context. Like FOSS Hack: a custom programme for an existing event." },
+            ].map(f => (
+              <div>
+                <p class="text-sm font-semibold text-white mb-1">{f.label}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <!-- By end of Year 1 -->
