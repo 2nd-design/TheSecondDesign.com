@@ -86,7 +86,6 @@ const metadata = {
             { label: "01 · What's been done", href: "#what-worked" },
             { label: "02 · How we scale this", href: "#how-to-scale" },
             { label: "03 · What we need", href: "#what-we-need" },
-            { label: "04 · Our belief", href: "#our-belief" },
           ].map(link => (
             <a href={link.href}
               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium hover:bg-white/10 hover:border-violet-500/40 hover:text-white transition-all duration-200">
@@ -400,14 +399,26 @@ const metadata = {
         <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">Where we want to be in a year</p>
         <div class="grid md:grid-cols-2 gap-3">
           {[
-            { n: "15 sessions", desc: "in the library, each with slides, workbook, script, and a blog post." },
-            { n: "1,500+ students", desc: "attending sessions across existing and new delivery partners." },
-            { n: "2 new partners", desc: "beyond TinkerHub, expanding reach to new student communities." },
-            { n: "Real impact data", desc: "pre/post surveys, outcome tracking, and an impact report." },
+            {
+              n: "15 sessions",
+              desc: "15 distinct topics ready to run, not 15 events. Each one a complete, tested package: slides, workbook, facilitator script, and a published write-up. We have 5 today. Every new topic addresses a different problem students face and gives a new reason to attend.",
+            },
+            {
+              n: "3,000+ students",
+              desc: "Three times where we are today. That growth comes from running existing sessions more frequently, larger per-session reach through partner infrastructure, and new partners bringing communities we don't currently touch.",
+            },
+            {
+              n: "2 new partners",
+              desc: "Beyond TinkerHub. New partners mean access to student communities we haven't reached yet: colleges, fellowships, bootcamps, youth organisations. Each new partner multiplies reach without requiring us to build a community from scratch.",
+            },
+            {
+              n: "Real impact data",
+              desc: "Today we track attendance and session ratings. We want to go further: pre/post surveys measuring actual shifts in thinking, outcome tracking showing whether students started something or made a decision, and a published impact report that makes the case to future partners and funders.",
+            },
           ].map(item => (
             <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
-              <p class="text-lg font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-1">{item.n}</p>
-              <p class="text-sm text-slate-400">{item.desc}</p>
+              <p class="text-lg font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-2">{item.n}</p>
+              <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -472,44 +483,18 @@ const metadata = {
 
       </section>
 
-      <!-- 04 · Our Belief -->
-      <section class="scroll-mt-24 pt-10 border-t border-white/10" id="our-belief">
-
-        <div class="inline-flex items-center gap-3 mb-8">
-          <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-emerald-500"></div>
-          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">04 · Our Belief</span>
-        </div>
-
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
-          We're doing this for ourselves.
-        </h2>
-
-        <p class="text-lg text-slate-400 leading-relaxed mb-6">
-          The goal is to be around people who have high agency, are free-thinking, and are supported by structures that allow their ideas to become reality. Creative, driven people collaborating with integrity to solve problems, create beautiful things, and lead fulfilling lives.
-        </p>
-
-        <p class="text-lg text-slate-400 leading-relaxed mb-10">
-          That's the world we wish to be part of. A world we're proud to be part of. And since it doesn't fully exist yet, we've decided to help build it.
-        </p>
-
-        <a href="/blog/mission-why-we-do-this"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium hover:bg-white/10 hover:border-violet-500/40 hover:text-white transition-all duration-200">
-          Read the full mission →
-        </a>
-
-      </section>
-
       <!-- Footer -->
       <section class="pt-10 border-t border-white/10">
         <div class="grid md:grid-cols-2 gap-10">
           <div>
             <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Contact</p>
-            <p class="font-semibold text-white">Gautham</p>
+            <p class="font-semibold text-white mb-0.5">Gautham</p>
             <p class="text-sm text-slate-500 mb-4">Co-founder, The Second Design</p>
-            <a href="/contact"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-slate-900 text-sm font-semibold hover:bg-slate-100 transition-colors">
-              Get in touch →
-            </a>
+            <ul class="space-y-2 text-sm">
+              <li><a href="mailto:gautham@theseconddesign.com" class="text-slate-300 hover:text-white transition-colors">gautham@theseconddesign.com</a></li>
+              <li><a href="tel:+919400474785" class="text-slate-300 hover:text-white transition-colors">+91 94004 74785</a></li>
+              <li><a href="https://wa.me/9400474785" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition-colors">WhatsApp →</a></li>
+            </ul>
           </div>
           <div>
             <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Learn more</p>
