@@ -54,15 +54,16 @@ const metadata = {
       </h1>
 
       <p class="text-xl text-slate-400 leading-relaxed max-w-2xl mb-10">
-        Running since August 2024. Nearly two years, two seasons, 49 sessions, no breaks. A delivery partner with 85+ campus chapters. Students who show up and engage. Here's what we've built, what we want to do next, and what we need to get there.
+        Running since August 2024. Nearly two years, two seasons, 54 sessions, no breaks. Two delivery partners: TinkerHub Foundation with 85+ campus chapters, and FOSS United for FOSS Hack 2025. Students who show up and engage. Here's what we've built, what we want to do next, and what we need to get there.
       </p>
 
       <!-- Stat pills -->
       <div class="flex flex-wrap gap-3 mb-14">
         {[
-          "49 sessions delivered",
-          "1,000+ attendance instances",
+          "54 sessions delivered",
+          "1,200+ attendance instances",
           "85+ campus chapters",
+          "2 delivery partners",
         ].map(s => (
           <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium">
             {s}
@@ -117,14 +118,14 @@ const metadata = {
         </h2>
 
         <p class="text-lg text-slate-400 leading-relaxed mb-10">
-          Real World Ready has been running since August 2024, nearly two years of live sessions, without a break. Two full seasons, 49 sessions, and still going. Built around specific problems students face, designed so they actually do something, not just listen.
+          Real World Ready has been running since August 2024, nearly two years of live sessions, without a break. Two full seasons, 54 sessions, and still going. Built around specific problems students face, designed so they actually do something, not just listen.
         </p>
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-px rounded-2xl overflow-hidden border border-white/10 mb-10">
           {[
-            { n: "49", label: "Sessions delivered" },
-            { n: "1,000+", label: "Attendance instances" },
+            { n: "55", label: "Sessions delivered" },
+            { n: "1,200+", label: "Attendance instances" },
             { n: "85+", label: "Campus chapters reached" },
           ].map((stat, i) => (
             <div class="p-6 text-center bg-white/[0.03] backdrop-blur-sm">
@@ -198,17 +199,72 @@ const metadata = {
         </div>
 
         <!-- How it reaches students -->
-        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10 mb-10">
-          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">How it reaches students</p>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">How it reaches students</p>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+          Real World Ready is delivered through organisations with existing reach into student communities. The pedagogy, facilitation, and content come from The Second Design. The community infrastructure comes from the partner.
+        </p>
+
+        <!-- TinkerHub -->
+        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10 mb-4">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-1">Sustained partnership</p>
+              <p class="font-semibold text-white">TinkerHub Foundation</p>
+            </div>
+            <span class="shrink-0 text-xs text-slate-500 bg-white/5 border border-white/10 rounded-full px-3 py-1">Ongoing · Season 1 &amp; 2</span>
+          </div>
           <p class="text-sm text-slate-400 leading-relaxed mb-3">
-            Real World Ready is delivered through delivery partners with existing reach into student communities. Our only delivery partner is TinkerHub Foundation: 85+ active campus chapters across Kerala's engineering colleges.
-          </p>
-          <p class="text-sm text-slate-400 leading-relaxed mb-3">
-            Sessions run under co-branded names (e.g. <em>Beyond the Blueprint</em> with TinkerHub). The pedagogy, facilitation, and content come from The Second Design. The student mobilisation and campus infrastructure come from the partner.
+            85+ active campus chapters across Kerala's engineering colleges. Sessions run under the <em>Beyond the Blueprint</em> co-brand. TinkerHub brings the student mobilisation and campus infrastructure; The Second Design brings the programme.
           </p>
           <a href="/blog/beyond-the-blueprint" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-violet-400 hover:text-violet-300 transition-colors">
             Read the Beyond the Blueprint write-up →
           </a>
+        </div>
+
+        <!-- FOSS United -->
+        <div class="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden mb-10">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-1">Event collaboration</p>
+                <p class="font-semibold text-white">FOSS United</p>
+              </div>
+              <span class="shrink-0 text-xs text-slate-500 bg-white/5 border border-white/10 rounded-full px-3 py-1">Dec 2024 · FOSS Hack 2025</span>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              FOSS United runs one of India's largest open-source hackathons. They noticed attendees showing up without a project idea, submitting work without READMEs or licenses. We designed five pre-hackathon sessions helping attendees figure out what to build and how to present it. Custom programme, built from scratch for their context.
+            </p>
+            <div class="flex gap-6 mb-4">
+              {[
+                { n: "605", label: "Registrations" },
+                { n: "217", label: "Participants" },
+                { n: "4.5/5", label: "Avg rating" },
+              ].map(s => (
+                <div>
+                  <p class="text-xl font-bold text-white">{s.n}</p>
+                  <p class="text-xs text-slate-500 uppercase tracking-wide">{s.label}</p>
+                </div>
+              ))}
+            </div>
+            <a href="/blog/real-world-ready-foss-hack-2025" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 transition-colors">
+              Read the full case study →
+            </a>
+          </div>
+          <!-- Rahul Poruri video -->
+          <div class="border-t border-white/10">
+            <div class="px-6 pt-4 pb-2">
+              <p class="text-xs text-slate-500 uppercase tracking-widest">Rahul Poruri, CEO · FOSS United</p>
+            </div>
+            <div class="aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/vd9-Ayw7WNU"
+                title="Rahul Poruri, CEO of FOSS United, on the collaboration with The Second Design"
+                class="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </div>
 
         <!-- Online session photo -->
@@ -235,11 +291,12 @@ const metadata = {
 
         <!-- Video testimonials -->
         <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">In their own words</p>
-        <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
           {[
-            { id: "1qBZ1Zn9CWo", quote: "The way you guys curate this: it's a model that an education system has to follow." },
+            { id: "ntWpaUSVnHg", quote: "If you get an opportunity, don't throw it away. Take it." },
             { id: "jjv7qU_42Zc", quote: "I wasn't aware of the Shitty First Draft technique. After learning it, I was mind blown. It was a Eureka moment." },
-            { id: "8oeOUDgv1l0", quote: "The most important thing is to take the first step. That night we had dinner and started." },
+            { id: "JRDIhgZo9AE", quote: "They handed the mic to everyone. No host-participant divide. That made me far more willing to speak up." },
+            { id: "1qBZ1Zn9CWo", quote: "The way you guys curate this: it's a model that an education system has to follow." },
           ].map(v => (
             <div class="flex flex-col gap-3">
               <div class="rounded-xl overflow-hidden border border-white/10">
