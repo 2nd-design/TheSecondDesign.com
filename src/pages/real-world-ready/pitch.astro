@@ -1,0 +1,429 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
+
+import heroImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/workshop-circle-01.jpg';
+import grid1 from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/presenter-stage-01.jpg';
+import grid2 from '~/assets/images/real-world-ready/events/btb-online-sessions/attendees-dec2025.png';
+import grid3 from '~/assets/images/real-world-ready/events/btb-summer-camp-feb-2025/session-openair-04.jpg';
+import grid4 from '~/assets/images/real-world-ready/events/btb-online-sessions/session-jan2026-03.png';
+import grid5 from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/students-working-01.jpg';
+import grid6 from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/workshop-hall-01.jpg';
+import zoomImg from '~/assets/images/real-world-ready/events/btb-online-sessions/session-mar2026-40participants.png';
+
+const metadata = {
+  title: 'Real World Ready: The Pitch',
+  description: "What we've built, how we want to scale it, and what we need to get there.",
+  robots: { index: false, follow: false },
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="relative overflow-hidden min-h-[80vh] flex items-end bg-slate-950">
+
+    <!-- Gradient blobs -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-br from-violet-600/15 via-slate-950 to-emerald-600/10"></div>
+      <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-violet-500/20 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-emerald-500/15 rounded-full blur-[100px]"></div>
+    </div>
+
+    <!-- Grid overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+
+    <div class="relative container max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-20">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
+        </span>
+        <span class="text-xs font-medium text-slate-300 tracking-wide">Real World Ready · The Second Design</span>
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.05]">
+        What we've built.<br />
+        <span class="bg-gradient-to-r from-violet-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          Where we're going.
+        </span>
+      </h1>
+
+      <p class="text-xl text-slate-400 leading-relaxed max-w-2xl mb-10">
+        Running since August 2024. Nearly two years, two seasons, 49 sessions, no breaks. A delivery partner with 85+ campus chapters. Students who show up and engage. Here's what we've built, what we want to do next, and what we need to get there.
+      </p>
+
+      <!-- Stat pills -->
+      <div class="flex flex-wrap gap-3 mb-14">
+        {[
+          "49 sessions delivered",
+          "1,000+ attendance instances",
+          "85+ campus chapters",
+        ].map(s => (
+          <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium">
+            {s}
+          </span>
+        ))}
+      </div>
+
+      <!-- Hero photo -->
+      <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 mb-14">
+        <Image src={heroImg} alt="Beyond the Blueprint workshop session" class="w-full aspect-[21/9] object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-5 text-xs text-white/40 uppercase tracking-widest font-medium">Beyond the Blueprint · Winter Camp 2025</div>
+      </div>
+
+      <!-- Jump links -->
+      <div class="pt-8 border-t border-white/10">
+        <p class="text-xs uppercase tracking-widest text-slate-500 mb-4">Jump to</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          {[
+            { label: "01 · What has worked", href: "#what-worked" },
+            { label: "02 · How we scale this", href: "#how-to-scale" },
+            { label: "03 · What we need", href: "#what-we-need" },
+            { label: "04 · Our belief", href: "#our-belief" },
+          ].map(link => (
+            <a href={link.href}
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium hover:bg-white/10 hover:border-violet-500/40 hover:text-white transition-all duration-200">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BODY
+  ============================================================ -->
+  <div class="bg-slate-950">
+    <div class="container max-w-4xl mx-auto px-4 sm:px-6 py-20 space-y-28">
+
+      <!-- 01 · What Has Worked -->
+      <section class="scroll-mt-24" id="what-worked">
+
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-blue-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">01 · What Has Worked</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+          Nearly two years in. Still going.
+        </h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-10">
+          Real World Ready has been running since August 2024 — nearly two years of live sessions, without a break. Two full seasons, 49 sessions, and still going. Built around specific problems students face, designed so they actually do something, not just listen.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-px rounded-2xl overflow-hidden border border-white/10 mb-10">
+          {[
+            { n: "49", label: "Sessions delivered" },
+            { n: "1,000+", label: "Attendance instances" },
+            { n: "85+", label: "Campus chapters reached" },
+          ].map((stat, i) => (
+            <div class="p-6 text-center bg-white/[0.03] backdrop-blur-sm">
+              <p class="text-3xl font-bold bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent mb-1">{stat.n}</p>
+              <p class="text-xs text-slate-500 uppercase tracking-wide">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Photo grid -->
+        <div class="grid grid-cols-3 gap-2 mb-10">
+          <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid1} alt="Presenter on stage at Beyond the Blueprint camp" class="w-full h-full object-cover aspect-[4/3]" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid2} alt="Online Zoom session with students" class="w-full h-full object-cover aspect-square" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid3} alt="Online session participants" class="w-full h-full object-cover aspect-square" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid4} alt="Zoom session with attendees" class="w-full h-full object-cover aspect-square" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid5} alt="Students working in session" class="w-full h-full object-cover aspect-square" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={grid6} alt="Workshop hall full of students" class="w-full h-full object-cover aspect-square" />
+          </div>
+        </div>
+
+        <!-- Season breakdown -->
+        <div class="grid md:grid-cols-2 gap-4 mb-10">
+          <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Season 1 · Aug 2024 – Jun 2025</p>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">→</span><span>27 sessions across 5 topics</span></li>
+              <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">→</span><span>Camp session: 105 attendees in a single day</span></li>
+              <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">→</span><span>Each session iterated 4–6 times per topic</span></li>
+            </ul>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+            <p class="text-xs font-bold uppercase tracking-widest text-emerald-500/70 mb-4">Season 2 · Nov 2025 – Ongoing</p>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span><span>22 sessions and counting</span></li>
+              <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span><span>Winter camp at Kochi: 167 attendees in one session</span></li>
+              <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span><span>61 campuses, 305 students in TinkerHub cohort</span></li>
+              <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span><span>Online sessions regularly drawing 25–40 per session</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- The 5 sessions -->
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">The 5 sessions we've built and tested</p>
+        <div class="space-y-3 mb-10">
+          {[
+            { n: "01", title: "Shitty First Drafts", desc: "Overcoming perfectionism. Students ship a first draft in 90 minutes. 63% rate it 10/10." },
+            { n: "02", title: "Understanding Agency", desc: "What high agency looks like in practice. Students map where they're waiting vs. where they could act." },
+            { n: "03", title: "Agency in Action", desc: "Applying high-agency thinking to real career decisions students are facing right now." },
+            { n: "04", title: "Navigating Your Future", desc: "Careers as systems. Making decisions without a perfect plan." },
+            { n: "05", title: "Understanding System Design", desc: "Thinking in systems. Breaking down complex problems, spotting leverage points." },
+          ].map(s => (
+            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-violet-500/30 transition-colors">
+              <span class="text-xl font-bold text-violet-400/40 font-mono shrink-0 leading-none mt-0.5">{s.n}</span>
+              <div>
+                <p class="font-semibold text-white mb-1">{s.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- How it reaches students -->
+        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10 mb-10">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">How it reaches students</p>
+          <p class="text-sm text-slate-400 leading-relaxed mb-3">
+            Real World Ready is delivered through delivery partners with existing reach into student communities. Our only delivery partner is TinkerHub Foundation: 85+ active campus chapters across Kerala's engineering colleges.
+          </p>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Sessions run under co-branded names (e.g. <em>Beyond the Blueprint</em> with TinkerHub). The pedagogy, facilitation, and content come from The Second Design. The student mobilisation and campus infrastructure come from the partner.
+          </p>
+        </div>
+
+        <!-- Online session photo -->
+        <div class="rounded-2xl overflow-hidden border border-white/10 mb-10">
+          <Image src={zoomImg} alt="Online session with 40+ participants" class="w-full aspect-[16/7] object-cover" />
+          <div class="px-5 py-3 bg-white/[0.03] border-t border-white/10">
+            <p class="text-xs text-slate-500 uppercase tracking-widest">Online sessions now regularly drawing 25–40 participants</p>
+          </div>
+        </div>
+
+        <!-- Quotes -->
+        <div class="space-y-4 mb-10">
+          {[
+            { q: "Your first step can be chaotic and still be valid.", a: "Arjun Vibeesh, Beyond the Blueprint" },
+            { q: "Gave 9/10 only because the session was too short: I didn't want it to end.", a: "Niranjana, Beyond the Blueprint" },
+            { q: "It's not about being perfect. It's about starting.", a: "Arsha, Beyond the Blueprint" },
+          ].map(item => (
+            <blockquote class="border-l-2 border-violet-500/50 pl-5 py-1">
+              <p class="text-slate-300 italic mb-1">"{item.q}"</p>
+              <p class="text-xs text-slate-600 uppercase tracking-wide">{item.a}</p>
+            </blockquote>
+          ))}
+        </div>
+
+        <!-- Proof of Work -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-violet-500/10 to-emerald-500/10 border border-violet-500/20">
+          <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">Proof of Work</p>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Beyond ratings, we track students who took real action after attending: started a project, made a career decision, reached out to someone they admired. Documented as <strong class="text-white/80">Proof of Work</strong> episodes: a decision, the steps taken, and the outcome.
+          </p>
+          <a href="https://theseconddesign.com/proof-of-work" target="_blank" rel="noreferrer"
+            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-violet-400 hover:text-violet-300 transition-colors">
+            View episodes →
+          </a>
+        </div>
+
+      </section>
+
+      <!-- 02 · How We Scale This -->
+      <section class="scroll-mt-24 pt-10 border-t border-white/10" id="how-to-scale">
+
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400">02 · How We Scale This</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+          What Year 1 at full capacity looks like
+        </h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-10">
+          We've proven the core. The programme is ready to grow. What it needs is the infrastructure around it: the team and systems that let it stop running on founder bandwidth.
+        </p>
+
+        <div class="space-y-4 mb-12">
+          {[
+            {
+              label: "A",
+              title: "10 new sessions built",
+              desc: "Each session: deep research → conceptual framework → script → slide deck → student workbook → blog post. We have 5 sessions today. This year, we build 10 more: expanding the library from 5 to 15.",
+            },
+            {
+              label: "B",
+              title: "Media & communications running consistently",
+              desc: "A blog post per new session. Instagram posts before and after each session. A content calendar. The Proof of Work series growing into a documented body of student outcomes.",
+            },
+            {
+              label: "C",
+              title: "Impact measurement in place",
+              desc: "Pre/post surveys. A framework for measuring actual shifts in agency, career confidence, and action: not just ratings. Data we can present to funders and partners with integrity.",
+            },
+            {
+              label: "D",
+              title: "1–2 new delivery partners",
+              desc: "We're currently limited to TinkerHub's network. This year, we research, pitch, and sign MoUs with 1–2 additional partners: expanding reach to new student communities beyond Kerala engineering colleges.",
+            },
+            {
+              label: "E",
+              title: "Operations running cleanly",
+              desc: "Post-session follow-ups. Community management. Proper accounts. SOPs that don't live only in founder heads. The organisation running as an organisation, not as a side project.",
+            },
+          ].map(item => (
+            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/30 transition-colors">
+              <span class="text-2xl font-bold text-blue-400/30 shrink-0 leading-none mt-0.5 w-6 text-center">{item.label}</span>
+              <div>
+                <p class="font-bold text-white mb-2">{item.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- By end of Year 1 -->
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">By end of Year 1</p>
+        <div class="grid md:grid-cols-2 gap-3">
+          {[
+            { n: "15 sessions", desc: "in the library: each with slides, workbook, script, and a blog." },
+            { n: "1,500+ students", desc: "attending sessions across existing and new delivery partners." },
+            { n: "2 new partners", desc: "beyond TinkerHub, expanding reach to new student communities." },
+            { n: "Real impact data", desc: "pre/post surveys, outcome tracking, and an impact report." },
+          ].map(item => (
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <p class="text-lg font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-1">{item.n}</p>
+              <p class="text-sm text-slate-400">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+      <!-- 03 · What We Need -->
+      <section class="scroll-mt-24 pt-10 border-t border-white/10" id="what-we-need">
+
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-emerald-500 to-violet-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">03 · What We Need</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+          Three things
+        </h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-10">
+          We've done the hardest part: built sessions that work, found a partner with reach, and proved that students show up and engage. What we need now is not complicated.
+        </p>
+
+        <div class="space-y-4 mb-10">
+          {[
+            {
+              n: "01",
+              color: "from-violet-500 to-blue-500",
+              textColor: "text-violet-400",
+              title: "Funding",
+              desc: "To hire the team and build the infrastructure that takes Real World Ready from a proven programme running on founder bandwidth to a fully operational organisation. The roles are defined, the activities are mapped: we need the runway to execute.",
+            },
+            {
+              n: "02",
+              color: "from-blue-500 to-emerald-500",
+              textColor: "text-blue-400",
+              title: "Introductions",
+              desc: "To colleges, universities, nonprofits, fellowships, and youth organisations that work with the students we serve. Every introduction that leads to a new delivery partner multiplies reach without multiplying cost.",
+            },
+            {
+              n: "03",
+              color: "from-emerald-500 to-violet-500",
+              textColor: "text-emerald-400",
+              title: "Ecosystem access",
+              desc: "To funders, advisors, and institutions who share the belief that India's undergraduate years are underleveraged. We're building something that needs to be embedded in a larger ecosystem: not just funded by one.",
+            },
+          ].map(item => (
+            <div class="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
+              <span class:list={["text-2xl font-bold font-mono shrink-0 leading-none mt-0.5", item.textColor]}>{item.n}</span>
+              <div>
+                <p class="font-bold text-xl text-white mb-2">{item.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-violet-500/10 via-slate-950/50 to-emerald-500/10 border border-white/10">
+          <p class="text-base font-semibold text-white leading-relaxed">
+            The programme is ready. We need the organisation and the ecosystem to match it.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- 04 · Our Belief -->
+      <section class="scroll-mt-24 pt-10 border-t border-white/10" id="our-belief">
+
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-emerald-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">04 · Our Belief</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+          We're doing this for ourselves.
+        </h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-6">
+          The goal is to be around people who have high agency, are free-thinking, and are supported by structures that allow their ideas to become reality. Creative, driven people collaborating with integrity to solve problems, create beautiful things, and lead fulfilling lives.
+        </p>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-10">
+          That's the world we wish to be part of. A world we're proud to be part of. And since it doesn't fully exist yet, we've decided to help build it.
+        </p>
+
+        <a href="/blog/mission-why-we-do-this"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 font-medium hover:bg-white/10 hover:border-violet-500/40 hover:text-white transition-all duration-200">
+          Read the full mission →
+        </a>
+
+      </section>
+
+      <!-- Footer -->
+      <section class="pt-10 border-t border-white/10">
+        <div class="grid md:grid-cols-2 gap-10">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Contact</p>
+            <p class="font-semibold text-white">Gautham</p>
+            <p class="text-sm text-slate-500 mb-4">Co-founder, The Second Design</p>
+            <a href="/contact"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-slate-900 text-sm font-semibold hover:bg-slate-100 transition-colors">
+              Get in touch →
+            </a>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Learn more</p>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/real-world-ready" class="text-slate-500 hover:text-violet-400 transition-colors">Real World Ready programme page →</a></li>
+              <li><a href="/proof-of-work" class="text-slate-500 hover:text-violet-400 transition-colors">Proof of Work student stories →</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</Layout>

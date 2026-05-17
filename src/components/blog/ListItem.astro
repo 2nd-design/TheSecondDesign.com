@@ -30,7 +30,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
           {post.category.title}
         </a>
       )}
-      <h2 class="text-xl md:text-2xl font-bold leading-snug font-heading dark:text-slate-100 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-200">
+      <h2 class="text-xl md:text-2xl font-bold leading-snug font-heading text-slate-900 dark:text-slate-100 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-200">
         {
           link ? (
             <a href={link}>{post.title}</a>
