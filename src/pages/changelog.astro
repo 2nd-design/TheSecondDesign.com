@@ -9,6 +9,28 @@ const metadata = {
 
 const changelog = [
   {
+    date: '2026-05-17',
+    version: '2.4.0',
+    title: 'New blog post, RWR pitch page, and blog display fixes',
+    changes: [
+      {
+        category: 'New Content',
+        items: [
+          'Published new blog post: How We Design Real World Ready Sessions — covers the meta-learning philosophy, the do-feedback-iterate candy core, and the three pedagogical layers underneath',
+          'New page: /real-world-ready/pitch — a full pitch deck for Real World Ready in the TSD theme, with four sections (what has worked, how we scale, what we need, our belief)',
+          'Replaced stock photo on the mission blog post with a real workshop photo from the December 2025 TinkerHub Kochi camp',
+        ],
+      },
+      {
+        category: 'Bug Fix',
+        items: [
+          'Fixed blog listing dark mode: h1 and h2 now have explicit text-slate-900 dark:text-slate-100 instead of relying on CSS variable inheritance, which was causing faded text in some dark mode states',
+          'Fixed hero image cropping in blog posts: removed hardcoded 16:9 height constraint so diagrams and non-landscape images render at their natural proportions',
+        ],
+      },
+    ],
+  },
+  {
     date: '2026-05-16',
     version: '2.3.2',
     title: 'Fix nav dark mode contrast and active link visibility',
