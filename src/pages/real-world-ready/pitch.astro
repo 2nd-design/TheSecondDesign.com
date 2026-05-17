@@ -82,7 +82,7 @@ const metadata = {
         <p class="text-xs uppercase tracking-widest text-slate-500 mb-4">Jump to</p>
         <div class="flex flex-col sm:flex-row gap-3">
           {[
-            { label: "01 · What has worked", href: "#what-worked" },
+            { label: "01 · What's been done", href: "#what-worked" },
             { label: "02 · How we scale this", href: "#how-to-scale" },
             { label: "03 · What we need", href: "#what-we-need" },
             { label: "04 · Our belief", href: "#our-belief" },
@@ -109,7 +109,7 @@ const metadata = {
 
         <div class="inline-flex items-center gap-3 mb-8">
           <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-blue-500"></div>
-          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">01 · What Has Worked</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">01 · What's Been Done</span>
         </div>
 
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
@@ -203,9 +203,12 @@ const metadata = {
           <p class="text-sm text-slate-400 leading-relaxed mb-3">
             Real World Ready is delivered through delivery partners with existing reach into student communities. Our only delivery partner is TinkerHub Foundation: 85+ active campus chapters across Kerala's engineering colleges.
           </p>
-          <p class="text-sm text-slate-400 leading-relaxed">
+          <p class="text-sm text-slate-400 leading-relaxed mb-3">
             Sessions run under co-branded names (e.g. <em>Beyond the Blueprint</em> with TinkerHub). The pedagogy, facilitation, and content come from The Second Design. The student mobilisation and campus infrastructure come from the partner.
           </p>
+          <a href="/blog/beyond-the-blueprint" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-violet-400 hover:text-violet-300 transition-colors">
+            Read the Beyond the Blueprint write-up →
+          </a>
         </div>
 
         <!-- Online session photo -->
@@ -228,6 +231,34 @@ const metadata = {
               <p class="text-xs text-slate-600 uppercase tracking-wide">{item.a}</p>
             </blockquote>
           ))}
+        </div>
+
+        <!-- Video testimonials -->
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">In their own words</p>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          {[
+            { id: "1qBZ1Zn9CWo", quote: "The way you guys curate this — it's a model that an education system has to follow." },
+            { id: "jjv7qU_42Zc", quote: "I wasn't aware of the Shitty First Draft technique. After learning it, I was mind blown. It was a Eureka moment." },
+            { id: "8oeOUDgv1l0", quote: "The most important thing is to take the first step. That night we had dinner and started." },
+          ].map(v => (
+            <div class="flex flex-col gap-3">
+              <div class="rounded-xl overflow-hidden border border-white/10">
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.quote}
+                  class="w-full aspect-[9/16]"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                />
+              </div>
+              <p class="text-xs text-slate-500 italic leading-relaxed">"{v.quote}"</p>
+            </div>
+          ))}
+        </div>
+        <div class="mb-10 text-right">
+          <a href="/testimonials" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-violet-400 transition-colors">
+            See all testimonials →
+          </a>
         </div>
 
         <!-- Proof of Work -->
@@ -253,56 +284,66 @@ const metadata = {
         </div>
 
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
-          What Year 1 at full capacity looks like
+          Four ways to reach more students.
         </h2>
 
         <p class="text-lg text-slate-400 leading-relaxed mb-10">
-          We've proven the core. The programme is ready to grow. What it needs is the infrastructure around it: the team and systems that let it stop running on founder bandwidth.
+          We've been thinking about scale in four ways. Three are straightforward. The fourth surprised us.
         </p>
 
         <div class="space-y-4 mb-12">
           {[
             {
-              label: "A",
-              title: "10 new sessions built",
-              desc: "Each session: deep research → conceptual framework → script → slide deck → student workbook → blog post. We have 5 sessions today. This year, we build 10 more: expanding the library from 5 to 15.",
+              n: "01",
+              title: "Conduct more sessions",
+              desc: "More frequency, more campuses, more delivery partners. The session format is proven. Reach grows directly with the number of times we run it.",
+              color: "text-blue-400/40",
+              border: "hover:border-blue-500/30",
             },
             {
-              label: "B",
-              title: "Media & communications running consistently",
-              desc: "A blog post per new session. Instagram posts before and after each session. A content calendar. The Proof of Work series growing into a documented body of student outcomes.",
+              n: "02",
+              title: "More students per session",
+              desc: "Sessions have gone from 20 students to 167 in a single room. With better logistics, partner infrastructure, and online reach, each session can go wider.",
+              color: "text-blue-400/40",
+              border: "hover:border-blue-500/30",
             },
             {
-              label: "C",
-              title: "Impact measurement in place",
-              desc: "Pre/post surveys. A framework for measuring actual shifts in agency, career confidence, and action: not just ratings. Data we can present to funders and partners with integrity.",
+              n: "03",
+              title: "More topics",
+              desc: "We have 5 sessions today. Each new topic addresses a different problem students face — and brings a new reason to attend. We are building 10 more.",
+              color: "text-blue-400/40",
+              border: "hover:border-blue-500/30",
             },
             {
-              label: "D",
-              title: "1–2 new delivery partners",
-              desc: "We're currently limited to TinkerHub's network. This year, we research, pitch, and sign MoUs with 1–2 additional partners: expanding reach to new student communities beyond Kerala engineering colleges.",
-            },
-            {
-              label: "E",
-              title: "Operations running cleanly",
-              desc: "Post-session follow-ups. Community management. Proper accounts. SOPs that don't live only in founder heads. The organisation running as an organisation, not as a side project.",
+              n: "04",
+              title: "Students run sessions themselves",
+              desc: "Two of our sessions are open-sourced under Creative Commons. Students at campuses we have never visited have started facilitating them for their own communities, entirely on their own. No budget. No coordination from us. This kind of scale doesn't show up in our session count. It doesn't require our time or travel. It's already happening.",
+              color: "text-emerald-400/60",
+              border: "hover:border-emerald-500/30",
+              link: { href: "/blog/students-ran-our-sessions-themselves", label: "Read the full story" },
             },
           ].map(item => (
-            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/30 transition-colors">
-              <span class="text-2xl font-bold text-blue-400/30 shrink-0 leading-none mt-0.5 w-6 text-center">{item.label}</span>
+            <div class={`flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10 transition-colors ${item.border}`}>
+              <span class={`text-2xl font-bold font-mono shrink-0 leading-none mt-0.5 w-8 ${item.color}`}>{item.n}</span>
               <div>
                 <p class="font-bold text-white mb-2">{item.title}</p>
                 <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                {item.link && (
+                  <a href={item.link.href}
+                    class="inline-flex items-center gap-1 mt-3 text-xs font-bold uppercase tracking-widest text-emerald-400 hover:text-emerald-300 transition-colors">
+                    {item.link.label} →
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
 
         <!-- By end of Year 1 -->
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">By end of Year 1</p>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-5">Where we want to be in a year</p>
         <div class="grid md:grid-cols-2 gap-3">
           {[
-            { n: "15 sessions", desc: "in the library: each with slides, workbook, script, and a blog." },
+            { n: "15 sessions", desc: "in the library, each with slides, workbook, script, and a blog post." },
             { n: "1,500+ students", desc: "attending sessions across existing and new delivery partners." },
             { n: "2 new partners", desc: "beyond TinkerHub, expanding reach to new student communities." },
             { n: "Real impact data", desc: "pre/post surveys, outcome tracking, and an impact report." },
