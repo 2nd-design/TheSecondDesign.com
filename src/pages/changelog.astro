@@ -10,6 +10,21 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-18',
+    version: '3.1.3',
+    title: 'Fix header hairline seam on dark pages',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Header absolute overlay was dark:bg-[#030620] but dark pages use bg-slate-950 (#020617), causing a 1px color seam',
+          'Changed dark mode header background to transparent so page background shows through seamlessly',
+          'Scroll state CSS still applies a solid background when the user scrolls',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-18',
     version: '3.1.2',
     title: 'Fix broken image import and header hairline border',
     changes: [
