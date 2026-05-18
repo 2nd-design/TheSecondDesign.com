@@ -10,6 +10,20 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-18',
+    version: '3.0.1',
+    title: 'Fix dark mode section backgrounds on real-world-ready page',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Three sections used dark:bg-slate-900/50 (semi-transparent), causing a washed-out gray in dark mode',
+          'Fixed all three to dark:bg-slate-900 (solid) -- sec-case-studies, sec-pow, sec-ratings',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-18',
     version: '3.0.0',
     title: 'New /real-world-ready/teach page, rating fix, homepage image, mobile nav fix',
     changes: [
