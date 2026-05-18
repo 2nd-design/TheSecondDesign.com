@@ -58,6 +58,10 @@
   right: 0;
   bottom: 70px !important;
   padding: 0 5px;
+  background-color: #ffffff;
+}
+.dark #header.expanded nav {
+  background-color: #030620;
 }
 
 .dropdown:focus .dropdown-menu,

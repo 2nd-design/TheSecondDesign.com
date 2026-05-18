@@ -9,6 +9,20 @@ const metadata = {
 
 const changelog = [
   {
+    date: '2026-05-18',
+    version: '2.9.2',
+    title: 'Fix mobile nav invisible in dark mode',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Mobile hamburger menu nav was transparent when expanded, making dark:text-slate-300 links invisible on white backgrounds',
+          'Added explicit background colours to #header.expanded nav: white in light mode, #030620 in dark mode',
+        ],
+      },
+    ],
+  },
+  {
     date: '2026-05-17',
     version: '2.9.1',
     title: 'Rename /real-world-ready/pitch to /real-world-ready/donate',
