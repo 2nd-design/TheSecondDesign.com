@@ -10,6 +10,35 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-18',
+    version: '3.0.0',
+    title: 'New /real-world-ready/teach page, rating fix, homepage image, mobile nav fix',
+    changes: [
+      {
+        category: 'New Page',
+        items: [
+          'Added /real-world-ready/teach: invitation page for potential patrons to share a mental model we can turn into a session',
+          'No financial ask anywhere on the page -- purely about a conversation',
+          'Links back to /real-world-ready and /real-world-ready/donate',
+        ],
+      },
+      {
+        category: 'Copy',
+        items: [
+          'Replaced misleading "63% rate it 10/10" stat with accurate "9.5/10 average rating" across teach.astro, donate.astro, and real-world-ready.astro',
+          'Added "88% gave it a 9 or 10" as supporting context in the ratings section',
+          'Replaced stock Unsplash image in homepage Real World Ready section with students-working-01.jpg from Winter Camp 2025',
+        ],
+      },
+      {
+        category: 'Bug Fix',
+        items: [
+          'Mobile hamburger nav was transparent when expanded in dark mode, making links nearly invisible -- fixed with explicit background colours',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-18',
     version: '2.9.2',
     title: 'Fix mobile nav invisible in dark mode',
     changes: [
