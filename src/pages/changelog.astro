@@ -10,6 +10,20 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-18',
+    version: '3.1.2',
+    title: 'Fix broken image import and header hairline border',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Fixed broken import path in real-world-ready.astro: sed renamed attendees-dec2025.png to students-dec2025.png (filename, not variable)',
+          'Fixed hairline border artifact below header in dark mode: changed border-gray-50/0 to border-transparent in Header.astro',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-18',
     version: '3.1.0',
     title: 'Revert "attendees" back to "students" across RWR content',
     changes: [
