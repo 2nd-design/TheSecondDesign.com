@@ -10,6 +10,22 @@ const metadata = {
 const changelog = [
   {
     date: '2026-05-18',
+    version: '3.1.4',
+    title: 'Fix blog post white background in dark mode',
+    changes: [
+      {
+        category: 'Bug Fix',
+        items: [
+          'Blog post pages showed light-colored text on white background in dark mode — body dark background was not applying reliably',
+          'Root cause: bg-page utility uses a CSS variable in @layer utilities, which has lower cascade priority than unlayered CSS',
+          'Fixed by adding dark:bg-[#030620] directly to <body> in Layout.astro, bypassing the CSS variable cascade entirely',
+          'This is a permanent fix that applies globally to all pages, not just blog posts',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-05-18',
     version: '3.1.3',
     title: 'Fix header hairline seam on dark pages',
     changes: [
