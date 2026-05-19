@@ -9,7 +9,7 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+author: HowToCBC
 metadata:
   canonical: https://theseconddesign.com/blog/active-learning-toolkit
 ---
@@ -81,4 +81,5 @@ See you in a fortnight!
 Team [howtocbc](https://twitter.com/howtocbc)
 
 ([Aruna](https://twitter.com/starryeyedak) and [Gautham](https://twitter.com/g3Mo))
+[With Special Thanks to Pratham Sehgal]
 
