@@ -9,7 +9,7 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/efficacy-of-cbcs
 ---
@@ -66,4 +66,6 @@ Add [email protected] to your contacts or set up a filter to never flag it as s
 We would love to hear about your experience with Cohort Based Courses. Just reply to this email.
 
 Come say hi to our team: [Aruna](https://twitter.com/starryeyedak) and [Gautham](https://twitter.com/g3Mo)
+
+[Special thanks to Pratham Sehgal.]
 
