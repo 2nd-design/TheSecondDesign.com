@@ -9,7 +9,9 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+  - newsletter
+  - howtocbc-pulse
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/learner-outcomes
 ---
@@ -50,4 +52,5 @@ We love Twitter threads. Find us and tag us @howtocbc on Twitter.
 See you in a fortnight! 👋🏼
 
 Team [howtocbc](https://howtocbc.com/)
+[With Special Thanks to Pratham Sehgal]
 
