@@ -66,6 +66,5 @@ Add [email protected] to your contacts or set up a filter to never flag it as s
 We would love to hear about your experience with Cohort Based Courses. Just reply to this email.
 
 Come say hi to our team: [Aruna](https://twitter.com/starryeyedak) and [Gautham](https://twitter.com/g3Mo)
-
-[Special thanks to Pratham Sehgal.]
+[With Special Thanks to Pratham Sehgal]
 
