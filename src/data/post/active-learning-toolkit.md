@@ -9,7 +9,9 @@ tags:
   - online-learning
   - education
   - cbc
-author: HowToCBC
+  - newsletter
+  - howtocbc-pulse
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/active-learning-toolkit
 ---
