@@ -9,7 +9,7 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/i-do-you-do-we-do-framework
 ---
@@ -61,7 +61,9 @@ As the name ‘I Do, You Do, We Do 🤝’ suggests, the idea is quite simple. w
 
 In the spirit of [Anne Lamott’s shitty first drafts](https://wrd.as.uky.edu/sites/default/files/1-Shitty%20First%20Drafts.pdf), we strongly encourage our learners to embrace imperfect and incomplete first drafts and attempt the steps given below.
 
-Note: We’ll use the topic of ‘[Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906)’ to illustrate how we apply the ‘I Do, You Do, We Do 🤝’ framework in the context of our [2 week program on designing Cohort Based Courses](https://maven.com/howtocbc).
+Note: We’ll use the topic of ‘[Learner Outcomes](https://theseconddesign.com/blog/learner-outcomes)’
+{/* [This is a comment in MDX](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906) */}
+to illustrate how we apply the ‘I Do, You Do, We Do 🤝’ framework in the context of our [2 week program on designing Cohort Based Courses](https://maven.com/howtocbc).
 
 Example: Right after we introduced the topic of [Learner Outcomes](https://newsletter.howtocbc.com/issues/howtocbc-pulse-learner-outcomes-1024906), we share the draft of the Learner outcome for [our 2 week program](https://maven.com/howtocbc) with our attendees. This effectively illustrates how we used best practices to formulate Learner Outcomes ourselves.
 
@@ -84,7 +86,9 @@ Thus, we can design Learning Units to allow for one or more iterations of learni
 
 Demonstration of the entire loop in class is a powerful device. It demystifies the process of learning for the attendee. It equips them to go out of class and continue to iterate on their learning.
 
-We’ve come up with a workbook with exercises and illustrative examples for the ‘I Do, You Do, We Do 🤝’ and many other useful [Active Learning](https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109) frameworks for online courses.
+We’ve come up with a workbook with exercises and illustrative examples for the ‘I Do, You Do, We Do 🤝’ and many other useful [Active Learning](https://theseconddesign.com/blog/active-learning-toolkit)
+{/*(https://newsletter.howtocbc.com/issues/howtocbc-pulse-active-learning-toolkit-1095109) */}
+frameworks for online courses.
 
 If you’d like to get early access to a workbook at a deeply discounted price, reply to this email saying ‘Interested’ and we’ll send you an exclusive link.
 
