@@ -9,7 +9,7 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/forget-lectures-think-learning-units
 ---
@@ -99,6 +99,7 @@ If you want to jump on a call where we can help you ship the first draft of your
 Until next time 👋,
 
 [Gautham](https://twitter.com/g3Mo) & [Aruna](https://twitter.com/starryeyedak)
+[With Special Thanks to Pratham Sehgal]
 
 [Next cohort starts 23 May](https://maycohorts.carrd.co/)
 
