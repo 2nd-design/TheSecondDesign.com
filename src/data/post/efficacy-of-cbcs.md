@@ -9,6 +9,8 @@ tags:
   - online-learning
   - education
   - cbc
+  - newsletter
+  - howtocbc-pulse
 author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/efficacy-of-cbcs
