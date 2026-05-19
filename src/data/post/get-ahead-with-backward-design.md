@@ -9,7 +9,7 @@ tags:
   - online-learning
   - education
   - cbc
-author: howtocbc
+author: The Second Design (old HowToCBC)
 metadata:
   canonical: https://theseconddesign.com/blog/get-ahead-with-backward-design
 ---
@@ -78,4 +78,4 @@ As you start to apply backward design and discover it’s magic, consider joinin
 Until next time 👋,
 
 Team [howtocbc](https://twitter.com/howtocbc)
-
+[With Special Thanks to Pratham Sehgal]
