@@ -94,3 +94,9 @@ If you’d like to get early access to a workbook at a deeply discounted price, 
 
 The exercises in the workbook can help you write the Shitty First Drafts to start incorporating Active Learning in your course.
 
+Until next time 👋,
+
+Team [howtocbc](https://twitter.com/howtocbc)
+[With Special Thanks to Pratham Sehgal]
+
+
