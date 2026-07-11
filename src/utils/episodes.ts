@@ -11,6 +11,7 @@ export interface Episode {
   tags?: string[];
   draft?: boolean;
   publishDate?: Date;
+  episodeNumber?: number;
   Content?: any;
 }
 
@@ -30,6 +31,7 @@ const getNormalizedEpisode = async (entry: CollectionEntry<'episode'>): Promise<
     tags: data.tags,
     draft: data.draft,
     publishDate: data.publishDate ? new Date(data.publishDate) : undefined,
+    episodeNumber: data.episodeNumber,
     Content,
   };
 };
@@ -40,7 +42,12 @@ export const fetchEpisodes = async (): Promise<Episode[]> => {
 
   return episodes
     .filter((e) => !e.draft)
-    .sort((a, b) => (b.publishDate?.valueOf() ?? 0) - (a.publishDate?.valueOf() ?? 0));
+    .sort((a, b) => {
+      if (a.episodeNumber != null && b.episodeNumber != null) {
+        return a.episodeNumber - b.episodeNumber;
+      }
+      return (a.publishDate?.valueOf() ?? 0) - (b.publishDate?.valueOf() ?? 0);
+    });
 };
 
 export const getStaticPathsEpisodes = async () => {

@@ -1,5 +1,6 @@
 ---
 publishDate: 2026-02-05T00:00:00Z
+episodeNumber: 1
 title: 'Build Before You Figure It Out'
 studentName: 'Aksa Rose'
 excerpt: 'In college, most of us are figuring out how to pass exams. Aksa was doing that too, and also fine-tuning a language model, building a viral AI product, running hack nights out of a hostel, and building a women-in-tech community nobody asked her to build.'

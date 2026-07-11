@@ -1,5 +1,6 @@
 ---
 publishDate: 2026-07-11T00:00:00Z
+episodeNumber: 2
 title: 'Order the Chai Before You Get Permission'
 studentName: 'Abina NJ'
 excerpt: 'She wanted to bring TinkerHub to her college. Her principal said no, three times. She ordered 200 cups of chai anyway, then found the money to pay for it.'

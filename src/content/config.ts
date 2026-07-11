@@ -71,6 +71,7 @@ const episodeCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/episode' }),
   schema: z.object({
     publishDate: z.date().optional(),
+    episodeNumber: z.number().optional(),
     draft: z.boolean().optional(),
 
     title: z.string(),
