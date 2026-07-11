@@ -19,7 +19,7 @@ const metadata = {
   description: episode.excerpt || `${episode.studentName}'s story, Proof of Work by The Second Design.`,
 };
 
-const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1];
+const youtubeId = episode.videoUrl?.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|live\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1];
 ---
 
 <Layout metadata={metadata}>

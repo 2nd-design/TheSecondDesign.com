@@ -24,6 +24,8 @@ export interface Post {
   image?: ImageMetadata | string;
   /**  */
   imageCaption?: string;
+  /** Optional video URL. When set, the hero image links out to it with a play-button overlay. */
+  videoUrl?: string;
 
   /**  */
   category?: Taxonomy;

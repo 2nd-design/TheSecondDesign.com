@@ -2,12 +2,13 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 import { fetchEpisodes } from '~/utils/episodes';
+import heroImg from '~/assets/images/real-world-ready/events/btb-winter-camp-dec-2025/workshop-hall-01.jpg';
 
 const episodes = await fetchEpisodes();
 
 function getYoutubeId(url?: string) {
   if (!url) return null;
-  return url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1] ?? null;
+  return url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|live\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)?.[1] ?? null;
 }
 
 const metadata = {
@@ -22,13 +23,14 @@ const metadata = {
   <section class="relative overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
     <!-- Background image -->
     <img
-      src="https://images.unsplash.com/photo-1735892907432-569ee8e8cc1b?auto=format&fit=crop&w=1920&q=80"
-      alt=""
+      src={heroImg.src}
+      alt="Students at a Beyond the Blueprint session, TinkerHub"
       class="absolute inset-0 w-full h-full object-cover"
     />
 
     <!-- Dark overlay for text readability -->
-    <div class="absolute inset-0 bg-slate-950/70"></div>
+    <div class="absolute inset-0 bg-slate-950/85"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_55%,rgba(2,6,23,0.75),transparent_100%)]"></div>
 
     <!-- Colored gradient accents -->
     <div class="absolute inset-0">
@@ -56,11 +58,11 @@ const metadata = {
           </span>
         </h1>
 
-        <p class="text-xl sm:text-2xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-6">
+        <p class="text-xl sm:text-2xl text-slate-100 leading-relaxed max-w-2xl mx-auto mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           Students who decided to act.
         </p>
 
-        <p class="text-base text-slate-500 max-w-xl mx-auto">
+        <p class="text-base text-slate-300 max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
           They didn't wait for permission. They started projects, organised events, shipped work, and made decisions. These are their stories.
         </p>
       </div>
@@ -138,111 +140,6 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Featured episode ************************* -->
-  {episodes.length > 0 && (
-    <section class="py-24 sm:py-32 bg-slate-950 text-white relative overflow-hidden">
-      <!-- Background -->
-      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-blue-500/15 to-transparent blur-3xl"></div>
-
-      <div class="relative container max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-16">
-          <p class="text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase mb-4">Latest Episode</p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            {episodes[0].title}
-          </h2>
-          <p class="text-lg text-slate-400">{episodes[0].studentName}</p>
-        </div>
-
-        <div class="max-w-5xl mx-auto">
-          <!-- Featured card -->
-          <a
-            href={`/proof-of-work/${episodes[0].slug}`}
-            class="group block relative rounded-3xl overflow-hidden"
-          >
-            <!-- Large gradient card -->
-            <div class="relative p-8 sm:p-12 md:p-16 bg-gradient-to-br from-blue-600/90 via-blue-700/80 to-violet-700/70 rounded-3xl border border-white/10">
-              <!-- Decorative blobs -->
-              <div class="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-              <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/20 rounded-full blur-2xl"></div>
-              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"></div>
-
-              <div class="relative grid md:grid-cols-2 gap-10 items-center">
-                <!-- Text side -->
-                <div class="space-y-6">
-                  <div class="flex items-center gap-2">
-                    {episodes[0].tags?.map((tag) => (
-                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/15 text-white/90 border border-white/20 backdrop-blur-sm">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <blockquote class="text-3xl sm:text-4xl font-bold leading-tight">
-                    "Build before you figure it out."
-                  </blockquote>
-
-                  <p class="text-blue-100 text-lg leading-relaxed">
-                    {episodes[0].excerpt}
-                  </p>
-
-                  <div class="flex items-center gap-3 text-white font-semibold group-hover:gap-4 transition-all">
-                    <span>{episodes[0].videoUrl ? 'Watch & read' : 'Read the full story'}</span>
-                    <Icon name="tabler:arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-
-                <!-- Visual side -->
-                <div class="hidden md:flex flex-col items-center justify-center">
-                  {(() => {
-                    const ytId = getYoutubeId(episodes[0].videoUrl);
-                    return ytId ? (
-                      <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 w-full aspect-video group-hover:scale-[1.02] transition-transform duration-300">
-                        <img
-                          src={`https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`}
-                          alt={`${episodes[0].title} video thumbnail`}
-                          class="w-full h-full object-cover"
-                        />
-                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                          <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl">
-                            <svg class="w-6 h-6 text-slate-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z"/>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-xs font-medium text-white/90">
-                          Watch episode
-                        </div>
-                      </div>
-                    ) : (
-                      <div class="text-[12rem] font-black leading-none text-white/10 select-none">01</div>
-                    );
-                  })()}
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Episode details bar -->
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
-            <div class="flex items-center gap-2">
-              <Icon name="tabler:user" class="w-4 h-4" />
-              <span>{episodes[0].studentName}</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <Icon name="tabler:school" class="w-4 h-4" />
-              <span>LBS Institute of Technology for Women, Trivandrum</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <Icon name="tabler:brand-github" class="w-4 h-4" />
-              <span>46 repositories</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )}
-
   <!-- Key quote ******************************** -->
   <section class="py-20 sm:py-28 bg-white dark:bg-slate-950 relative">
     <div class="container max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -255,38 +152,47 @@ const metadata = {
     </div>
   </section>
 
-  <!-- More episodes / Coming soon ************** -->
+  <!-- All episodes ******************************* -->
   <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50">
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">Coming up</p>
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase mb-4">All episodes</p>
         <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-          More stories in the making
+          Every conversation so far
         </h2>
         <p class="text-lg text-slate-600 dark:text-slate-400">
-          We're documenting more students who decided to act. Each story follows the same format: the decision, the steps, and what happened.
+          Newest first. Each one follows the same format: the decision, the steps, and what happened.
         </p>
       </div>
 
-      <div class="max-w-xs mx-auto">
-        <div class="relative rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 p-8 flex flex-col items-center justify-center text-center min-h-[180px]">
-          <div class="w-12 h-12 rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center mb-4">
-            <Icon name="tabler:microphone-2" class="w-6 h-6 text-slate-400 dark:text-slate-500" />
-          </div>
-          <p class="text-sm font-semibold text-slate-400 dark:text-slate-500">Episode 02</p>
-          <p class="text-xs text-slate-400 dark:text-slate-600 mt-1">Coming soon</p>
-        </div>
-      </div>
-
-      {episodes.length > 1 && (
-        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {episodes.slice(1).map((episode, index) => (
+      {episodes.length > 0 ? (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {episodes.map((episode, index) => (
             <a
               href={`/proof-of-work/${episode.slug}`}
               class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 hover:-translate-y-1"
             >
+              {(() => {
+                const ytId = getYoutubeId(episode.videoUrl);
+                return ytId ? (
+                  <div class="relative aspect-video overflow-hidden">
+                    <img
+                      src={`https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`}
+                      alt={`${episode.title} video thumbnail`}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-xl">
+                        <svg class="w-5 h-5 text-slate-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                ) : null;
+              })()}
               <div class="p-6 sm:p-8">
-                <span class="text-xs font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-3 block">Episode {String(index + 2).padStart(2, '0')}</span>
+                <span class="text-xs font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-3 block">Episode {String(index + 1).padStart(2, '0')}</span>
                 <div class="flex items-center gap-2 mb-4">
                   {episode.tags?.map((tag) => (
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20">
@@ -302,13 +208,15 @@ const metadata = {
                   <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{episode.excerpt}</p>
                 )}
                 <div class="mt-4 flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400">
-                  <span>Read story</span>
+                  <span>{episode.videoUrl ? 'Watch & read' : 'Read story'}</span>
                   <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </a>
           ))}
         </div>
+      ) : (
+        <p class="text-center text-slate-500 dark:text-slate-400">More stories are on the way.</p>
       )}
     </div>
   </section>

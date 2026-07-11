@@ -9,6 +9,27 @@ const metadata = {
 
 const changelog = [
   {
+    date: '2026-07-11',
+    version: '3.2.0',
+    title: 'Second Proof of Work episode: Abina NJ',
+    changes: [
+      {
+        category: 'Content',
+        items: [
+          { text: "New Proof of Work episode: 'Order the Chai Before You Get Permission' (Abina NJ)", url: '/proof-of-work/order-the-chai-before-you-get-permission' },
+          { text: "Companion blog post announcing the episode", url: '/blog/she-ordered-the-chai-before-her-principal-said-yes' },
+          { text: "New blog post: 'Two Steps Ahead Is Enough' (on gatekeeping around who gets to give/take advice)", url: '/blog/two-steps-ahead-is-enough' },
+        ],
+      },
+      {
+        category: 'Bug Fix',
+        items: [
+          'Fixed the YouTube ID parser on the Proof of Work index and episode pages to recognize youtube.com/live/ URLs (livestream links), which were previously silently dropped — no thumbnail or embed rendered',
+        ],
+      },
+    ],
+  },
+  {
     date: '2026-05-18',
     version: '3.1.4',
     title: 'Fix blog post white background in dark mode',

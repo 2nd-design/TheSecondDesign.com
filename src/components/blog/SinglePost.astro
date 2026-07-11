@@ -64,16 +64,41 @@ const { post, url } = Astro.props;
     {
       post.image ? (
         <figure class="max-w-3xl mx-auto mb-10 sm:px-0">
-          <Image
-            src={post.image}
-            class="w-full sm:rounded-xl bg-gray-200 dark:bg-slate-700"
-            widths={[400, 900]}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post?.excerpt || ''}
-            width={900}
-            loading="eager"
-            decoding="async"
-          />
+          {post.videoUrl ? (
+            <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" class="group relative block sm:rounded-xl overflow-hidden">
+              <Image
+                src={post.image}
+                class="w-full sm:rounded-xl bg-gray-200 dark:bg-slate-700"
+                widths={[400, 900]}
+                sizes="(max-width: 900px) 400px, 900px"
+                alt={post?.excerpt || ''}
+                width={900}
+                loading="eager"
+                decoding="async"
+              />
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform">
+                  <svg class="w-6 h-6 text-slate-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-xs font-medium text-white/90">
+                Watch on YouTube
+              </div>
+            </a>
+          ) : (
+            <Image
+              src={post.image}
+              class="w-full sm:rounded-xl bg-gray-200 dark:bg-slate-700"
+              widths={[400, 900]}
+              sizes="(max-width: 900px) 400px, 900px"
+              alt={post?.excerpt || ''}
+              width={900}
+              loading="eager"
+              decoding="async"
+            />
+          )}
           {post.imageCaption && (
             <figcaption class="text-center text-xs text-slate-400 dark:text-slate-500 mt-2 px-4">
               {post.imageCaption}
