@@ -1,0 +1,123 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Before the Session · The Second Design',
+  description: 'What to know before you join a Real World Ready session.',
+  robots: { index: false, follow: false },
+};
+
+const tldr = [
+  { emoji: '⏰', lead: 'Be on time:', rest: 'Entry will be denied if you’re more than 5 minutes late. Drop-offs due to tech issues can rejoin. Join 10 mins early.' },
+  { emoji: '💻', lead: 'Use a laptop:', rest: 'Mobile kills the experience. You’ll need to edit Google Docs, join breakout rooms, and possibly share your screen.' },
+  { emoji: '🔄', lead: 'Update Zoom:', rest: 'Use the latest Zoom desktop app. Browser/old versions won’t support all features.' },
+  { emoji: '📷', lead: 'Cameras ON', rest: 'encouraged (but not mandatory).' },
+  { emoji: '🎥', lead: 'Recording:', rest: 'The session will be recorded, but shared only with your permission.' },
+  { emoji: '🙋', lead: 'Need accommodations?', rest: 'DM the host privately. We’ll make it work.' },
+];
+
+const sections = [
+  {
+    emoji: '⏰',
+    heading: 'Be on Time',
+    summary: 'We start sharp, and we respect everyone’s time.',
+    ring: 'border-violet-500/30',
+    accent: 'text-violet-400',
+    points: [
+      'Participants arriving more than 5 minutes late won’t be allowed entry. Please be on time so that we can start on time by respecting everyone’s time.',
+      'If you’re unable to join on time, that’s completely okay! We’ll be conducting more sessions like this, and you’re welcome to join the next one.',
+      'Those who drop off owing to connectivity or other issues after joining will be allowed to re-enter. Please contact the organizer if you’ve dropped and are having trouble rejoining the call. Please rejoin the call with your name.',
+      'Ideally, join the call 10 minutes early so that we can start sharp on time.',
+    ],
+  },
+  {
+    emoji: '💻',
+    heading: 'Join from a Laptop, not from your Mobile',
+    summary: 'The session is built around a shared workbook. Mobile will cost you most of the experience.',
+    ring: 'border-blue-500/30',
+    accent: 'text-blue-400',
+    points: [
+      'We will be sharing the link to a workbook (Google Doc) with you. You’ll be able to make a copy of it and make edits in your copy. Avoid downloading the document and editing it as a Word document on your computer. Doing this on a mobile device will diminish your experience vastly.',
+      'In addition to typing in a Google Doc, you may have to share your screen, join breakout rooms on Zoom etc. Joining from a mobile device will diminish the quality of the experience, a lot.',
+    ],
+  },
+  {
+    emoji: '🔄',
+    heading: 'Join from the latest Zoom app on your Laptop',
+    summary: 'Update Zoom before the session, not during it.',
+    ring: 'border-emerald-500/30',
+    accent: 'text-emerald-400',
+    points: [
+      'For the best experience, it’ll be ideal if you download and install the latest app of Zoom on your desktop / laptop.',
+      'If you already have the Zoom app installed, ensure that it has been updated to the latest version. During the workshop, we will be using features on Zoom that may not be available on the older versions of the app.',
+      'Zoom has this annoying habit of auto-updating the app just when you launch it, so watch out for that and update it beforehand.',
+      'Avoid joining from Zoom on your browser, you won’t be able to use all the features we use to conduct the session.',
+    ],
+  },
+  {
+    emoji: '🙂',
+    heading: 'Others',
+    summary: 'Cameras, recording and accommodations.',
+    ring: 'border-amber-500/30',
+    accent: 'text-amber-400',
+    points: [
+      'It’ll be great if you can keep your cameras on during the session. But, we totally understand if you would prefer not to. Your call, it’d be a lot more nice for us, the hosts, to talk to faces is all.',
+      'The session will be recorded on Zoom. It will not be shared without your permission. Please let us know in advance if you have any reservations about it, we shall accommodate them.',
+      'DM the host on Zoom if you have any concerns or disabilities that you need accommodations for. We shall do our best.',
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="relative overflow-hidden bg-slate-950 pt-24 pb-12">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-1/3 w-[500px] h-[500px] bg-violet-500/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-emerald-500/8 rounded-full blur-[100px]"></div>
+    </div>
+    <div class="relative container max-w-2xl mx-auto px-5 sm:px-6">
+      <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-5">Real World Ready</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">Before the session</h1>
+      <p class="text-xl text-slate-300 leading-relaxed max-w-xl">What to know so the session works well for you.</p>
+    </div>
+  </section>
+
+  <div class="bg-slate-950">
+    <div class="container max-w-2xl mx-auto px-5 sm:px-6 pb-28 space-y-10">
+
+      <section class="rounded-2xl bg-white/[0.05] border border-white/10 border-l-4 border-l-violet-500 p-6 sm:p-7">
+        <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-5">The short version</p>
+        <ul class="space-y-4">
+          {tldr.map((t) => (
+            <li class="flex gap-3 text-[17px] leading-relaxed text-slate-200">
+              <span class="text-xl leading-snug" aria-hidden="true">{t.emoji}</span>
+              <span><strong class="text-white font-semibold">{t.lead}</strong> {t.rest}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <p class="text-sm text-slate-400 pt-2">The details, if you want them:</p>
+
+      {sections.map((s) => (
+        <section class={`rounded-2xl bg-white/[0.03] border ${s.ring} p-6 sm:p-7`}>
+          <div class="flex items-start gap-4 mb-5">
+            <span class="text-3xl leading-none" aria-hidden="true">{s.emoji}</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white leading-snug">{s.heading}</h2>
+              <p class={`mt-1 text-[15px] font-medium ${s.accent}`}>{s.summary}</p>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            {s.points.map((p) => (
+              <li class="flex gap-3 text-[17px] leading-relaxed text-slate-300">
+                <span class={`mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-current ${s.accent}`} aria-hidden="true"></span>
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+</Layout>
