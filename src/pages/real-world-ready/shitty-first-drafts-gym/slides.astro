@@ -1,0 +1,469 @@
+---
+import '@fontsource/dm-serif-display';
+import '@fontsource-variable/dm-sans';
+import { Image } from 'astro:assets';
+import afraPhoto from '~/assets/images/real-world-ready/afra/tinkerhub-graduation.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Shitty First Drafts Gym: slides · The Second Design</title>
+  </head>
+  <body>
+    <main class="deck" id="deck" aria-live="polite">
+
+      <!-- 1. Title -->
+      <section class="slide center active" data-title="Shitty First Drafts Gym">
+        <p class="eyebrow rise">The Second Design · Real World Ready</p>
+        <h1 class="rise">Shitty First<br /><span class="grad">Drafts Gym</span></h1>
+        <p class="lede rise">A weekly session dedicated to doing.</p>
+        <p class="meta rise">Every Wednesday · 8 to 9 pm IST · On Zoom</p>
+      </section>
+
+      <!-- 2. Why -->
+      <section class="slide" data-title="Why it exists">
+        <p class="eyebrow rise">Why it exists</p>
+        <h2 class="rise">Getting started is the hard part.<br /><span class="grad">A rough first draft is enough.</span></h2>
+        <div class="flow rise">
+          <div class="flow-step"><span class="flow-n">1</span><span class="flow-t">Start something rough</span></div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step"><span class="flow-n">2</span><span class="flow-t">Show someone</span></div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step"><span class="flow-n">3</span><span class="flow-t">Keep going</span></div>
+        </div>
+        <p class="lede rise">Every week you make something, and someone else sees it. Want to keep building the same thing across weeks? You can, with a room of people behind you.</p>
+      </section>
+
+      <!-- 3. How it works -->
+      <section class="slide" data-title="How a session runs">
+        <p class="eyebrow rise">How a session runs</p>
+        <h2 class="rise">One hour. Three steps.</h2>
+        <div class="steps">
+          <div class="step rise">
+            <span class="n">01</span>
+            <div><p class="t">Before you start</p><p class="d">Say, in one line, what you will have to show.</p></div>
+          </div>
+          <div class="step rise">
+            <span class="n">02</span>
+            <div><p class="t">40 minutes: work</p><p class="d">Alone, on anything you choose.</p></div>
+          </div>
+          <div class="step rise">
+            <span class="n">03</span>
+            <div><p class="t">20 minutes: feedback</p><p class="d">Paired at random. Swap work, review each other.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. State your outcome -->
+      <section class="slide" data-title="State your outcome">
+        <p class="eyebrow rise">The one rule</p>
+        <h2 class="rise">State your outcome <span class="grad">up front.</span></h2>
+        <div class="compare">
+          <div class="card bad rise">
+            <p class="tag">Too vague</p>
+            <p class="q">"I'll work on my presentation."</p>
+            <p class="d">Your partner has nothing specific to react to.</p>
+          </div>
+          <div class="card good rise">
+            <p class="tag">Ready to review</p>
+            <p class="q">"The first three slides of my presentation."</p>
+            <p class="d">Small, finishable, shareable in 40 minutes.</p>
+          </div>
+        </div>
+        <p class="lede rise">Big project? Pick one slice.</p>
+      </section>
+
+      <!-- 5. Work on anything -->
+      <section class="slide" data-title="Work on anything">
+        <p class="eyebrow rise">What can you work on?</p>
+        <h2 class="rise">Anything you can <span class="grad">share and get comments on.</span></h2>
+        <ul class="chips rise">
+          <li>Writing</li>
+          <li>A portfolio</li>
+          <li>A design</li>
+          <li>Research</li>
+          <li>An email</li>
+        </ul>
+        <p class="lede rise">Host it as a link your partner can open and comment on: a Google Doc, a website, a slide deck.</p>
+      </section>
+
+      <!-- 6. Feedback -->
+      <section class="slide" data-title="Feedback that helps">
+        <p class="eyebrow rise">The 20 minutes</p>
+        <h2 class="rise">Feedback that <span class="grad">helps.</span></h2>
+        <div class="two">
+          <div class="col rise">
+            <p class="coltitle">Giving</p>
+            <ul class="list">
+              <li>Be specific. Say why.</li>
+              <li>You don't need to be an expert.</li>
+              <li>What grabbed you? Where did you drift? What confused you?</li>
+            </ul>
+          </div>
+          <div class="col rise">
+            <p class="coltitle">Receiving</p>
+            <ul class="list">
+              <li>Stay curious. Read everything first.</li>
+              <li>Look for patterns across people.</li>
+              <li>You may disagree. Say thank you.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="lede rise">Fix the big things first. Typos come last.</p>
+      </section>
+
+      <!-- 7. Community -->
+      <section class="slide" data-title="Community ground rules">
+        <p class="eyebrow rise">Ground rules</p>
+        <h2 class="rise">A small, safe room.</h2>
+        <ul class="rules">
+          <li class="rise"><span>Be on time.</span> A few minutes early.</li>
+          <li class="rise"><span>Take part, with kindness.</span> Disappear for a long stretch and you may be removed. You can ask to rejoin.</li>
+          <li class="rise"><span>Stay on topic.</span> No spam or self-promotion.</li>
+          <li class="rise"><span>Respect privacy.</span> Nothing leaves the group without permission.</li>
+          <li class="rise"><span>Zero tolerance</span> for harassment or exclusion.</li>
+        </ul>
+      </section>
+
+      <!-- 8. Proof -->
+      <section class="slide proof" data-title="One example: Afra">
+        <div class="proof-text">
+          <p class="eyebrow rise">One example</p>
+          <h2 class="rise">For Afra, the Gym became <span class="grad">a support system.</span></h2>
+          <p class="lede rise">She started with a rough WhatsApp message, kept working on the same piece week after week with feedback from the group, and published it as an essay.</p>
+          <p class="meta rise">"The Things We Dream About, But Never Do"</p>
+        </div>
+        <div class="proof-photo rise">
+          <Image src={afraPhoto} alt="Afra and Gautham at the TinkerHub graduation" widths={[480, 720]} sizes="40vw" loading="eager" />
+        </div>
+      </section>
+
+      <!-- 9. Join -->
+      <section class="slide center" data-title="How to join">
+        <p class="eyebrow rise">Want in?</p>
+        <h2 class="rise">Bring something<br /><span class="grad">you've been putting off.</span></h2>
+        <p class="lede rise">Email us and we'll consider adding you to the community.</p>
+        <p class="email rise">team@theseconddesign.com</p>
+        <p class="meta rise">theseconddesign.com/real-world-ready/shitty-first-drafts-gym</p>
+      </section>
+
+    </main>
+
+    <div class="chrome">
+      <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+      <div class="hud">
+        <span id="counter">1 / 9</span>
+        <span class="hint">← → to move · F for full screen</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #020617;
+    --ink: #f8fafc;
+    --muted: #94a3b8;
+    --soft: #cbd5e1;
+    --violet: #a78bfa;
+    --blue: #60a5fa;
+    --emerald: #34d399;
+    --line: rgba(255, 255, 255, 0.1);
+    --card: rgba(255, 255, 255, 0.04);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans Variable', system-ui, sans-serif;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 85% 0%, rgba(139, 92, 246, 0.25) 0%, rgba(2, 6, 23, 0) 50%),
+      radial-gradient(circle at 5% 100%, rgba(16, 185, 129, 0.16) 0%, rgba(2, 6, 23, 0) 45%);
+  }
+
+  .deck { position: fixed; inset: 0; }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7vmin 9vmin 9vmin;
+    max-width: 1500px;
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s;
+  }
+  .slide.center { align-items: center; text-align: center; }
+  .slide.active { opacity: 1; visibility: visible; }
+
+  .rise { opacity: 0; transform: translateY(14px); }
+  .slide.active .rise {
+    animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  .slide.active .rise:nth-child(1) { animation-delay: 0.05s; }
+  .slide.active .rise:nth-child(2) { animation-delay: 0.15s; }
+  .slide.active .rise:nth-child(3) { animation-delay: 0.3s; }
+  .slide.active .rise:nth-child(4) { animation-delay: 0.45s; }
+  .slide.active .rise:nth-child(5) { animation-delay: 0.6s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise { opacity: 1; transform: none; }
+    .slide.active .rise { animation: none; }
+    .slide { transition: none; }
+  }
+
+  .eyebrow {
+    margin: 0 0 3vmin;
+    font-size: clamp(0.85rem, 2.1vmin, 1.3rem);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--violet);
+  }
+
+  h1, h2 {
+    margin: 0;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    line-height: 1.08;
+  }
+  h1 { font-size: clamp(3rem, 13vmin, 10rem); }
+  h2 { font-size: clamp(2rem, 8vmin, 6.2rem); max-width: 18em; }
+  .slide.center h2 { max-width: none; }
+
+  .grad {
+    background: linear-gradient(90deg, #a78bfa, #60a5fa 50%, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .lede {
+    margin: 4vmin 0 0;
+    max-width: 30em;
+    font-size: clamp(1.15rem, 3.7vmin, 2.5rem);
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .meta {
+    margin: 3vmin 0 0;
+    font-size: clamp(1rem, 2.7vmin, 1.8rem);
+    color: var(--muted);
+  }
+
+  /* flow */
+  .flow { display: flex; align-items: stretch; gap: 2vmin; margin-top: 5vmin; flex-wrap: wrap; }
+  .flow-step {
+    display: flex; align-items: center; gap: 2vmin;
+    padding: 2.6vmin 3.4vmin;
+    border: 1px solid var(--line);
+    border-radius: 2.2vmin;
+    background: var(--card);
+  }
+  .flow-n {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 3.4vmin, 2.2rem);
+    color: rgba(167, 139, 250, 0.7);
+  }
+  .flow-t { font-weight: 700; font-size: clamp(1.1rem, 3.4vmin, 2.2rem); }
+  .flow-step.quiet { border-style: dashed; border-color: rgba(248, 113, 113, 0.4); }
+  .flow-step.quiet .flow-n { color: #f87171; }
+  .flow-step.done { border-color: rgba(52, 211, 153, 0.45); background: rgba(52, 211, 153, 0.06); }
+  .flow-step.done .flow-n { color: var(--emerald); }
+  .flow-arrow { align-self: center; font-size: clamp(1.4rem, 4vmin, 2.6rem); color: var(--muted); }
+
+  /* steps */
+  .steps { margin-top: 5vmin; display: grid; gap: 2vmin; max-width: 48em; }
+  .step {
+    display: flex; gap: 3vmin; align-items: flex-start;
+    padding: 2.6vmin 3.4vmin;
+    border: 1px solid var(--line);
+    border-radius: 2.2vmin;
+    background: var(--card);
+  }
+  .step .n {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 3.6vmin, 2.4rem);
+    color: rgba(167, 139, 250, 0.55);
+    line-height: 1.3;
+  }
+  .step .t { margin: 0 0 0.6vmin; font-weight: 700; font-size: clamp(1.2rem, 4vmin, 2.6rem); }
+  .step .d { margin: 0; font-size: clamp(1rem, 3vmin, 1.9rem); color: var(--muted); }
+
+  /* compare */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 3vmin; margin-top: 5vmin; }
+  .card {
+    padding: 3.4vmin 3.6vmin;
+    border-radius: 2.2vmin;
+    border: 1px solid var(--line);
+    background: var(--card);
+  }
+  .card .tag {
+    margin: 0 0 1.6vmin;
+    font-size: clamp(0.8rem, 2vmin, 1.25rem);
+    font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .card .q {
+    margin: 0 0 1.6vmin;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(1.5rem, 5vmin, 3.3rem);
+    line-height: 1.2;
+  }
+  .card .d { margin: 0; font-size: clamp(1rem, 2.9vmin, 1.8rem); color: var(--muted); }
+  .card.bad .tag { color: #f87171; }
+  .card.bad { border-color: rgba(248, 113, 113, 0.3); }
+  .card.good .tag { color: var(--emerald); }
+  .card.good { border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.05); }
+
+  /* chips */
+  .chips { list-style: none; padding: 0; margin: 5vmin 0 0; display: flex; flex-wrap: wrap; gap: 1.6vmin; }
+  .chips li {
+    padding: 1.4vmin 3vmin;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--card);
+    font-size: clamp(1.05rem, 3.5vmin, 2.3rem);
+    color: var(--soft);
+  }
+
+  /* two columns */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 3vmin; margin-top: 4.5vmin; }
+  .col {
+    padding: 3vmin 3.4vmin;
+    border: 1px solid var(--line);
+    border-radius: 2.2vmin;
+    background: var(--card);
+  }
+  .coltitle {
+    margin: 0 0 1.8vmin;
+    font-size: clamp(0.85rem, 2.1vmin, 1.3rem);
+    font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--blue);
+  }
+  .list { margin: 0; padding-left: 2.4vmin; display: grid; gap: 1.2vmin; font-size: clamp(1rem, 3vmin, 1.9rem); color: var(--soft); line-height: 1.35; }
+
+  /* rules */
+  .rules { list-style: none; padding: 0; margin: 4.5vmin 0 0; display: grid; gap: 1.8vmin; max-width: 44em; }
+  .rules li {
+    padding: 2vmin 3vmin;
+    border-left: 3px solid var(--violet);
+    background: var(--card);
+    border-radius: 0 1.6vmin 1.6vmin 0;
+    font-size: clamp(1.05rem, 3.2vmin, 2.1rem);
+    color: var(--muted);
+  }
+  .rules li span { color: var(--ink); font-weight: 700; }
+
+  /* proof */
+  .slide.proof { flex-direction: row; align-items: center; gap: 6vmin; }
+  .proof-text { flex: 1.2; }
+  .proof-photo { flex: 0.8; }
+  .proof-photo img {
+    width: 100%; max-height: 70vh; object-fit: cover;
+    border-radius: 2.4vmin;
+    border: 1px solid var(--line);
+  }
+  .proof h2 { font-size: clamp(1.8rem, 6.6vmin, 5rem); }
+
+  /* join */
+  .email {
+    margin: 4vmin 0 0;
+    padding: 2vmin 4vmin;
+    border: 1px solid rgba(167, 139, 250, 0.5);
+    border-radius: 999px;
+    background: rgba(167, 139, 250, 0.1);
+    font-size: clamp(1.4rem, 5vmin, 3.2rem);
+    font-weight: 700;
+  }
+
+  /* chrome */
+  .chrome { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; }
+  .bar { height: 3px; background: rgba(255, 255, 255, 0.08); }
+  .bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399); transition: width 0.35s ease; }
+  .hud {
+    display: flex; justify-content: space-between;
+    padding: 1.2vmin 3vmin;
+    font-size: clamp(0.7rem, 1.5vmin, 0.95rem);
+    color: rgba(148, 163, 184, 0.7);
+  }
+
+  @media (max-width: 760px) {
+    .slide { padding: 6vmin 6vmin 10vmin; overflow-y: auto; justify-content: flex-start; }
+    .compare, .two { grid-template-columns: 1fr; }
+    .slide.proof { flex-direction: column; align-items: flex-start; }
+    .hint { display: none; }
+  }
+</style>
+
+<script>
+  const slides = Array.from(document.querySelectorAll<HTMLElement>('.slide'));
+  const counter = document.getElementById('counter')!;
+  const fill = document.getElementById('barFill')!;
+  let index = 0;
+
+  const fromHash = () => {
+    const n = parseInt(location.hash.replace('#', ''), 10);
+    return Number.isFinite(n) ? Math.min(Math.max(n - 1, 0), slides.length - 1) : 0;
+  };
+
+  const show = (i: number) => {
+    index = Math.min(Math.max(i, 0), slides.length - 1);
+    slides.forEach((s, k) => s.classList.toggle('active', k === index));
+    counter.textContent = `${index + 1} / ${slides.length}`;
+    fill.style.width = `${((index + 1) / slides.length) * 100}%`;
+    history.replaceState(null, '', `#${index + 1}`);
+    document.title = `${slides[index].dataset.title} · Shitty First Drafts Gym`;
+  };
+
+  const next = () => show(index + 1);
+  const prev = () => show(index - 1);
+
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(slides.length - 1);
+    else if (e.key.toLowerCase() === 'f') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen?.();
+    }
+  });
+
+  document.getElementById('deck')!.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) return;
+    (e as MouseEvent).clientX < window.innerWidth * 0.3 ? prev() : next();
+  });
+
+  let startX = 0;
+  document.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+  });
+
+  window.addEventListener('hashchange', () => show(fromHash()));
+  show(fromHash());
+</script>

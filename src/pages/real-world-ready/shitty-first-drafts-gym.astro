@@ -34,8 +34,8 @@ const commitments = [
     desc: 'I will arrive a few minutes before meeting start time. This respects the time of both myself and everyone else that has joined the meeting.',
   },
   {
-    title: 'I will participate with respect.',
-    desc: 'I will actively engage in discussions, share my ideas, listen to others with an open mind, and communicate with kindness. When I disagree or offer feedback, I will do so respectfully and constructively. Long periods without participation can lead to my removal from a group.',
+    title: 'I will take part, with kindness.',
+    desc: 'I will share my work, give feedback, and listen to others with an open mind. When I disagree or offer feedback, I will do so respectfully and constructively. If I stay away for a long stretch, I understand I may be removed from the group, and I can ask to rejoin.',
   },
   {
     title: 'I will stay on topic and avoid spam.',
@@ -62,7 +62,7 @@ const commitments = [
 const faqs = [
   {
     q: 'When are the sessions and how can I join one?',
-    a: 'The sessions run every Wednesday from 8 pm to 9 pm on Zoom. To join, email us and we will consider adding you to the community. Once you are in, please join a few minutes before 8 pm so we can all start on time, and join from your laptop for an optimum experience.',
+    a: 'The sessions run every Wednesday from 8 pm to 9 pm IST on Zoom. To join, email us and we will consider adding you to the community. Once you are in, please join a few minutes before 8 pm so we can all start on time, and join from your laptop for an optimum experience.',
     link: { text: 'Email team@theseconddesign.com →', url: 'mailto:team@theseconddesign.com?subject=Shitty%20First%20Drafts%20Gym' },
   },
   {
@@ -71,11 +71,15 @@ const faqs = [
   },
   {
     q: 'Is the activity only restricted to writing?',
-    a: 'No! If you wish to work on some other project such as building a portfolio, coding, designing or researching something, you are welcome to experiment. Be mindful that any person in the session is able to view and interact with your project, and give feedback.',
+    a: 'No! You can work on a presentation, a portfolio, a design, some research, or anything else you like. Your feedback partner may not be an expert in your area, so pick something anyone can read or look at and react to. Be mindful that any person in the session is able to view and interact with your project, and give feedback.',
+  },
+  {
+    q: 'Can I keep working on the same thing week after week?',
+    a: 'Yes. Some people bring something new each week, and others keep building one piece across several weeks. State a small outcome for each session, show it, take the feedback, and carry on next time.',
   },
   {
     q: 'Where should I host my work?',
-    a: 'During the session, host your work in a format that is easy to share, access and provide feedback on. For example, a Google doc, website, portfolio, code repository or any other link. Make sure you give others appropriate access to view and interact with your work, as well as a way to leave comments and feedback on it.',
+    a: 'During the session, host your work in a format that is easy to share, access and provide feedback on. For example, a Google doc, a website, a portfolio, a slide deck or any other link. Make sure you give others appropriate access to view and interact with your work, as well as a way to leave comments and feedback on it.',
   },
   {
     q: 'How do I share my work?',
@@ -122,7 +126,7 @@ const faqs = [
       </h1>
 
       <p class="text-xl text-slate-400 leading-relaxed max-w-xl mb-10">
-        A weekly session dedicated to doing. Come to write, build, design, experiment, or work on your ideas, and get feedback on your work.
+        A weekly session dedicated to doing. Getting started is the hard part, and a rough first draft is enough. Come to write, build, design or experiment, and get feedback on your work.
       </p>
 
       <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -132,7 +136,7 @@ const faqs = [
         >
           Email us to join →
         </a>
-        <span class="text-sm text-slate-500">Every Wednesday, 8 pm to 9 pm</span>
+        <span class="text-sm text-slate-500">Every Wednesday, 8 pm to 9 pm IST</span>
       </div>
 
     </div>
@@ -143,6 +147,30 @@ const faqs = [
   ============================================================ -->
   <div class="bg-slate-950">
     <div class="container max-w-2xl mx-auto px-6 pb-28 space-y-20">
+
+      <!-- In 30 seconds -->
+      <section>
+        <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+          <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-4">In 30 seconds</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-base text-slate-300 leading-relaxed">
+              <span class="mt-2.5 h-1 w-1 rounded-full bg-violet-400 shrink-0"></span>
+              <span>Every Wednesday, 8 to 9 pm IST, on Zoom.</span>
+            </li>
+            <li class="flex items-start gap-3 text-base text-slate-300 leading-relaxed">
+              <span class="mt-2.5 h-1 w-1 rounded-full bg-violet-400 shrink-0"></span>
+              <span>Say what you will make. Work on it alone for 40 minutes. Swap work with a partner for 20 minutes of feedback.</span>
+            </li>
+            <li class="flex items-start gap-3 text-base text-slate-300 leading-relaxed">
+              <span class="mt-2.5 h-1 w-1 rounded-full bg-violet-400 shrink-0"></span>
+              <span>Bring anything rough: a draft, a few slides, a plan. Start something new each week, or keep building the same piece.</span>
+            </li>
+          </ul>
+          <a href="/real-world-ready/shitty-first-drafts-gym/slides" class="inline-block mt-5 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+            See the quick overview slides →
+          </a>
+        </div>
+      </section>
 
       <!-- What is it -->
       <section>
@@ -155,6 +183,10 @@ const faqs = [
 
         <p class="text-lg text-slate-400 leading-relaxed">
           "Shitty First Drafts Gym" is a weekly session dedicated to doing. Anyone can come to write, build, design, experiment, or work on their ideas and get feedback on their work. Attendees are free to pick the topic or project to work on.
+        </p>
+
+        <p class="text-lg text-slate-400 leading-relaxed mt-5">
+          The Gym is a place to practise the Shitty First Draft technique: start rough, show someone, and keep going. Getting started is the hard part, and a rough first draft is enough. Bring something new each week, or carry on with the same piece, with a room of people behind you.
         </p>
       </section>
 
@@ -186,6 +218,16 @@ const faqs = [
             Get the open source session →
           </a>
         </p>
+
+        <div class="mt-8 p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">One example</p>
+          <p class="text-base text-slate-300 leading-relaxed">
+            For Afra, a student at KAHM Unity Women's College, the Gym became a support system. She started with a rough WhatsApp message, kept working on the same piece week after week with feedback from the group, and published it as an essay.
+          </p>
+          <a href="/blog/the-first-draft-took-two-days" class="inline-block mt-4 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+            Read Afra's story →
+          </a>
+        </div>
       </section>
 
       <!-- What happens -->
@@ -209,6 +251,22 @@ const faqs = [
               </div>
             </div>
           ))}
+        </div>
+
+        <p class="text-lg text-slate-400 leading-relaxed mt-6">
+          Come back next week with something new, or carry on with the same piece. Many people keep building one thing across several weeks.
+        </p>
+
+        <div class="mt-8 p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">What people bring</p>
+          <ul class="flex flex-wrap gap-2">
+            {['A blog post draft', 'The first three slides of a presentation', 'A LinkedIn post', 'A one-page plan', 'A poster or a design', 'An email you have been avoiding', 'A research summary', 'A pitch'].map(x => (
+              <li class="px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-sm text-slate-300">{x}</li>
+            ))}
+          </ul>
+          <p class="text-sm text-slate-400 leading-relaxed mt-5">
+            Not sure what to bring? Write five rough lines about something you have been thinking about.
+          </p>
         </div>
       </section>
 
@@ -290,22 +348,26 @@ const faqs = [
           <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Community guidelines</span>
         </div>
 
-        <h2 class="text-2xl font-bold text-white mb-3">My commitment to this community</h2>
-        <p class="text-lg text-slate-400 leading-relaxed mb-8">
-          By being a member of this community, I commit to the following:
-        </p>
-
-        <div class="space-y-3">
-          {commitments.map((item, i) => (
-            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10">
-              <span class="text-lg font-bold font-mono text-violet-400/40 shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <p class="font-semibold text-white mb-1">{item.title}</p>
-                <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+        <details class="group rounded-2xl bg-white/[0.03] border border-white/10">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 [&::-webkit-details-marker]:hidden">
+            <span>
+              <span class="block text-2xl font-bold text-white mb-1">My commitment to this community</span>
+              <span class="block text-sm text-slate-400">By being a member, I commit to the following. Tap to read.</span>
+            </span>
+            <span class="text-3xl leading-none text-slate-500 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="px-5 pb-5 space-y-3">
+            {commitments.map((item, i) => (
+              <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+                <span class="text-lg font-bold font-mono text-violet-400/40 shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <p class="font-semibold text-white mb-1">{item.title}</p>
+                  <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </details>
       </section>
 
       <!-- FAQs -->
@@ -317,18 +379,23 @@ const faqs = [
 
         <div class="space-y-3">
           {faqs.map(item => (
-            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
-              <p class="font-semibold text-white mb-2">{item.q}</p>
-              <p class="text-sm text-slate-400 leading-relaxed">{item.a}</p>
-              {item.link && (
-                <a
-                  href={item.link.url}
-                  class="inline-block mt-3 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
-                >
-                  {item.link.text}
-                </a>
-              )}
-            </div>
+            <details class="group rounded-2xl bg-white/[0.03] border border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 [&::-webkit-details-marker]:hidden">
+                <span class="font-semibold text-white">{item.q}</span>
+                <span class="text-2xl leading-none text-slate-500 transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div class="px-5 pb-5">
+                <p class="text-sm text-slate-400 leading-relaxed">{item.a}</p>
+                {item.link && (
+                  <a
+                    href={item.link.url}
+                    class="inline-block mt-3 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    {item.link.text}
+                  </a>
+                )}
+              </div>
+            </details>
           ))}
         </div>
       </section>
