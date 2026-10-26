@@ -24,7 +24,8 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` | Page ${currentPage}` : ''}`,
+  title: `The Second Design Way${currentPage > 1 ? ` | Page ${currentPage}` : ''}`,
+  description: 'Notes from our experiments: stories from our sessions, our students and the work they ship.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
