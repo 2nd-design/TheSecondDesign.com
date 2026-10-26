@@ -120,3 +120,14 @@
   font-size: 1.125em;
   color: inherit;
 }
+
+/* DM Serif Display ships in a single regular weight. Asking for bold makes the browser fake it,
+   which smears the letters together, and Tailwind's tracking-tighter squeezes them further.
+   Force the real weight and open the tracking on every heading that uses the font. */
+.font-heading,
+.prose :is(h1, h2, h3, h4, h5, h6),
+.prose-headings\:font-heading :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  font-synthesis: none;
+}
