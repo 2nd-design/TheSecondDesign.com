@@ -10,6 +10,25 @@ const metadata = {
 const changelog = [
   {
     date: '2026-10-26',
+    version: '3.7.0',
+    title: 'Unlisted pages index; template demo pages removed',
+    changes: [
+      {
+        category: 'Feature',
+        items: [
+          { text: 'New /unlisted page: a hidden index (not indexed by search engines) of every page that is not linked from the main navigation.', url: '/unlisted' },
+        ],
+      },
+      {
+        category: 'Cleanup',
+        items: [
+          'Removed the /services and /pricing pages. They were leftover template demo pages with placeholder content that did not describe The Second Design.',
+        ],
+      },
+    ],
+  },
+  {
+    date: '2026-10-26',
     version: '3.6.2',
     title: 'Headings: fixed the crushed, over-bold look',
     changes: [

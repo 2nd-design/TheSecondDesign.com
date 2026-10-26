@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Unlisted pages · The Second Design',
+  description: 'Every page on the site that is not linked from the navigation.',
+  robots: { index: false, follow: false },
+};
+
+const sections = [
+  {
+    label: 'Real World Ready',
+    accent: 'text-violet-400',
+    rule: 'from-violet-500 to-blue-500',
+    pages: [
+      {
+        title: 'Shitty First Drafts Gym',
+        href: '/real-world-ready/shitty-first-drafts-gym',
+        desc: 'The weekly Wednesday session: how it runs, giving and receiving feedback, community guidelines, FAQs, and how to join.',
+      },
+      {
+        title: 'Before the Session',
+        href: '/real-world-ready/session-logistics',
+        desc: 'What students should know before joining a Real World Ready session: timing, laptop, Zoom, cameras, recording, accommodations.',
+      },
+      {
+        title: 'What Would You Teach?',
+        href: '/real-world-ready/teach',
+        desc: 'Invitation to experienced people to turn one way of thinking into a session students can learn from.',
+      },
+      {
+        title: 'Support Us',
+        href: '/real-world-ready/donate',
+        desc: 'What we have built, how we want to scale it, and what we need to get there.',
+      },
+    ],
+  },
+  {
+    label: 'Company pages',
+    accent: 'text-blue-400',
+    rule: 'from-blue-500 to-emerald-500',
+    pages: [
+      { title: 'Privacy Policy', href: '/privacy', desc: 'Privacy policy, last updated January 2023. Worth a review.' },
+      { title: 'Terms and Conditions', href: '/terms', desc: 'Terms and conditions, last updated January 2023. Worth a review.' },
+    ],
+  },
+  {
+    label: 'Internal',
+    accent: 'text-emerald-400',
+    rule: 'from-emerald-500 to-violet-500',
+    pages: [
+      {
+        title: 'Internal hub',
+        href: '/internal-only',
+        desc: 'Index of internal documentation and tools.',
+      },
+      {
+        title: 'Changelog',
+        href: '/changelog',
+        desc: 'A log of every update made to this website.',
+      },
+      {
+        title: 'Testimonials Table',
+        href: '/docs/testimonials-table',
+        desc: 'Flat table view of all testimonials, for internal review and curation.',
+      },
+      {
+        title: 'Testimonials Data Architecture',
+        href: '/docs/testimonial-architecture',
+        desc: 'How testimonials are modelled, stored and used across the site via Google Sheets.',
+      },
+      {
+        title: 'RWR YouTube Titles & Descriptions',
+        href: '/internal/rwr-youtube-metadata.html',
+        desc: 'Titles and descriptions for the Beyond the Blueprint testimonial videos, ready to paste into YouTube.',
+      },
+    ],
+  },
+  {
+    label: 'Test pages',
+    accent: 'text-slate-400',
+    rule: 'from-slate-500 to-slate-400',
+    pages: [
+      {
+        title: 'Understanding Agency: test slides',
+        href: '/open-source/understanding-agency/test-slides/index.html',
+        desc: 'Test version of the Understanding Agency slide deck.',
+      },
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+
+  <section class="relative overflow-hidden bg-slate-950 pt-24 pb-16">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-1/3 w-[500px] h-[500px] bg-violet-500/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-emerald-500/8 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative container max-w-2xl mx-auto px-6">
+      <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-10">The Second Design · Internal</p>
+
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-[1.05] mb-8">
+        <span class="bg-gradient-to-r from-violet-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          Unlisted pages
+        </span>
+      </h1>
+
+      <p class="text-xl text-slate-400 leading-relaxed max-w-xl">
+        Every page on the site that is not linked from the navigation. This page is not indexed by search engines.
+      </p>
+    </div>
+  </section>
+
+  <div class="bg-slate-950">
+    <div class="container max-w-2xl mx-auto px-6 pt-8 pb-28 space-y-16">
+
+      {sections.map(section => (
+        <section>
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class={`h-px w-8 bg-gradient-to-r ${section.rule}`}></div>
+            <span class={`text-xs font-bold uppercase tracking-widest ${section.accent}`}>{section.label}</span>
+          </div>
+
+          <div class="space-y-3">
+            {section.pages.map(page => (
+              <a
+                href={page.href}
+                class="block p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-white/20 transition-colors"
+              >
+                <p class="font-semibold text-white mb-1">{page.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed mb-2">{page.desc}</p>
+                <p class="text-xs font-mono text-slate-500">{page.href}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+
+    </div>
+  </div>
+
+</Layout>
