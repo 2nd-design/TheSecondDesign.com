@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'What topics can I work on?',
-    a: 'Anything! There are no constraints on what to think about or work on.',
+    a: 'Anything! There are no constraints on what to think about or work on. The one requirement is that you state the outcome you are aiming for at the start, something you will have ready to show and get feedback on by the 40-minute mark. If your project is big, such as a full presentation or product, pick one slice of it.',
   },
   {
     q: 'Is the activity only restricted to writing?',
@@ -197,8 +197,9 @@ const faqs = [
 
         <div class="space-y-3">
           {[
-            { n: "01", title: "First 40 minutes", desc: "Everyone works by themselves on individual projects of their choice." },
-            { n: "02", title: "Next 20 minutes", desc: "Everyone is randomly paired with someone else and sent to breakout rooms. The pair exchange their work, making sure viewing and comment or edit access is provided to the feedback partner. Each person reviews the other's work and gives feedback." },
+            { n: "01", title: "Before you start", desc: "Everyone states, in one line, what they will have to show by the end of the first 40 minutes. For example: \"the first three slides of my presentation\" or \"a rough draft of my blog post\". Pick something small enough to finish and share." },
+            { n: "02", title: "First 40 minutes", desc: "Everyone works by themselves on individual projects of their choice, aiming for the outcome they stated." },
+            { n: "03", title: "Next 20 minutes", desc: "Everyone is randomly paired with someone else and sent to breakout rooms. The pair exchange their work, making sure viewing and comment or edit access is provided to the feedback partner. Each person reviews the other's work and gives feedback." },
           ].map(item => (
             <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10">
               <span class="text-lg font-bold font-mono text-violet-400/40 shrink-0 leading-none mt-0.5">{item.n}</span>
