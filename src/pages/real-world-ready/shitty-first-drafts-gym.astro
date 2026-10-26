@@ -1,0 +1,352 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Shitty First Drafts Gym · The Second Design',
+  description:
+    'A weekly session dedicated to doing. Come to write, build, design or experiment, then get feedback on your work from a peer.',
+};
+
+const feedbackQuestions = [
+  'What did you like?',
+  'What did you dislike?',
+  'What did you feel while going through the work?',
+  'What parts grabbed your attention?',
+  'What parts did you find boring or lost your attention?',
+  'What did you understand? What did you not understand or find confusing?',
+  'Do you wish some parts were emphasized, expanded upon or added?',
+  'What would you shorten, remove, explain or do differently?',
+  'What would you like to see more of?',
+  'What questions did the work leave you with?',
+];
+
+const receiveTips = [
+  'Read all the comments carefully before deciding what to act on.',
+  'Where necessary, ask questions or seek clarification.',
+  'Pay close attention to themes or patterns repeating in feedback from multiple parties.',
+  'Feel free to disagree.',
+  'Be sure to thank people for their time and effort to give you feedback.',
+];
+
+const commitments = [
+  {
+    title: 'I will be on time.',
+    desc: 'I will arrive a few minutes before meeting start time. This respects the time of both myself and everyone else that has joined the meeting.',
+  },
+  {
+    title: 'I will participate with respect.',
+    desc: 'I will actively engage in discussions, share my ideas, listen to others with an open mind, and communicate with kindness. When I disagree or offer feedback, I will do so respectfully and constructively. Long periods without participation can lead to my removal from a group.',
+  },
+  {
+    title: 'I will stay on topic and avoid spam.',
+    desc: 'I will keep discussions relevant to the purpose of the community and will not post unsolicited promotions, advertisements, affiliate links, or excessive self-promotion. If I share a resource, I will ensure it genuinely adds value.',
+  },
+  {
+    title: 'I will read and follow community resources.',
+    desc: 'I will stay informed by reading pinned messages, announcements, and shared documents.',
+  },
+  {
+    title: 'I will respect everyone\'s privacy.',
+    desc: 'I will not share conversations, screenshots, or personal information from this community outside the group without permission. I will also not send direct messages to another member unless they have invited or consented to it.',
+  },
+  {
+    title: 'I will speak up when something is wrong.',
+    desc: 'If I experience or witness bullying, harassment, or inappropriate behaviour, I will contact an admin privately so that it can be addressed.',
+  },
+  {
+    title: 'I understand and accept the zero-tolerance policy.',
+    desc: 'Disrespectful, insulting, discriminatory, harassing, or intentionally exclusionary behaviour has no place here. Violations may result in immediate removal without warning, and repeated removals may lead to permanent removal from the community.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'When are the sessions and how can I join one?',
+    a: 'The sessions run every Wednesday from 8 pm to 9 pm on Zoom. To join, email us and we will consider adding you to the community. Once you are in, please join a few minutes before 8 pm so we can all start on time, and join from your laptop for an optimum experience.',
+    link: { text: 'Email team@theseconddesign.com →', url: 'mailto:team@theseconddesign.com?subject=Shitty%20First%20Drafts%20Gym' },
+  },
+  {
+    q: 'What topics can I work on?',
+    a: 'Anything! There are no constraints on what to think about or work on.',
+  },
+  {
+    q: 'Is the activity only restricted to writing?',
+    a: 'No! If you wish to work on some other project such as building a portfolio, coding, designing or researching something, you are welcome to experiment. Be mindful that any person in the session is able to view and interact with your project, and give feedback.',
+  },
+  {
+    q: 'Where should I host my work?',
+    a: 'During the session, host your work in a format that is easy to share, access and provide feedback on. For example, a Google doc, website, portfolio, code repository or any other link. Make sure you give others appropriate access to view and interact with your work, as well as a way to leave comments and feedback on it.',
+  },
+  {
+    q: 'How do I share my work?',
+    a: 'Share a link to your work and make sure the person you are sharing with has access to it. They should be able to view it, as well as post their feedback as comments on it. After you incorporate feedback and finalise your work, feel free to share the finished version in the WhatsApp group. One simple way to keep your weekly work in one place is a master document with individual links to each week\'s work.',
+  },
+  {
+    q: 'What if I feel uncomfortable sharing my work?',
+    a: 'Sharing is strongly encouraged, but not mandated. Receiving feedback can provide new perspectives, weed out errors and show you how your audience interacts with your work well before you publicly share it. Sharing in a small, safe space helps you test out ideas and sharpen them. It can also help you get over the nervousness of displaying your work to a wider public audience.',
+  },
+  {
+    q: 'What if I cannot show up for one week?',
+    a: 'No problem! Join in the discussion on the WhatsApp group, offer your feedback to work shared there, and join the sessions next week. However, prolonged absences from the sessions and inactivity on the WhatsApp group may prompt the administrators to temporarily remove you from the community. You may request to rejoin when you are able to attend the sessions and / or participate in the WhatsApp group.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="relative overflow-hidden bg-slate-950 pt-24 pb-24">
+
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-1/3 w-[500px] h-[500px] bg-violet-500/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-emerald-500/8 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative container max-w-2xl mx-auto px-6">
+
+      <div class="flex items-center gap-4 mb-10">
+        <a href="/real-world-ready" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-violet-400 transition-colors">
+          ← Real World Ready
+        </a>
+      </div>
+
+      <p class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-10">The Second Design · Real World Ready</p>
+
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-[1.05] mb-8">
+        Shitty First<br />
+        <span class="bg-gradient-to-r from-violet-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          Drafts Gym
+        </span>
+      </h1>
+
+      <p class="text-xl text-slate-400 leading-relaxed max-w-xl mb-10">
+        A weekly session dedicated to doing. Come to write, build, design, experiment, or work on your ideas, and get feedback on your work.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a
+          href="mailto:team@theseconddesign.com?subject=Shitty%20First%20Drafts%20Gym"
+          class="inline-flex items-center px-6 py-3 rounded-full bg-violet-500 hover:bg-violet-400 text-white text-sm font-semibold transition-colors"
+        >
+          Email us to join →
+        </a>
+        <span class="text-sm text-slate-500">Every Wednesday, 8 pm to 9 pm</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BODY
+  ============================================================ -->
+  <div class="bg-slate-950">
+    <div class="container max-w-2xl mx-auto px-6 pb-28 space-y-20">
+
+      <!-- What is it -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-blue-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">What it is</span>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mb-6">What is "Shitty First Drafts Gym"?</h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed">
+          "Shitty First Drafts Gym" is a weekly session dedicated to doing. Anyone can come to write, build, design, experiment, or work on their ideas and get feedback on their work. Attendees are free to pick the topic or project to work on.
+        </p>
+      </section>
+
+      <!-- Video -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Where this comes from</span>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mb-4">Why first drafts matter</h2>
+        <p class="text-lg text-slate-400 leading-relaxed mb-6">
+          The Gym is built on our Shitty First Draft session. Watch this 9-minute video on why imperfect first versions are essential for momentum and real learning.
+        </p>
+
+        <div class="relative w-full pt-[56.25%] rounded-2xl overflow-hidden border border-white/10">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/zc3okOwRB3s"
+            title="Shitty First Draft - The Second Design"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <p class="text-base text-slate-400 leading-relaxed mt-6">
+          Want to run the session yourself? The slide deck and participant workbook are free to use.
+          <a href="/open-source/shitty-first-draft" class="text-emerald-400 hover:text-emerald-300 transition-colors">
+            Get the open source session →
+          </a>
+        </p>
+      </section>
+
+      <!-- What happens -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400">What happens in the session</span>
+        </div>
+
+        <div class="space-y-3">
+          {[
+            { n: "01", title: "First 40 minutes", desc: "Everyone works by themselves on individual projects of their choice." },
+            { n: "02", title: "Next 20 minutes", desc: "Everyone is randomly paired with someone else and sent to breakout rooms. The pair exchange their work, making sure viewing and comment or edit access is provided to the feedback partner. Each person reviews the other's work and gives feedback." },
+          ].map(item => (
+            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <span class="text-lg font-bold font-mono text-violet-400/40 shrink-0 leading-none mt-0.5">{item.n}</span>
+              <div>
+                <p class="font-semibold text-white mb-1">{item.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Give feedback -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-emerald-500 to-violet-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Feedback</span>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mb-6">How to give feedback</h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-5">
+          Go through what is shared with you carefully and as thoroughly as possible. Your role is to help the creator see their work from another perspective, not to judge them or their ability.
+        </p>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-8">
+          Share your honest reaction and offer your personal point of view. You are not required to be an expert in the subject matter. Whenever possible, be specific and detailed in your feedback. Explain the "why" behind your perspectives.
+        </p>
+
+        <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10 mb-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Questions that may help</p>
+          <ul class="space-y-2.5">
+            {feedbackQuestions.map(q => (
+              <li class="flex items-start gap-3 text-base text-slate-300 leading-relaxed">
+                <span class="mt-2.5 h-1 w-1 rounded-full bg-violet-400 shrink-0"></span>
+                <span>{q}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p class="text-lg text-slate-400 leading-relaxed">
+          Share your feedback as comments on the work provided, or in an appropriate format allowed for by the creator.
+        </p>
+      </section>
+
+      <!-- Pull quote -->
+      <div class="border-l-4 border-violet-500 pl-6 py-2">
+        <p class="text-2xl font-semibold text-white leading-snug">
+          Help the creator see their work from another perspective.
+        </p>
+      </div>
+
+      <!-- Receive feedback -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-blue-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-violet-400">Feedback</span>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mb-6">How to receive feedback</h2>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-5">
+          Be open to and curious about feedback. This is a rare opportunity to understand how somebody interacts with and responds to your work. Remember, you don't have to agree with every piece of feedback, nor act on every suggestion.
+        </p>
+
+        <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10 my-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Some tips</p>
+          <ul class="space-y-2.5">
+            {receiveTips.map(t => (
+              <li class="flex items-start gap-3 text-base text-slate-300 leading-relaxed">
+                <span class="mt-2.5 h-1 w-1 rounded-full bg-emerald-400 shrink-0"></span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p class="text-lg text-slate-400 leading-relaxed">
+          When incorporating feedback, it helps to start from the big picture and progress to finer details. Identify and prioritize larger changes such as those to the purpose of your work, structure, clarity, experience and flow of information first. Leave the finer details such as formatting, line edits, finer visual or implementation details to the end.
+        </p>
+      </section>
+
+      <!-- Community guidelines -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Community guidelines</span>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mb-3">My commitment to this community</h2>
+        <p class="text-lg text-slate-400 leading-relaxed mb-8">
+          By being a member of this community, I commit to the following:
+        </p>
+
+        <div class="space-y-3">
+          {commitments.map((item, i) => (
+            <div class="flex items-start gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <span class="text-lg font-bold font-mono text-violet-400/40 shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <p class="font-semibold text-white mb-1">{item.title}</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section>
+        <div class="inline-flex items-center gap-3 mb-8">
+          <div class="h-px w-8 bg-gradient-to-r from-emerald-500 to-violet-500"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">FAQs</span>
+        </div>
+
+        <div class="space-y-3">
+          {faqs.map(item => (
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <p class="font-semibold text-white mb-2">{item.q}</p>
+              <p class="text-sm text-slate-400 leading-relaxed">{item.a}</p>
+              {item.link && (
+                <a
+                  href={item.link.url}
+                  class="inline-block mt-3 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  {item.link.text}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="pt-4 border-t border-white/10">
+        <h2 class="text-2xl font-bold text-white mb-4">Want to join?</h2>
+        <p class="text-lg text-slate-400 leading-relaxed mb-8">
+          Want to be part of it? Email us at team@theseconddesign.com and we will consider adding you to the community.
+        </p>
+        <a
+          href="mailto:team@theseconddesign.com?subject=Shitty%20First%20Drafts%20Gym"
+          class="inline-flex items-center px-6 py-3 rounded-full bg-violet-500 hover:bg-violet-400 text-white text-sm font-semibold transition-colors"
+        >
+          Email us to join →
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+</Layout>
